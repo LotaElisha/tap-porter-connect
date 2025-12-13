@@ -146,7 +146,7 @@ export default function Stories() {
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
             Are you a porter with a story to tell? We want to hear from you. Your experiences can inspire others and help us advocate for better conditions for all porters.
           </p>
-          <a href="mailto:stories@tapo.or.tz" className="inline-block">
+          <a href="mailto:stories@tap.or.tz" className="inline-block">
             <button className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors">
               Submit Your Story
             </button>

@@ -1,63 +1,30 @@
+import { useTranslation } from "react-i18next";
 import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 
-const timeline = [
-  {
-    year: "2008",
-    title: "Foundation",
-    description: "TAP was founded by a group of veteran porters and tourism advocates who recognized the need for a unified voice for mountain porters.",
-  },
-  {
-    year: "2010",
-    title: "First Training Program",
-    description: "Launched our first comprehensive safety and skills training program, certifying over 200 porters in the first year.",
-  },
-  {
-    year: "2012",
-    title: "Government Recognition",
-    description: "TAP was officially recognized by the Tanzanian government as the representative body for mountain porters.",
-  },
-  {
-    year: "2014",
-    title: "Healthcare Initiative",
-    description: "Introduced the Porter Health Program, providing free health screenings and medical support to members.",
-  },
-  {
-    year: "2016",
-    title: "International Partnerships",
-    description: "Established partnerships with international NGOs and tourism organizations to promote ethical trekking practices.",
-  },
-  {
-    year: "2018",
-    title: "Digital Registration",
-    description: "Launched our digital membership system, making it easier for porters to register and access benefits.",
-  },
-  {
-    year: "2020",
-    title: "COVID-19 Response",
-    description: "Provided emergency relief to over 3,000 porters affected by the tourism industry shutdown.",
-  },
-  {
-    year: "2022",
-    title: "Expansion",
-    description: "Extended our programs to cover porters across all of Tanzania's major mountains and trekking routes.",
-  },
-  {
-    year: "2024",
-    title: "New Headquarters",
-    description: "Opened our new headquarters in Moshi, featuring a training center and member services facility.",
-  },
-];
-
 export default function History() {
+  const { t } = useTranslation();
+
+  const timeline = [
+    { year: "2008", title: t("historyPage.timeline.2008.title"), description: t("historyPage.timeline.2008.desc") },
+    { year: "2010", title: t("historyPage.timeline.2010.title"), description: t("historyPage.timeline.2010.desc") },
+    { year: "2012", title: t("historyPage.timeline.2012.title"), description: t("historyPage.timeline.2012.desc") },
+    { year: "2014", title: t("historyPage.timeline.2014.title"), description: t("historyPage.timeline.2014.desc") },
+    { year: "2016", title: t("historyPage.timeline.2016.title"), description: t("historyPage.timeline.2016.desc") },
+    { year: "2018", title: t("historyPage.timeline.2018.title"), description: t("historyPage.timeline.2018.desc") },
+    { year: "2020", title: t("historyPage.timeline.2020.title"), description: t("historyPage.timeline.2020.desc") },
+    { year: "2022", title: t("historyPage.timeline.2022.title"), description: t("historyPage.timeline.2022.desc") },
+    { year: "2024", title: t("historyPage.timeline.2024.title"), description: t("historyPage.timeline.2024.desc") },
+  ];
+
   return (
     <Layout>
       {/* Hero */}
       <section className="relative py-20 bg-secondary text-secondary-foreground">
         <div className="container">
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">History & Legacy</h1>
+          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">{t("historyPage.title")}</h1>
           <p className="text-xl text-secondary-foreground/80 max-w-3xl">
-            From humble beginnings to becoming the voice of Tanzania's porters, our journey reflects the resilience and determination of the community we serve.
+            {t("historyPage.subtitle")}
           </p>
         </div>
       </section>
@@ -68,17 +35,11 @@ export default function History() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-6">
-                The Porter Legacy
+                {t("historyPage.legacyTitle")}
               </h2>
-              <p className="text-muted-foreground mb-4">
-                For over a century, porters have been the backbone of mountain expeditions in Tanzania. Long before modern tourism, local communities guided explorers and carried supplies up the slopes of Kilimanjaro, Meru, and other peaks.
-              </p>
-              <p className="text-muted-foreground mb-4">
-                These men and women developed an intimate knowledge of the mountains, passing down skills and traditions through generations. Their expertise in navigation, weather patterns, and survival techniques became invaluable to climbers from around the world.
-              </p>
-              <p className="text-muted-foreground">
-                Today, we honor this legacy by ensuring that porters receive the recognition, training, and support they deserve. The spirit of service and resilience that defined the first porters continues to inspire our work at TAP.
-              </p>
+              <p className="text-muted-foreground mb-4">{t("historyPage.legacyDesc1")}</p>
+              <p className="text-muted-foreground mb-4">{t("historyPage.legacyDesc2")}</p>
+              <p className="text-muted-foreground">{t("historyPage.legacyDesc3")}</p>
             </div>
             <div>
               <img
@@ -95,10 +56,9 @@ export default function History() {
       <section className="py-20 bg-muted">
         <div className="container">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-12 text-center">
-            Our Journey
+            {t("historyPage.ourJourney")}
           </h2>
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-border hidden md:block" />
             
             <div className="space-y-12">
@@ -137,35 +97,29 @@ export default function History() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">
-              Cultural Significance
+              {t("historyPage.culturalSignificance")}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Porters are not just workers; they are cultural ambassadors who share the rich heritage of Tanzania with visitors from around the world.
+              {t("historyPage.culturalSignificanceDesc")}
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <Card>
               <CardContent className="p-6 text-center">
-                <h3 className="font-display text-xl font-semibold text-secondary mb-2">Traditional Knowledge</h3>
-                <p className="text-muted-foreground">
-                  Porters carry generations of wisdom about the mountains, including traditional remedies and navigation techniques.
-                </p>
+                <h3 className="font-display text-xl font-semibold text-secondary mb-2">{t("historyPage.traditionalKnowledge")}</h3>
+                <p className="text-muted-foreground">{t("historyPage.traditionalKnowledgeDesc")}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6 text-center">
-                <h3 className="font-display text-xl font-semibold text-secondary mb-2">Community Bonds</h3>
-                <p className="text-muted-foreground">
-                  The porter community is tightly knit, with strong traditions of mutual support and shared responsibility.
-                </p>
+                <h3 className="font-display text-xl font-semibold text-secondary mb-2">{t("historyPage.communityBonds")}</h3>
+                <p className="text-muted-foreground">{t("historyPage.communityBondsDesc")}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6 text-center">
-                <h3 className="font-display text-xl font-semibold text-secondary mb-2">Songs & Stories</h3>
-                <p className="text-muted-foreground">
-                  Porters maintain a rich oral tradition of songs and stories that celebrate the mountains and their work.
-                </p>
+                <h3 className="font-display text-xl font-semibold text-secondary mb-2">{t("historyPage.songsStories")}</h3>
+                <p className="text-muted-foreground">{t("historyPage.songsStoriesDesc")}</p>
               </CardContent>
             </Card>
           </div>

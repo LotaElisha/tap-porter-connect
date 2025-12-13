@@ -1,108 +1,47 @@
+import { useTranslation } from "react-i18next";
 import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Eye, Lightbulb, Heart, Users, Award, Globe, GraduationCap, Handshake, Shield, Banknote } from "lucide-react";
 
-const objectives = [
-  {
-    icon: Users,
-    title: "Unity & Solidarity",
-    description: "Unite porters for solidarity and cooperation to strengthen their collective voice.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Training & Development",
-    description: "Provide regular training on profession, health, safety, and leadership skills.",
-  },
-  {
-    icon: Shield,
-    title: "Rights Advocacy",
-    description: "Advocate for the social and economic interests of all members.",
-  },
-  {
-    icon: Award,
-    title: "Economic Projects",
-    description: "Establish and manage social and economic projects for member benefit.",
-  },
-  {
-    icon: Handshake,
-    title: "Collaboration",
-    description: "Collaborate with tourism and porter-related institutions for mutual growth.",
-  },
-  {
-    icon: Globe,
-    title: "Environmental Conservation",
-    description: "Promote environmental conservation and sustainable tourism practices.",
-  },
-  {
-    icon: Heart,
-    title: "Equipment & Safety",
-    description: "Ensure every mountain climber and porter has adequate equipment for safety.",
-  },
-  {
-    icon: Banknote,
-    title: "Fair Payment",
-    description: "Ensure porters are paid fairly through their bank accounts.",
-  },
-];
-
-const values = [
-  {
-    icon: Heart,
-    title: "Dignity",
-    description: "Every porter deserves respect, fair treatment, and recognition for their invaluable contribution.",
-  },
-  {
-    icon: Users,
-    title: "Community",
-    description: "We believe in the power of collective action and mutual support among porters.",
-  },
-  {
-    icon: Award,
-    title: "Excellence",
-    description: "We strive for the highest standards in training, safety, and professional conduct.",
-  },
-  {
-    icon: Globe,
-    title: "Sustainability",
-    description: "We are committed to practices that benefit both porters and the environment.",
-  },
-];
-
 import loishiyePhoto from "@/assets/loishiye-lenoy-mollel.png";
 import chairmanPhoto from "@/assets/mohamed-ally-mkoma.png";
 
-const leadership = [
-  {
-    name: "Mohamed Ally Mkoma",
-    role: "Mwenyekiti (Chairman)",
-    image: chairmanPhoto,
-  },
-  {
-    name: "Loishiye Lenoy Mollel",
-    role: "Makamu Mwenyekiti (Vice Chairman)",
-    image: loishiyePhoto,
-  },
-  {
-    name: "Katibu Mkuu",
-    role: "General Secretary",
-    image: null,
-  },
-  {
-    name: "Mtunza Hazina",
-    role: "Treasurer",
-    image: null,
-  },
-];
-
 export default function About() {
+  const { t } = useTranslation();
+
+  const objectives = [
+    { icon: Users, title: t("about.unity"), description: t("about.unityDesc") },
+    { icon: GraduationCap, title: t("about.training"), description: t("about.trainingDesc") },
+    { icon: Shield, title: t("about.rights"), description: t("about.rightsDesc") },
+    { icon: Award, title: t("about.economic"), description: t("about.economicDesc") },
+    { icon: Handshake, title: t("about.collaboration"), description: t("about.collaborationDesc") },
+    { icon: Globe, title: t("about.environmental"), description: t("about.environmentalDesc") },
+    { icon: Heart, title: t("about.equipment"), description: t("about.equipmentDesc") },
+    { icon: Banknote, title: t("about.payment"), description: t("about.paymentDesc") },
+  ];
+
+  const values = [
+    { icon: Heart, title: t("about.dignity"), description: t("about.dignityDesc") },
+    { icon: Users, title: t("about.community"), description: t("about.communityDesc") },
+    { icon: Award, title: t("about.excellence"), description: t("about.excellenceDesc") },
+    { icon: Globe, title: t("about.sustainability"), description: t("about.sustainabilityDesc") },
+  ];
+
+  const leadership = [
+    { name: "Mohamed Ally Mkoma", role: t("about.chairman"), image: chairmanPhoto },
+    { name: "Loishiye Lenoy Mollel", role: t("about.viceChairman"), image: loishiyePhoto },
+    { name: "Katibu Mkuu", role: t("about.generalSecretary"), image: null },
+    { name: "Mtunza Hazina", role: t("about.treasurer"), image: null },
+  ];
+
   return (
     <Layout>
       {/* Hero */}
       <section className="relative py-20 bg-secondary text-secondary-foreground">
         <div className="container">
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">About TAP</h1>
+          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">{t("about.title")}</h1>
           <p className="text-xl text-secondary-foreground/80 max-w-3xl">
-            The Tanzania Association of Porters (Chama cha Wapagazi Tanzania) is the leading professional body dedicated to the welfare, advocacy, and professional development of mountain porters in Tanzania.
+            {t("about.subtitle")}
           </p>
         </div>
       </section>
@@ -114,28 +53,22 @@ export default function About() {
             <Card className="bg-gradient-warm border-none">
               <CardContent className="p-8">
                 <Lightbulb className="h-12 w-12 text-primary mb-4" />
-                <h2 className="font-display text-2xl font-bold text-secondary mb-2">Nia (Purpose)</h2>
-                <p className="text-muted-foreground">
-                  To bring all Tanzanian porters under one umbrella for cooperation, training, development, and collective advocacy of their rights.
-                </p>
+                <h2 className="font-display text-2xl font-bold text-secondary mb-2">{t("about.purpose")}</h2>
+                <p className="text-muted-foreground">{t("about.purposeDesc")}</p>
               </CardContent>
             </Card>
             <Card className="bg-gradient-warm border-none">
               <CardContent className="p-8">
                 <Target className="h-12 w-12 text-primary mb-4" />
-                <h2 className="font-display text-2xl font-bold text-secondary mb-2">Lengo (Mission)</h2>
-                <p className="text-muted-foreground">
-                  To create a conducive working environment for porters and help them achieve sustainable welfare through training, rights advocacy, and social and economic opportunities.
-                </p>
+                <h2 className="font-display text-2xl font-bold text-secondary mb-2">{t("about.mission")}</h2>
+                <p className="text-muted-foreground">{t("about.missionDesc")}</p>
               </CardContent>
             </Card>
             <Card className="bg-gradient-warm border-none">
               <CardContent className="p-8">
                 <Eye className="h-12 w-12 text-primary mb-4" />
-                <h2 className="font-display text-2xl font-bold text-secondary mb-2">Maono (Vision)</h2>
-                <p className="text-muted-foreground">
-                  To be the leading national body representing and elevating the lives of Tanzanian porters to the highest professional, social, and economic standards.
-                </p>
+                <h2 className="font-display text-2xl font-bold text-secondary mb-2">{t("about.vision")}</h2>
+                <p className="text-muted-foreground">{t("about.visionDesc")}</p>
               </CardContent>
             </Card>
           </div>
@@ -146,10 +79,8 @@ export default function About() {
       <section className="py-20 bg-muted">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">Malengo (Objectives)</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our eight core objectives guide our work in supporting and empowering porters across Tanzania.
-            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">{t("about.objectives")}</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">{t("about.objectivesDesc")}</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {objectives.map((objective) => (
@@ -169,10 +100,8 @@ export default function About() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">Our Values</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              These core values guide everything we do at TAP.
-            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">{t("about.values")}</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">{t("about.valuesDesc")}</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value) => (
@@ -192,10 +121,8 @@ export default function About() {
       <section className="py-20 bg-muted">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">Uongozi (Leadership)</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Meet the dedicated team leading TAP's mission.
-            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">{t("about.leadership")}</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">{t("about.leadershipDesc")}</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {leadership.map((leader) => (
@@ -225,34 +152,28 @@ export default function About() {
       {/* What We Do */}
       <section className="py-20 bg-secondary text-secondary-foreground">
         <div className="container">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-8 text-center">What We Do</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-8 text-center">{t("about.whatWeDo")}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">1</span>
               </div>
-              <h3 className="font-display text-xl font-semibold mb-2">Advocacy</h3>
-              <p className="text-secondary-foreground/80">
-                We advocate for fair wages, proper working conditions, and legal protections for all porters.
-              </p>
+              <h3 className="font-display text-xl font-semibold mb-2">{t("about.advocacy")}</h3>
+              <p className="text-secondary-foreground/80">{t("about.advocacyDesc")}</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">2</span>
               </div>
-              <h3 className="font-display text-xl font-semibold mb-2">Training</h3>
-              <p className="text-secondary-foreground/80">
-                We provide comprehensive training programs in safety, first aid, customer service, and leadership.
-              </p>
+              <h3 className="font-display text-xl font-semibold mb-2">{t("about.trainingTitle")}</h3>
+              <p className="text-secondary-foreground/80">{t("about.trainingTitleDesc")}</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">3</span>
               </div>
-              <h3 className="font-display text-xl font-semibold mb-2">Welfare</h3>
-              <p className="text-secondary-foreground/80">
-                We offer healthcare support, insurance schemes, and emergency assistance to porters and their families.
-              </p>
+              <h3 className="font-display text-xl font-semibold mb-2">{t("about.welfare")}</h3>
+              <p className="text-secondary-foreground/80">{t("about.welfareDesc")}</p>
             </div>
           </div>
         </div>

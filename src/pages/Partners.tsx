@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -15,72 +16,28 @@ interface Partner {
   partner_type: string | null;
 }
 
-const partnershipBenefits = [
-  {
-    icon: Users,
-    title: "Access to Certified Porters",
-    description: "Connect with our network of trained and certified professional porters.",
-  },
-  {
-    icon: Building2,
-    title: "Brand Visibility",
-    description: "Showcase your commitment to ethical tourism on our platforms.",
-  },
-  {
-    icon: Globe,
-    title: "Industry Networking",
-    description: "Join a community of like-minded organizations working for sustainable tourism.",
-  },
-  {
-    icon: Handshake,
-    title: "Collaborative Programs",
-    description: "Partner on training, research, and community development initiatives.",
-  },
-];
-
-// Placeholder partners for demo
-const placeholderPartners: Partner[] = [
-  {
-    id: "1",
-    name: "Kilimanjaro Expeditions",
-    description: "Leading tour operator committed to ethical porter practices.",
-    logo_url: null,
-    website: "https://example.com",
-    partner_type: "Tour Operator",
-  },
-  {
-    id: "2",
-    name: "Tanzania Tourism Board",
-    description: "Government body promoting sustainable tourism in Tanzania.",
-    logo_url: null,
-    website: "https://example.com",
-    partner_type: "Government",
-  },
-  {
-    id: "3",
-    name: "Mountain Health Initiative",
-    description: "NGO focused on healthcare for mountain communities.",
-    logo_url: null,
-    website: "https://example.com",
-    partner_type: "NGO",
-  },
-  {
-    id: "4",
-    name: "Adventure Gear Co.",
-    description: "Equipment supplier supporting porter welfare programs.",
-    logo_url: null,
-    website: "https://example.com",
-    partner_type: "Corporate",
-  },
-];
-
 export default function Partners() {
+  const { t } = useTranslation();
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);
 
+  const partnershipBenefits = [
+    { icon: Users, title: t("partnersPage.benefits.access"), description: t("partnersPage.benefits.accessDesc") },
+    { icon: Building2, title: t("partnersPage.benefits.visibility"), description: t("partnersPage.benefits.visibilityDesc") },
+    { icon: Globe, title: t("partnersPage.benefits.networking"), description: t("partnersPage.benefits.networkingDesc") },
+    { icon: Handshake, title: t("partnersPage.benefits.collaborative"), description: t("partnersPage.benefits.collaborativeDesc") },
+  ];
+
+  const placeholderPartners: Partner[] = [
+    { id: "1", name: "Kilimanjaro Expeditions", description: t("partnersPage.placeholders.tourOperator"), logo_url: null, website: "https://example.com", partner_type: t("partnersPage.types.tourOperator") },
+    { id: "2", name: "Tanzania Tourism Board", description: t("partnersPage.placeholders.government"), logo_url: null, website: "https://example.com", partner_type: t("partnersPage.types.government") },
+    { id: "3", name: "Mountain Health Initiative", description: t("partnersPage.placeholders.ngo"), logo_url: null, website: "https://example.com", partner_type: t("partnersPage.types.ngo") },
+    { id: "4", name: "Adventure Gear Co.", description: t("partnersPage.placeholders.corporate"), logo_url: null, website: "https://example.com", partner_type: t("partnersPage.types.corporate") },
+  ];
+
   useEffect(() => {
     async function fetchPartners() {
-      const { data, error } = await supabase
+      const { data } = await supabase
         .from("partners")
         .select("*")
         .order("display_order", { ascending: true });
@@ -101,9 +58,9 @@ export default function Partners() {
       {/* Hero */}
       <section className="relative py-20 bg-secondary text-secondary-foreground">
         <div className="container">
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">Partners & Collaborators</h1>
+          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">{t("partnersPage.title")}</h1>
           <p className="text-xl text-secondary-foreground/80 max-w-3xl">
-            We work with tour operators, NGOs, government bodies, and international organizations to promote ethical tourism and porter welfare.
+            {t("partnersPage.subtitle")}
           </p>
         </div>
       </section>
@@ -113,10 +70,10 @@ export default function Partners() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">
-              Our Partners
+              {t("partnersPage.ourPartners")}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              These organizations share our commitment to improving the lives of mountain porters.
+              {t("partnersPage.ourPartnersDesc")}
             </p>
           </div>
 
@@ -126,32 +83,17 @@ export default function Partners() {
                 <CardContent className="p-6 text-center">
                   <div className="w-20 h-20 mx-auto mb-4 bg-muted rounded-lg flex items-center justify-center">
                     {partner.logo_url ? (
-                      <img
-                        src={partner.logo_url}
-                        alt={partner.name}
-                        className="w-full h-full object-contain p-2"
-                      />
+                      <img src={partner.logo_url} alt={partner.name} className="w-full h-full object-contain p-2" />
                     ) : (
                       <Building2 className="h-10 w-10 text-muted-foreground" />
                     )}
                   </div>
-                  <h3 className="font-display font-semibold text-secondary mb-1">
-                    {partner.name}
-                  </h3>
-                  {partner.partner_type && (
-                    <p className="text-xs text-primary mb-2">{partner.partner_type}</p>
-                  )}
-                  {partner.description && (
-                    <p className="text-sm text-muted-foreground mb-3">{partner.description}</p>
-                  )}
+                  <h3 className="font-display font-semibold text-secondary mb-1">{partner.name}</h3>
+                  {partner.partner_type && <p className="text-xs text-primary mb-2">{partner.partner_type}</p>}
+                  {partner.description && <p className="text-sm text-muted-foreground mb-3">{partner.description}</p>}
                   {partner.website && (
-                    <a
-                      href={partner.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-sm text-primary hover:underline"
-                    >
-                      Visit Website
+                    <a href={partner.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm text-primary hover:underline">
+                      {t("partnersPage.visitWebsite")}
                       <ExternalLink className="ml-1 h-3 w-3" />
                     </a>
                   )}
@@ -167,10 +109,10 @@ export default function Partners() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">
-              Why Partner With Us?
+              {t("partnersPage.whyPartner")}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Partnering with TAP offers numerous benefits while making a real difference.
+              {t("partnersPage.whyPartnerDesc")}
             </p>
           </div>
 
@@ -179,9 +121,7 @@ export default function Partners() {
               <Card key={benefit.title}>
                 <CardContent className="p-6 text-center">
                   <benefit.icon className="h-10 w-10 text-primary mx-auto mb-4" />
-                  <h3 className="font-display font-semibold text-secondary mb-2">
-                    {benefit.title}
-                  </h3>
+                  <h3 className="font-display font-semibold text-secondary mb-2">{benefit.title}</h3>
                   <p className="text-sm text-muted-foreground">{benefit.description}</p>
                 </CardContent>
               </Card>
@@ -194,20 +134,18 @@ export default function Partners() {
       <section className="py-20 bg-secondary text-secondary-foreground">
         <div className="container text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
-            Become a Partner
+            {t("partnersPage.becomePartner")}
           </h2>
           <p className="text-secondary-foreground/80 max-w-2xl mx-auto mb-8">
-            Join our network of partners committed to ethical tourism and porter welfare. Whether you're a tour operator, NGO, or corporate sponsor, there's a way for you to contribute.
+            {t("partnersPage.becomePartnerDesc")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/membership/corporate">
-              <Button size="lg">
-                Corporate Membership
-              </Button>
+              <Button size="lg">{t("index.cta.corporateMembership")}</Button>
             </Link>
             <Link to="/contact">
               <Button size="lg" variant="outline" className="border-secondary-foreground text-secondary-foreground hover:bg-secondary-foreground hover:text-secondary">
-                Contact Us
+                {t("index.quickLinks.contactUs")}
               </Button>
             </Link>
           </div>

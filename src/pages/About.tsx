@@ -1,6 +1,49 @@
 import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Eye, Heart, Users, Award, Globe } from "lucide-react";
+import { Target, Eye, Lightbulb, Heart, Users, Award, Globe, GraduationCap, Handshake, Shield, Banknote } from "lucide-react";
+
+const objectives = [
+  {
+    icon: Users,
+    title: "Unity & Solidarity",
+    description: "Unite porters for solidarity and cooperation to strengthen their collective voice.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Training & Development",
+    description: "Provide regular training on profession, health, safety, and leadership skills.",
+  },
+  {
+    icon: Shield,
+    title: "Rights Advocacy",
+    description: "Advocate for the social and economic interests of all members.",
+  },
+  {
+    icon: Award,
+    title: "Economic Projects",
+    description: "Establish and manage social and economic projects for member benefit.",
+  },
+  {
+    icon: Handshake,
+    title: "Collaboration",
+    description: "Collaborate with tourism and porter-related institutions for mutual growth.",
+  },
+  {
+    icon: Globe,
+    title: "Environmental Conservation",
+    description: "Promote environmental conservation and sustainable tourism practices.",
+  },
+  {
+    icon: Heart,
+    title: "Equipment & Safety",
+    description: "Ensure every mountain climber and porter has adequate equipment for safety.",
+  },
+  {
+    icon: Banknote,
+    title: "Fair Payment",
+    description: "Ensure porters are paid fairly through their bank accounts.",
+  },
+];
 
 const values = [
   {
@@ -27,23 +70,23 @@ const values = [
 
 const leadership = [
   {
-    name: "John Moshi",
+    name: "Mwenyekiti",
     role: "Chairman",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
   },
   {
-    name: "Grace Mwanga",
-    role: "Executive Director",
+    name: "Makamu Mwenyekiti",
+    role: "Vice Chairman",
     image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400",
   },
   {
-    name: "Emmanuel Kimaro",
-    role: "Training Coordinator",
+    name: "Katibu Mkuu",
+    role: "General Secretary",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
   },
   {
-    name: "Amina Hassan",
-    role: "Welfare Officer",
+    name: "Mtunza Hazina",
+    role: "Treasurer",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400",
   },
 ];
@@ -56,30 +99,39 @@ export default function About() {
         <div className="container">
           <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">About TAP</h1>
           <p className="text-xl text-secondary-foreground/80 max-w-3xl">
-            The Tanzania Association of Porters is the leading professional body dedicated to the welfare, advocacy, and professional development of mountain porters in Tanzania.
+            The Tanzania Association of Porters (Chama cha Wapagazi Tanzania) is the leading professional body dedicated to the welfare, advocacy, and professional development of mountain porters in Tanzania.
           </p>
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Purpose, Mission & Vision */}
       <section className="py-20">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="bg-gradient-warm border-none">
+              <CardContent className="p-8">
+                <Lightbulb className="h-12 w-12 text-primary mb-4" />
+                <h2 className="font-display text-2xl font-bold text-secondary mb-2">Nia (Purpose)</h2>
+                <p className="text-muted-foreground">
+                  To bring all Tanzanian porters under one umbrella for cooperation, training, development, and collective advocacy of their rights.
+                </p>
+              </CardContent>
+            </Card>
             <Card className="bg-gradient-warm border-none">
               <CardContent className="p-8">
                 <Target className="h-12 w-12 text-primary mb-4" />
-                <h2 className="font-display text-2xl font-bold text-secondary mb-4">Our Mission</h2>
+                <h2 className="font-display text-2xl font-bold text-secondary mb-2">Lengo (Mission)</h2>
                 <p className="text-muted-foreground">
-                  To advocate for the rights and welfare of mountain porters, provide comprehensive training and professional development opportunities, and ensure that porters are recognized as essential partners in Tanzania's tourism industry.
+                  To create a conducive working environment for porters and help them achieve sustainable welfare through training, rights advocacy, and social and economic opportunities.
                 </p>
               </CardContent>
             </Card>
             <Card className="bg-gradient-warm border-none">
               <CardContent className="p-8">
                 <Eye className="h-12 w-12 text-primary mb-4" />
-                <h2 className="font-display text-2xl font-bold text-secondary mb-4">Our Vision</h2>
+                <h2 className="font-display text-2xl font-bold text-secondary mb-2">Maono (Vision)</h2>
                 <p className="text-muted-foreground">
-                  A Tanzania where every porter is valued, protected, and empowered to achieve their full potential, contributing to a sustainable and ethical tourism industry that benefits all stakeholders.
+                  To be the leading national body representing and elevating the lives of Tanzanian porters to the highest professional, social, and economic standards.
                 </p>
               </CardContent>
             </Card>
@@ -87,8 +139,31 @@ export default function About() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Objectives */}
       <section className="py-20 bg-muted">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">Malengo (Objectives)</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Our eight core objectives guide our work in supporting and empowering porters across Tanzania.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {objectives.map((objective) => (
+              <Card key={objective.title} className="text-center hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <objective.icon className="h-10 w-10 text-primary mx-auto mb-4" />
+                  <h3 className="font-display text-lg font-semibold text-secondary mb-2">{objective.title}</h3>
+                  <p className="text-sm text-muted-foreground">{objective.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-20">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">Our Values</h2>
@@ -111,10 +186,10 @@ export default function About() {
       </section>
 
       {/* Leadership */}
-      <section className="py-20">
+      <section className="py-20 bg-muted">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">Our Leadership</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">Uongozi (Leadership)</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Meet the dedicated team leading TAP's mission.
             </p>

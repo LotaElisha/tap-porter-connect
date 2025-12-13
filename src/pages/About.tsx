@@ -69,12 +69,13 @@ const values = [
 ];
 
 import loishiyePhoto from "@/assets/loishiye-lenoy-mollel.png";
+import chairmanPhoto from "@/assets/mohamed-ally-mkoma.png";
 
 const leadership = [
   {
     name: "Mohamed Ally Mkoma",
     role: "Mwenyekiti (Chairman)",
-    image: null,
+    image: chairmanPhoto,
   },
   {
     name: "Loishiye Lenoy Mollel",

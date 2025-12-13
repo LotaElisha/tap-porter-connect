@@ -97,9 +97,8 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-secondary">Address</h3>
                     <p className="text-muted-foreground text-sm">
-                      TAP Headquarters<br />
-                      Moshi, Kilimanjaro Region<br />
-                      Tanzania
+                      P.O. Box 4087<br />
+                      Arusha, Tanzania
                     </p>
                   </div>
                 </div>
@@ -111,8 +110,8 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-secondary">Phone</h3>
                     <p className="text-muted-foreground text-sm">
-                      <a href="tel:+255123456789" className="hover:text-primary transition-colors">
-                        +255 123 456 789
+                      <a href="tel:+255763488857" className="hover:text-primary transition-colors">
+                        +255 763 488 857
                       </a>
                     </p>
                   </div>
@@ -125,8 +124,8 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-secondary">Email</h3>
                     <p className="text-muted-foreground text-sm">
-                      <a href="mailto:info@tapo.or.tz" className="hover:text-primary transition-colors">
-                        info@tapo.or.tz
+                      <a href="mailto:info@tap.or.tz" className="hover:text-primary transition-colors">
+                        info@tap.or.tz
                       </a>
                     </p>
                   </div>

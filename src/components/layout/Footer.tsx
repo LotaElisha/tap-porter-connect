@@ -96,15 +96,15 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-1 shrink-0" />
-                <span>Moshi, Kilimanjaro Region, Tanzania</span>
+                <span>P.O. Box 4087, Arusha, Tanzania</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0" />
-                <a href="tel:+255123456789" className="hover:text-primary transition-colors">+255 123 456 789</a>
+                <a href="tel:+255763488857" className="hover:text-primary transition-colors">+255 763 488 857</a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0" />
-                <a href="mailto:info@tapo.or.tz" className="hover:text-primary transition-colors">info@tapo.or.tz</a>
+                <a href="mailto:info@tap.or.tz" className="hover:text-primary transition-colors">info@tap.or.tz</a>
               </li>
             </ul>
           </div>

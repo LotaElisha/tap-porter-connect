@@ -1,75 +1,78 @@
+import { useTranslation } from "react-i18next";
 import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { User, Building2, Heart, Check, ArrowRight } from "lucide-react";
 
-const membershipTypes = [
-  {
-    icon: User,
-    title: "Individual Porter Membership",
-    description: "For active mountain porters seeking professional recognition and support.",
-    benefits: [
-      "Official TAP membership card and ID",
-      "Access to all training programs",
-      "Health screening and wellness support",
-      "Emergency assistance fund",
-      "Insurance scheme enrollment",
-      "Job placement assistance",
-      "Professional certification",
-      "Networking opportunities",
-    ],
-    fee: "TZS 50,000 / year",
-    link: "/membership/porter",
-    cta: "Register as Porter",
-  },
-  {
-    icon: Building2,
-    title: "Corporate Membership",
-    description: "For tour operators, lodges, and outfitters committed to ethical porter practices.",
-    benefits: [
-      "TAP Ethical Partner certification",
-      "Access to certified porter database",
-      "Staff training programs",
-      "Marketing partnership opportunities",
-      "Priority booking for training sessions",
-      "Industry networking events",
-      "Annual compliance review",
-      "Brand visibility on TAP platforms",
-    ],
-    fee: "TZS 500,000 / year",
-    link: "/membership/corporate",
-    cta: "Apply for Corporate Membership",
-  },
-  {
-    icon: Heart,
-    title: "Honorary & Support Membership",
-    description: "For NGOs, academics, and individuals who want to support porter welfare.",
-    benefits: [
-      "Recognition as TAP Supporter",
-      "Regular impact reports",
-      "Invitations to TAP events",
-      "Volunteer opportunities",
-      "Research collaboration",
-      "Tax-deductible contributions",
-      "Newsletter and updates",
-      "Speaking engagement opportunities",
-    ],
-    fee: "Flexible contribution",
-    link: "/membership/honorary",
-    cta: "Become a Supporter",
-  },
-];
-
 export default function Membership() {
+  const { t } = useTranslation();
+
+  const membershipTypes = [
+    {
+      icon: User,
+      title: t("membershipPage.porterTitle"),
+      description: t("membershipPage.porterDesc"),
+      benefits: [
+        t("membershipPage.porterBenefits.card"),
+        t("membershipPage.porterBenefits.training"),
+        t("membershipPage.porterBenefits.health"),
+        t("membershipPage.porterBenefits.emergency"),
+        t("membershipPage.porterBenefits.insurance"),
+        t("membershipPage.porterBenefits.job"),
+        t("membershipPage.porterBenefits.certification"),
+        t("membershipPage.porterBenefits.networking"),
+      ],
+      fee: t("membershipPage.porterFee"),
+      link: "/membership/porter",
+      cta: t("membershipPage.registerAsPorter"),
+    },
+    {
+      icon: Building2,
+      title: t("membershipPage.corporateTitle"),
+      description: t("membershipPage.corporateDesc"),
+      benefits: [
+        t("membershipPage.corporateBenefits.certification"),
+        t("membershipPage.corporateBenefits.database"),
+        t("membershipPage.corporateBenefits.training"),
+        t("membershipPage.corporateBenefits.marketing"),
+        t("membershipPage.corporateBenefits.booking"),
+        t("membershipPage.corporateBenefits.events"),
+        t("membershipPage.corporateBenefits.review"),
+        t("membershipPage.corporateBenefits.visibility"),
+      ],
+      fee: t("membershipPage.corporateFee"),
+      link: "/membership/corporate",
+      cta: t("membershipPage.applyForCorporate"),
+    },
+    {
+      icon: Heart,
+      title: t("membershipPage.honoraryTitle"),
+      description: t("membershipPage.honoraryDesc"),
+      benefits: [
+        t("membershipPage.honoraryBenefits.recognition"),
+        t("membershipPage.honoraryBenefits.reports"),
+        t("membershipPage.honoraryBenefits.events"),
+        t("membershipPage.honoraryBenefits.volunteer"),
+        t("membershipPage.honoraryBenefits.research"),
+        t("membershipPage.honoraryBenefits.tax"),
+        t("membershipPage.honoraryBenefits.newsletter"),
+        t("membershipPage.honoraryBenefits.speaking"),
+      ],
+      fee: t("membershipPage.honoraryFee"),
+      link: "/membership/honorary",
+      cta: t("membershipPage.becomeSupporter"),
+    },
+  ];
+
   return (
     <Layout>
       {/* Hero */}
       <section className="relative py-20 bg-secondary text-secondary-foreground">
         <div className="container">
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">Membership</h1>
+          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">{t("membershipPage.title")}</h1>
           <p className="text-xl text-secondary-foreground/80 max-w-3xl">
-            Join the Tanzania Association of Porters and be part of a community dedicated to empowering and protecting mountain porters.
+            {t("membershipPage.subtitle")}
           </p>
         </div>
       </section>
@@ -79,10 +82,10 @@ export default function Membership() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">
-              Choose Your Membership
+              {t("membershipPage.chooseYourMembership")}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              We offer different membership categories to serve the diverse needs of our community.
+              {t("membershipPage.membershipDesc")}
             </p>
           </div>
 
@@ -129,7 +132,7 @@ export default function Membership() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-6">
-                Why Join TAP?
+                {t("membershipPage.whyJoin")}
               </h2>
               <div className="space-y-4">
                 <div className="flex gap-4">
@@ -137,10 +140,8 @@ export default function Membership() {
                     <span className="text-primary font-bold">1</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-secondary mb-1">Professional Recognition</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Gain official certification that validates your skills and experience.
-                    </p>
+                    <h3 className="font-semibold text-secondary mb-1">{t("membershipPage.whyJoinReasons.recognition")}</h3>
+                    <p className="text-muted-foreground text-sm">{t("membershipPage.whyJoinReasons.recognitionDesc")}</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -148,10 +149,8 @@ export default function Membership() {
                     <span className="text-primary font-bold">2</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-secondary mb-1">Continuous Learning</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Access training programs that keep your skills current and competitive.
-                    </p>
+                    <h3 className="font-semibold text-secondary mb-1">{t("membershipPage.whyJoinReasons.learning")}</h3>
+                    <p className="text-muted-foreground text-sm">{t("membershipPage.whyJoinReasons.learningDesc")}</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -159,10 +158,8 @@ export default function Membership() {
                     <span className="text-primary font-bold">3</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-secondary mb-1">Community Support</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Be part of a network that looks out for each other in times of need.
-                    </p>
+                    <h3 className="font-semibold text-secondary mb-1">{t("membershipPage.whyJoinReasons.support")}</h3>
+                    <p className="text-muted-foreground text-sm">{t("membershipPage.whyJoinReasons.supportDesc")}</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -170,10 +167,8 @@ export default function Membership() {
                     <span className="text-primary font-bold">4</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-secondary mb-1">Your Voice Matters</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Contribute to shaping policies that affect porter welfare and rights.
-                    </p>
+                    <h3 className="font-semibold text-secondary mb-1">{t("membershipPage.whyJoinReasons.voice")}</h3>
+                    <p className="text-muted-foreground text-sm">{t("membershipPage.whyJoinReasons.voiceDesc")}</p>
                   </div>
                 </div>
               </div>
@@ -193,39 +188,31 @@ export default function Membership() {
       <section className="py-20">
         <div className="container">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-12 text-center">
-            Frequently Asked Questions
+            {t("membershipPage.faq")}
           </h2>
           <div className="max-w-3xl mx-auto space-y-6">
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-semibold text-secondary mb-2">How do I become a member?</h3>
-                <p className="text-muted-foreground">
-                  Simply fill out the appropriate registration form based on your membership type. Our team will review your application and contact you within 5-7 business days.
-                </p>
+                <h3 className="font-semibold text-secondary mb-2">{t("membershipPage.faqQuestions.howToJoin")}</h3>
+                <p className="text-muted-foreground">{t("membershipPage.faqQuestions.howToJoinAnswer")}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-semibold text-secondary mb-2">What documents do I need?</h3>
-                <p className="text-muted-foreground">
-                  Individual porters need a valid national ID and proof of experience (such as references from tour operators). Corporate members need business registration documents.
-                </p>
+                <h3 className="font-semibold text-secondary mb-2">{t("membershipPage.faqQuestions.documents")}</h3>
+                <p className="text-muted-foreground">{t("membershipPage.faqQuestions.documentsAnswer")}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-semibold text-secondary mb-2">Can I pay in installments?</h3>
-                <p className="text-muted-foreground">
-                  Yes, we offer flexible payment options for individual porter memberships. Contact us to discuss a payment plan that works for you.
-                </p>
+                <h3 className="font-semibold text-secondary mb-2">{t("membershipPage.faqQuestions.installments")}</h3>
+                <p className="text-muted-foreground">{t("membershipPage.faqQuestions.installmentsAnswer")}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-semibold text-secondary mb-2">How long does membership last?</h3>
-                <p className="text-muted-foreground">
-                  Memberships are valid for one year from the date of approval. You'll receive renewal reminders before your membership expires.
-                </p>
+                <h3 className="font-semibold text-secondary mb-2">{t("membershipPage.faqQuestions.duration")}</h3>
+                <p className="text-muted-foreground">{t("membershipPage.faqQuestions.durationAnswer")}</p>
               </CardContent>
             </Card>
           </div>

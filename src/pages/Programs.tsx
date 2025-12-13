@@ -1,105 +1,108 @@
+import { useTranslation } from "react-i18next";
 import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Shield, GraduationCap, Heart, Languages, Users, Award, ArrowRight } from "lucide-react";
 
-const programs = [
-  {
-    icon: Shield,
-    title: "Mountain Safety Training",
-    description: "Comprehensive training on altitude sickness prevention, emergency response, and mountain rescue techniques.",
-    features: [
-      "Altitude sickness recognition and prevention",
-      "Emergency first aid certification",
-      "Weather pattern interpretation",
-      "Route safety assessment",
-      "Equipment inspection and maintenance",
-    ],
-    duration: "5 days",
-    certification: "TAP Safety Certificate",
-  },
-  {
-    icon: Heart,
-    title: "Health & Wellness Program",
-    description: "Regular health screenings, fitness training, and nutrition guidance tailored for high-altitude work.",
-    features: [
-      "Annual health screenings",
-      "Fitness assessment and training",
-      "Nutrition counseling",
-      "Mental health support",
-      "Injury prevention workshops",
-    ],
-    duration: "Ongoing",
-    certification: "Health Clearance Card",
-  },
-  {
-    icon: GraduationCap,
-    title: "Professional Development",
-    description: "Skills enhancement programs covering leadership, customer service, and career advancement.",
-    features: [
-      "Leadership and team management",
-      "Customer service excellence",
-      "Conflict resolution",
-      "Financial literacy",
-      "Career planning",
-    ],
-    duration: "3 days",
-    certification: "Professional Porter Certificate",
-  },
-  {
-    icon: Languages,
-    title: "Language Skills",
-    description: "English language training to improve communication with international climbers and tourists.",
-    features: [
-      "Basic to intermediate English",
-      "Tourism-specific vocabulary",
-      "Cultural communication",
-      "Conversation practice",
-      "Written communication basics",
-    ],
-    duration: "8 weeks",
-    certification: "Language Proficiency Certificate",
-  },
-  {
-    icon: Users,
-    title: "Guide Training Program",
-    description: "Advanced training for porters looking to become certified mountain guides.",
-    features: [
-      "Advanced navigation skills",
-      "Group leadership techniques",
-      "Natural history and ecology",
-      "Cultural interpretation",
-      "Business and marketing basics",
-    ],
-    duration: "4 weeks",
-    certification: "TAP Guide License",
-  },
-  {
-    icon: Award,
-    title: "Certification Program",
-    description: "Official TAP certification that verifies a porter's training, experience, and professional standing.",
-    features: [
-      "Skills verification",
-      "Experience documentation",
-      "Background check",
-      "Reference verification",
-      "Ongoing compliance monitoring",
-    ],
-    duration: "Varies",
-    certification: "TAP Professional Porter ID",
-  },
-];
-
 export default function Programs() {
+  const { t } = useTranslation();
+
+  const programs = [
+    {
+      icon: Shield,
+      title: t("programsPage.mountainSafety.title"),
+      description: t("programsPage.mountainSafety.desc"),
+      features: [
+        t("programsPage.mountainSafety.feature1"),
+        t("programsPage.mountainSafety.feature2"),
+        t("programsPage.mountainSafety.feature3"),
+        t("programsPage.mountainSafety.feature4"),
+        t("programsPage.mountainSafety.feature5"),
+      ],
+      duration: t("programsPage.mountainSafety.duration"),
+      certification: t("programsPage.mountainSafety.cert"),
+    },
+    {
+      icon: Heart,
+      title: t("programsPage.healthWellness.title"),
+      description: t("programsPage.healthWellness.desc"),
+      features: [
+        t("programsPage.healthWellness.feature1"),
+        t("programsPage.healthWellness.feature2"),
+        t("programsPage.healthWellness.feature3"),
+        t("programsPage.healthWellness.feature4"),
+        t("programsPage.healthWellness.feature5"),
+      ],
+      duration: t("programsPage.healthWellness.duration"),
+      certification: t("programsPage.healthWellness.cert"),
+    },
+    {
+      icon: GraduationCap,
+      title: t("programsPage.professional.title"),
+      description: t("programsPage.professional.desc"),
+      features: [
+        t("programsPage.professional.feature1"),
+        t("programsPage.professional.feature2"),
+        t("programsPage.professional.feature3"),
+        t("programsPage.professional.feature4"),
+        t("programsPage.professional.feature5"),
+      ],
+      duration: t("programsPage.professional.duration"),
+      certification: t("programsPage.professional.cert"),
+    },
+    {
+      icon: Languages,
+      title: t("programsPage.language.title"),
+      description: t("programsPage.language.desc"),
+      features: [
+        t("programsPage.language.feature1"),
+        t("programsPage.language.feature2"),
+        t("programsPage.language.feature3"),
+        t("programsPage.language.feature4"),
+        t("programsPage.language.feature5"),
+      ],
+      duration: t("programsPage.language.duration"),
+      certification: t("programsPage.language.cert"),
+    },
+    {
+      icon: Users,
+      title: t("programsPage.guide.title"),
+      description: t("programsPage.guide.desc"),
+      features: [
+        t("programsPage.guide.feature1"),
+        t("programsPage.guide.feature2"),
+        t("programsPage.guide.feature3"),
+        t("programsPage.guide.feature4"),
+        t("programsPage.guide.feature5"),
+      ],
+      duration: t("programsPage.guide.duration"),
+      certification: t("programsPage.guide.cert"),
+    },
+    {
+      icon: Award,
+      title: t("programsPage.certification.title"),
+      description: t("programsPage.certification.desc"),
+      features: [
+        t("programsPage.certification.feature1"),
+        t("programsPage.certification.feature2"),
+        t("programsPage.certification.feature3"),
+        t("programsPage.certification.feature4"),
+        t("programsPage.certification.feature5"),
+      ],
+      duration: t("programsPage.certification.duration"),
+      certification: t("programsPage.certification.cert"),
+    },
+  ];
+
   return (
     <Layout>
       {/* Hero */}
       <section className="relative py-20 bg-secondary text-secondary-foreground">
         <div className="container">
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">Our Programs</h1>
+          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">{t("programsPage.title")}</h1>
           <p className="text-xl text-secondary-foreground/80 max-w-3xl">
-            Comprehensive training and development programs designed to empower porters with the skills, knowledge, and certifications they need to excel in their profession.
+            {t("programsPage.subtitle")}
           </p>
         </div>
       </section>
@@ -123,7 +126,7 @@ export default function Programs() {
                 </CardHeader>
                 <CardContent className="p-6">
                   <div className="mb-4">
-                    <h4 className="font-semibold text-secondary mb-2">What You'll Learn:</h4>
+                    <h4 className="font-semibold text-secondary mb-2">{t("programsPage.whatYouLearn")}</h4>
                     <ul className="space-y-1">
                       {program.features.map((feature) => (
                         <li key={feature} className="text-sm text-muted-foreground flex items-center gap-2">
@@ -135,11 +138,11 @@ export default function Programs() {
                   </div>
                   <div className="flex flex-wrap gap-4 text-sm">
                     <div>
-                      <span className="text-muted-foreground">Duration:</span>{" "}
+                      <span className="text-muted-foreground">{t("programsPage.duration")}:</span>{" "}
                       <span className="font-medium text-secondary">{program.duration}</span>
                     </div>
                     <div>
-                      <span className="text-muted-foreground">Certification:</span>{" "}
+                      <span className="text-muted-foreground">{t("programsPage.certification")}:</span>{" "}
                       <span className="font-medium text-secondary">{program.certification}</span>
                     </div>
                   </div>
@@ -154,21 +157,21 @@ export default function Programs() {
       <section className="py-20 bg-gradient-warm">
         <div className="container text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-6">
-            Ready to Advance Your Career?
+            {t("programsPage.readyToAdvance")}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            Join thousands of porters who have enhanced their skills and advanced their careers through TAP programs. Become a registered member to access our full range of training opportunities.
+            {t("programsPage.readyToAdvanceDesc")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/membership/porter">
               <Button size="lg">
-                Register as a Porter
+                {t("programsPage.registerAsPorter")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Link to="/contact">
               <Button size="lg" variant="outline">
-                Contact Us for Details
+                {t("programsPage.contactForDetails")}
               </Button>
             </Link>
           </div>
@@ -180,18 +183,18 @@ export default function Programs() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">
-              Upcoming Training Sessions
+              {t("programsPage.upcomingTraining")}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              View our upcoming training schedule and register for sessions that fit your availability.
+              {t("programsPage.upcomingTrainingDesc")}
             </p>
           </div>
           <div className="bg-muted rounded-lg p-8 text-center">
             <p className="text-muted-foreground mb-4">
-              Training schedules are updated regularly. Contact us or check back soon for the latest session dates.
+              {t("programsPage.trainingScheduleInfo")}
             </p>
             <Link to="/contact">
-              <Button>Inquire About Training</Button>
+              <Button>{t("programsPage.inquireAboutTraining")}</Button>
             </Link>
           </div>
         </div>

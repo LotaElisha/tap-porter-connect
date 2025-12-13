@@ -1,4 +1,50 @@
 {
+  "seo": {
+    "default": {
+      "title": "Chama cha Wapagazi Tanzania | TAP",
+      "description": "Kuwawezesha Wapagazi wa Milima ya Tanzania kupitia ustawi, mafunzo, na utetezi kwa mashujaa wa Kilimanjaro na zaidi."
+    },
+    "home": {
+      "title": "Chama cha Wapagazi Tanzania | TAP - Kuwawezesha Wapagazi wa Milima",
+      "description": "TAP imejitolea kwa ustawi, mafunzo, na utetezi wa wapagazi wa milima ya Tanzania. Jiunge na jamii yetu na usaidie mashujaa wasioonekana wa Kilimanjaro."
+    },
+    "about": {
+      "title": "Kuhusu TAP | Chama cha Wapagazi Tanzania",
+      "description": "Jifunze kuhusu dhamira yetu, maono, na timu yenye kujitolea inayofanya kazi kuinua maisha ya wapagazi wa Tanzania."
+    },
+    "contact": {
+      "title": "Wasiliana Nasi | Chama cha Wapagazi Tanzania",
+      "description": "Wasiliana na TAP kwa maswali ya uanachama, ushirikiano, au kujifunza zaidi kuhusu kusaidia wapagazi wa milima ya Tanzania."
+    },
+    "membership": {
+      "title": "Uanachama | Chama cha Wapagazi Tanzania",
+      "description": "Jiunge na TAP kama mpagazi, mshirika wa kampuni, au mwanachama wa heshima. Pata mafunzo, vyeti, na jamii yenye kusaidiana."
+    },
+    "programs": {
+      "title": "Programu | Chama cha Wapagazi Tanzania",
+      "description": "Chunguza programu za mafunzo za TAP ikiwa ni pamoja na usalama wa mlima, afya na ustawi, na maendeleo ya kitaaluma kwa wapagazi."
+    },
+    "history": {
+      "title": "Historia na Urithi | Chama cha Wapagazi Tanzania",
+      "description": "Gundua urithi tajiri na safari ya wapagazi wa milima ya Tanzania na jinsi TAP inavyoendelea kuheshimu urithi wao."
+    },
+    "partners": {
+      "title": "Washirika na Wabia | Chama cha Wapagazi Tanzania",
+      "description": "Kutana na mashirika yanayofanya kazi na TAP kukuza utalii wa kimaadili na kuboresha ustawi wa wapagazi Tanzania."
+    },
+    "stories": {
+      "title": "Sauti za Wapagazi | Chama cha Wapagazi Tanzania",
+      "description": "Soma hadithi za kusisimua kutoka kwa wanaume na wanawake wanaobeba ndoto hadi kilele cha Kilimanjaro na zaidi."
+    },
+    "gallery": {
+      "title": "Picha | Chama cha Wapagazi Tanzania",
+      "description": "Sherehe ya picha ya jamii ya wapagazi, kazi yao, na milima mikuu ya Tanzania."
+    },
+    "porterDirectory": {
+      "title": "Orodha ya Wapagazi | Chama cha Wapagazi Tanzania",
+      "description": "Pata na wasiliana na wapagazi wa kitaalamu walioidhinishwa kwa safari yako ya mlima Tanzania."
+    }
+  },
   "nav": {
     "home": "Nyumbani",
     "about": "Kuhusu",
@@ -7,24 +53,24 @@
     "programs": "Programu",
     "membership": "Uanachama",
     "membershipBenefits": "Faida za Uanachama",
-    "porterRegistration": "Usajili wa Wabeba Mizigo",
+    "porterRegistration": "Usajili wa Wapagazi",
     "corporateRegistration": "Usajili wa Mashirika",
     "honoraryRegistration": "Usajili wa Heshima",
     "partners": "Washirika",
-    "storiesMedia": "Matukio",
+    "storiesMedia": "Habari na Matukio",
     "news": "Habari na Masasisho",
-    "porterVoices": "Sauti za Wabeba Mizigo",
+    "porterVoices": "Sauti za Wapagazi",
     "gallery": "Picha",
-    "podcast": "Podcast ya Wabeba Mizigo",
-    "porterChat": "Mazungumzo ya Wabeba Mizigo",
+    "podcast": "Podcast ya Wapagazi",
+    "porterChat": "Mazungumzo ya Wapagazi",
     "contact": "Wasiliana",
     "signIn": "Ingia",
     "joinTap": "Jiunge na TAP",
-    "findPorter": "Pata Mbeba Mizigo",
-    "porterDirectory": "Orodha ya Wabeba Mizigo"
+    "findPorter": "Pata Mpagazi",
+    "porterDirectory": "Orodha ya Wapagazi"
   },
   "hero": {
-    "title": "Kuwawezesha Wabeba Mizigo wa Milima ya Tanzania",
+    "title": "Kuwawezesha Wapagazi wa Milima ya Tanzania",
     "subtitle": "Tumejitolea kwa ustawi, mafunzo, na utetezi wa mashujaa wasioonekana wa Kilimanjaro na zaidi",
     "cta": "Jiunge na Jamii Yetu",
     "learnMore": "Jifunze Zaidi"
@@ -59,7 +105,10 @@
     "active": "Hai",
     "featured": "Iliyoangaziwa",
     "required": "Inahitajika",
-    "optional": "Hiari"
+    "optional": "Hiari",
+    "yearsAsPorter": "miaka kama mpagazi",
+    "noPortersFound": "Hakuna wapagazi waliopatikana. Rudi hivi karibuni!",
+    "interactiveMapComingSoon": "Ramani shirikishi inakuja hivi karibuni"
   },
   "auth": {
     "signIn": "Ingia",
@@ -79,8 +128,8 @@
     "memberSignup": "Jisajili Mwanachama"
   },
   "porter": {
-    "directory": "Orodha ya Wabeba Mizigo",
-    "profile": "Wasifu wa Mbeba Mizigo",
+    "directory": "Orodha ya Wapagazi",
+    "profile": "Wasifu wa Mpagazi",
     "rating": "Kiwango",
     "ratings": "Viwango",
     "reviews": "Hakiki",
@@ -88,7 +137,7 @@
     "certifications": "Vyeti",
     "region": "Mkoa",
     "mountain": "Mlima",
-    "ratePorter": "Kiwango Mbeba Mizigo Huyu",
+    "ratePorter": "Weka Kiwango Mpagazi Huyu",
     "writeReview": "Andika Hakiki",
     "expeditionDate": "Tarehe ya Safari",
     "submitRating": "Wasilisha Kiwango",
@@ -96,19 +145,19 @@
     "averageRating": "Kiwango cha Wastani",
     "totalRatings": "Jumla ya Viwango",
     "verifiedReview": "Hakiki Iliyothibitishwa",
-    "searchPorters": "Tafuta wabeba mizigo kwa jina...",
+    "searchPorters": "Tafuta wapagazi kwa jina...",
     "filterByRegion": "Chuja kwa mkoa",
     "filterByMountain": "Chuja kwa mlima",
     "allRegions": "Mikoa Yote",
     "allMountains": "Milima Yote",
-    "contactPorter": "Wasiliana na Mbeba Mizigo",
-    "hirePorter": "Ajiri Mbeba Mizigo Huyu",
+    "contactPorter": "Wasiliana na Mpagazi",
+    "hirePorter": "Ajiri Mpagazi Huyu",
     "shareProfile": "Shiriki Wasifu"
   },
   "membership": {
     "joinUs": "Jiunge Nasi",
     "benefits": "Faida za Uanachama",
-    "porterMember": "Mwanachama Mbeba Mizigo",
+    "porterMember": "Mwanachama Mpagazi",
     "corporateMember": "Mwanachama Shirika",
     "honoraryMember": "Mwanachama wa Heshima",
     "applyNow": "Omba Sasa",
@@ -135,7 +184,7 @@
     "termsOfService": "Masharti ya Huduma"
   },
   "podcast": {
-    "title": "Podcast ya Wabeba Mizigo",
+    "title": "Podcast ya Wapagazi",
     "subtitle": "Hadithi kutoka milimani",
     "latestEpisode": "Kipindi cha Hivi Karibuni",
     "allEpisodes": "Vipindi Vyote",
@@ -145,8 +194,8 @@
     "becomeGuest": "Kuwa Mgeni"
   },
   "chat": {
-    "title": "Mazungumzo ya Jamii ya Wabeba Mizigo",
-    "subtitle": "Unganana na wabeba mizigo wenzako",
+    "title": "Mazungumzo ya Jamii ya Wapagazi",
+    "subtitle": "Unganana na wapagazi wenzako",
     "shareMessage": "Shiriki ujumbe wako",
     "yourName": "Jina Lako",
     "messageContent": "Ujumbe Wako",
@@ -161,5 +210,334 @@
     "installInstructions": "Sakinisha programu yetu kwa ufikiaji wa haraka",
     "iosInstructions": "Gusa Shiriki kisha 'Ongeza kwenye Skrini ya Nyumbani'",
     "androidInstructions": "Gusa menyu kisha 'Sakinisha Programu'"
+  },
+  "index": {
+    "tagline": "Chama cha Wapagazi Tanzania",
+    "heroTitle1": "Kuheshimu",
+    "heroTitle2": "Mashujaa Wasioonekana",
+    "heroTitle3": "wa Kilimanjaro",
+    "heroSubtitle": "Tumejitolea kwa ustawi, maendeleo ya kitaaluma, na kutambuliwa kwa wanaume na wanawake jasiri wanaobeba ndoto hadi Paa la Afrika.",
+    "joinAsPorter": "Jiunge kama Mpagazi",
+    "learnAboutTap": "Jifunze Kuhusu TAP",
+    "stats": {
+      "registeredPorters": "Wapagazi Waliosajiliwa",
+      "trainingPrograms": "Programu za Mafunzo",
+      "partnerOrganizations": "Mashirika ya Washirika",
+      "yearsOfService": "Miaka ya Huduma"
+    },
+    "about": {
+      "whoWeAre": "Sisi ni Nani",
+      "elevatingPorters": "Kuinua Wapagazi,",
+      "preservingLegacy": "Kuhifadhi Urithi",
+      "description1": "Chama cha Wapagazi Tanzania kinawakilisha na kutetea maslahi ya wapagazi wa milima Tanzania nzima. Tunahakikisha kuwa uti wa mgongo wa tasnia ya kupanda milima Tanzania unapata utambuzi, mafunzo, na msaada wanaostahili.",
+      "description2": "Dhamira yetu ni kuinua hadhi ya wapagazi kupitia mafunzo ya kitaaluma, programu za afya na usalama, na kuunda maisha endelevu kwa wanachama wetu na familia zao.",
+      "ourStory": "Hadithi Yetu",
+      "historyLegacy": "Historia na Urithi"
+    },
+    "programs": {
+      "whatWeOffer": "Tunachotoa",
+      "ourPrograms": "Programu Zetu",
+      "programsDescription": "Programu kamili zilizoundwa kusaidia, kufundisha, na kuwawezesha wapagazi katika kila hatua ya kazi zao.",
+      "exploreAllPrograms": "Chunguza Programu Zote",
+      "safetyHealth": "Mafunzo ya Usalama na Afya",
+      "safetyHealthDesc": "Mafunzo kamili kuhusu kuzuia ugonjwa wa urefu, huduma ya kwanza, na itifaki za usalama wa mlima.",
+      "skillsDevelopment": "Maendeleo ya Ujuzi",
+      "skillsDesc": "Programu za maendeleo ya kitaaluma ikiwa ni pamoja na ujuzi wa lugha, huduma kwa wateja, na uongozi.",
+      "welfarePrograms": "Programu za Ustawi",
+      "welfareDesc": "Msaada wa afya, mipango ya bima, na msaada wa dharura kwa wapagazi na familia zao."
+    },
+    "testimonials": {
+      "porterVoices": "Sauti za Wapagazi",
+      "storiesFromSummit": "Hadithi kutoka Kileleni",
+      "testimonialsDesc": "Sikia kutoka kwa wapagazi ambao maisha yao yamebadilishwa kupitia TAP.",
+      "readMoreStories": "Soma Hadithi Zaidi"
+    },
+    "cta": {
+      "joinCommunity": "Jiunge na Jamii ya TAP",
+      "ctaDescription": "Iwe wewe ni mpagazi, opereta wa utalii, au msaidizi wa sababu yetu, kuna nafasi yako. Pamoja, tunaweza kujenga mustakabali bora kwa wapagazi wa milima ya Tanzania.",
+      "porterRegistration": "Usajili wa Mpagazi",
+      "corporateMembership": "Uanachama wa Shirika",
+      "supportUs": "Tusaidie"
+    },
+    "quickLinks": {
+      "latestNews": "Habari za Hivi Karibuni",
+      "newsDesc": "Kuwa na habari za TAP na mipango.",
+      "readNews": "Soma Habari",
+      "photoGallery": "Picha za Picha",
+      "galleryDesc": "Ona uzuri wa milima yetu na jamii.",
+      "viewGallery": "Tazama Picha",
+      "ourPartners": "Washirika Wetu",
+      "partnersDesc": "Kutana na mashirika yanayosaidia dhamira yetu.",
+      "viewPartners": "Tazama Washirika",
+      "contactUs": "Wasiliana Nasi",
+      "contactDesc": "Wasiliana na timu yetu kwa maswali.",
+      "getInTouch": "Wasiliana"
+    }
+  },
+  "about": {
+    "title": "Kuhusu TAP",
+    "subtitle": "Chama cha Wapagazi Tanzania (Chama cha Wapagazi Tanzania) ni chombo kikuu cha kitaaluma kinachojitolea kwa ustawi, utetezi, na maendeleo ya kitaaluma ya wapagazi wa milima Tanzania.",
+    "purpose": "Nia (Madhumuni)",
+    "purposeDesc": "Kuleta wapagazi wote wa Tanzania chini ya mwamvuli mmoja kwa ushirikiano, mafunzo, maendeleo, na utetezi wa pamoja wa haki zao.",
+    "mission": "Lengo (Dhamira)",
+    "missionDesc": "Kuunda mazingira mazuri ya kazi kwa wapagazi na kuwasaidia kufikia ustawi endelevu kupitia mafunzo, utetezi wa haki, na fursa za kijamii na kiuchumi.",
+    "vision": "Maono (Maono)",
+    "visionDesc": "Kuwa chombo kikuu cha kitaifa kinachowakilisha na kuinua maisha ya wapagazi wa Tanzania kwa viwango vya juu vya kitaaluma, kijamii, na kiuchumi.",
+    "objectives": "Malengo (Malengo)",
+    "objectivesDesc": "Malengo yetu nane ya msingi yanaongoza kazi yetu ya kusaidia na kuwawezesha wapagazi Tanzania nzima.",
+    "unity": "Umoja na Mshikamano",
+    "unityDesc": "Kuwaunganisha wapagazi kwa mshikamano na ushirikiano kuimarisha sauti yao ya pamoja.",
+    "training": "Mafunzo na Maendeleo",
+    "trainingDesc": "Kutoa mafunzo ya mara kwa mara kuhusu taaluma, afya, usalama, na ujuzi wa uongozi.",
+    "rights": "Utetezi wa Haki",
+    "rightsDesc": "Kutetea maslahi ya kijamii na kiuchumi ya wanachama wote.",
+    "economic": "Miradi ya Kiuchumi",
+    "economicDesc": "Kuanzisha na kusimamia miradi ya kijamii na kiuchumi kwa faida ya wanachama.",
+    "collaboration": "Ushirikiano",
+    "collaborationDesc": "Kushirikiana na taasisi za utalii na zinazohusiana na wapagazi kwa ukuaji wa pamoja.",
+    "environmental": "Uhifadhi wa Mazingira",
+    "environmentalDesc": "Kukuza uhifadhi wa mazingira na mazoea ya utalii endelevu.",
+    "equipment": "Vifaa na Usalama",
+    "equipmentDesc": "Kuhakikisha kila mpandaji mlima na mpagazi ana vifaa vya kutosha kwa usalama.",
+    "payment": "Malipo ya Haki",
+    "paymentDesc": "Kuhakikisha wapagazi wanalipwa kwa haki kupitia akaunti zao za benki.",
+    "values": "Maadili Yetu",
+    "valuesDesc": "Maadili haya ya msingi yanaongoza kila tunachofanya katika TAP.",
+    "dignity": "Heshima",
+    "dignityDesc": "Kila mpagazi anastahili heshima, matibabu ya haki, na kutambuliwa kwa mchango wao wa thamani.",
+    "community": "Jamii",
+    "communityDesc": "Tunaamini katika nguvu ya vitendo vya pamoja na msaada wa pamoja kati ya wapagazi.",
+    "excellence": "Ubora",
+    "excellenceDesc": "Tunajitahidi kufikia viwango vya juu vya mafunzo, usalama, na mwenendo wa kitaaluma.",
+    "sustainability": "Uendelevu",
+    "sustainabilityDesc": "Tumejitolea kwa mazoea yanayonufaisha wapagazi na mazingira.",
+    "leadership": "Uongozi (Uongozi)",
+    "leadershipDesc": "Kutana na timu iliyojitolea inayoongoza dhamira ya TAP.",
+    "whatWeDo": "Tunachofanya",
+    "advocacy": "Utetezi",
+    "advocacyDesc": "Tunatetea mishahara ya haki, hali nzuri za kazi, na ulinzi wa kisheria kwa wapagazi wote.",
+    "trainingTitle": "Mafunzo",
+    "trainingTitleDesc": "Tunatoa programu kamili za mafunzo katika usalama, huduma ya kwanza, huduma kwa wateja, na uongozi.",
+    "welfare": "Ustawi",
+    "welfareDesc": "Tunatoa msaada wa afya, mipango ya bima, na msaada wa dharura kwa wapagazi na familia zao.",
+    "chairman": "Mwenyekiti (Mwenyekiti)",
+    "viceChairman": "Makamu Mwenyekiti (Makamu Mwenyekiti)",
+    "generalSecretary": "Katibu Mkuu",
+    "treasurer": "Mweka Hazina"
+  },
+  "contactPage": {
+    "title": "Wasiliana Nasi",
+    "subtitle": "Una maswali kuhusu uanachama, programu, au ushirikiano? Tungependa kusikia kutoka kwako.",
+    "getInTouch": "Wasiliana",
+    "getInTouchDesc": "Iwe wewe ni mpagazi unayetaka kujiunga, opereta wa utalii anayevutiwa na ushirikiano, au unataka kujifunza zaidi kuhusu kazi yetu, tuko hapa kusaidia.",
+    "address": "Anwani",
+    "phone": "Simu",
+    "email": "Barua pepe",
+    "officeHours": "Masaa ya Ofisi",
+    "weekdays": "Jumatatu - Ijumaa: 8:00 AM - 5:00 PM",
+    "saturday": "Jumamosi: 9:00 AM - 1:00 PM",
+    "sunday": "Jumapili: Imefungwa",
+    "sendUsMessage": "Tutumie Ujumbe",
+    "formDesc": "Jaza fomu hapa chini na tutakujibu ndani ya saa 48.",
+    "yourName": "Jina Lako",
+    "emailAddress": "Anwani ya Barua pepe",
+    "subject": "Mada",
+    "subjectPlaceholder": "Ujumbe wako unahusu nini?",
+    "yourMessage": "Ujumbe",
+    "messagePlaceholder": "Tunawezaje kukusaidia?",
+    "sending": "Inatuma...",
+    "requiredFields": "Sehemu zinazohitajika zimekosekana",
+    "requiredFieldsDesc": "Tafadhali jaza jina lako, barua pepe, na ujumbe.",
+    "messageSentTitle": "Ujumbe Umetumwa!",
+    "messageSentDesc": "Asante kwa kuwasiliana nasi. Tutajibu ndani ya saa 48.",
+    "failedToSend": "Imeshindwa kutuma ujumbe",
+    "tryAgain": "Tafadhali jaribu tena baadaye."
+  },
+  "membershipPage": {
+    "title": "Uanachama",
+    "subtitle": "Jiunge na Chama cha Wapagazi Tanzania na uwe sehemu ya jamii inayojitolea kuwawezesha na kuwalinda wapagazi wa milima.",
+    "chooseYourMembership": "Chagua Uanachama Wako",
+    "membershipDesc": "Tunatoa kategoria tofauti za uanachama kuhudumia mahitaji mbalimbali ya jamii yetu.",
+    "porterTitle": "Uanachama wa Mpagazi Binafsi",
+    "porterDesc": "Kwa wapagazi wa milima wanaofanya kazi wanaotafuta utambuzi na msaada wa kitaaluma.",
+    "corporateTitle": "Uanachama wa Shirika",
+    "corporateDesc": "Kwa waendeshaji wa utalii, hoteli, na wasambazaji wanaojitolea kwa mazoea ya kimaadili ya wapagazi.",
+    "honoraryTitle": "Uanachama wa Heshima na Msaada",
+    "honoraryDesc": "Kwa mashirika yasiyo ya kiserikali, wasomi, na watu binafsi wanaotaka kusaidia ustawi wa wapagazi.",
+    "porterBenefits": {
+      "card": "Kadi rasmi ya uanachama wa TAP na kitambulisho",
+      "training": "Upatikanaji wa programu zote za mafunzo",
+      "health": "Uchunguzi wa afya na msaada wa ustawi",
+      "emergency": "Mfuko wa msaada wa dharura",
+      "insurance": "Uandikishaji wa mpango wa bima",
+      "job": "Msaada wa kupata kazi",
+      "certification": "Vyeti vya kitaaluma",
+      "networking": "Fursa za mtandao"
+    },
+    "corporateBenefits": {
+      "certification": "Cheti cha Mshirika wa Kimaadili cha TAP",
+      "database": "Upatikanaji wa hifadhidata ya wapagazi walioidhinishwa",
+      "training": "Programu za mafunzo ya wafanyakazi",
+      "marketing": "Fursa za ushirikiano wa masoko",
+      "booking": "Uhifadhi wa kipaumbele kwa vipindi vya mafunzo",
+      "events": "Matukio ya mtandao wa tasnia",
+      "review": "Ukaguzi wa kila mwaka wa kufuata",
+      "visibility": "Uonekano wa nembo kwenye majukwaa ya TAP"
+    },
+    "honoraryBenefits": {
+      "recognition": "Utambuzi kama Msaidizi wa TAP",
+      "reports": "Ripoti za athari za mara kwa mara",
+      "events": "Mialiko ya matukio ya TAP",
+      "volunteer": "Fursa za kujitolea",
+      "research": "Ushirikiano wa utafiti",
+      "tax": "Michango inayokatwa kodi",
+      "newsletter": "Jarida na masasisho",
+      "speaking": "Fursa za kusema hadharani"
+    },
+    "porterFee": "TZS 50,000 / mwaka",
+    "corporateFee": "TZS 500,000 / mwaka",
+    "honoraryFee": "Mchango unaobadilika",
+    "registerAsPorter": "Jisajili kama Mpagazi",
+    "applyForCorporate": "Omba Uanachama wa Shirika",
+    "becomeSupporter": "Kuwa Msaidizi",
+    "whyJoin": "Kwa Nini Ujiunge na TAP?",
+    "whyJoinReasons": {
+      "recognition": "Utambuzi wa Kitaaluma",
+      "recognitionDesc": "Pata cheti rasmi kinachothibitisha ujuzi na uzoefu wako.",
+      "learning": "Kujifunza Kila Wakati",
+      "learningDesc": "Pata programu za mafunzo zinazoweka ujuzi wako sasa na wa ushindani.",
+      "support": "Msaada wa Jamii",
+      "supportDesc": "Kuwa sehemu ya mtandao unaoshughulikiana wakati wa shida.",
+      "voice": "Sauti Yako Ni Muhimu",
+      "voiceDesc": "Changia katika kuunda sera zinazoathiri ustawi na haki za wapagazi."
+    },
+    "faq": "Maswali Yanayoulizwa Mara kwa Mara",
+    "faqQuestions": {
+      "howToJoin": "Ninawezaje kuwa mwanachama?",
+      "howToJoinAnswer": "Jaza tu fomu ya usajili inayofaa kulingana na aina yako ya uanachama. Timu yetu itakagua maombi yako na kukuwasiliana ndani ya siku 5-7 za kazi.",
+      "documents": "Ni nyaraka gani ninahitaji?",
+      "documentsAnswer": "Wapagazi binafsi wanahitaji kitambulisho halali cha kitaifa na ushahidi wa uzoefu (kama vile marejeo kutoka kwa waendeshaji wa utalii). Wanachama wa shirika wanahitaji nyaraka za usajili wa biashara.",
+      "installments": "Je, naweza kulipa kwa awamu?",
+      "installmentsAnswer": "Ndio, tunatoa chaguo za malipo zinazobadilika kwa uanachama wa mpagazi binafsi. Wasiliana nasi kujadili mpango wa malipo unaofanya kazi kwako.",
+      "duration": "Uanachama unadumu muda gani?",
+      "durationAnswer": "Uanachama ni halali kwa mwaka mmoja kutoka tarehe ya uidhinishaji. Utapokea vikumbusho vya upya kabla uanachama wako haujakwisha."
+    }
+  },
+  "programsPage": {
+    "title": "Programu Zetu",
+    "subtitle": "Programu kamili za mafunzo na maendeleo zilizoundwa kuwawezesha wapagazi na ujuzi, maarifa, na vyeti wanavyohitaji kufaulu katika taaluma zao.",
+    "whatYouLearn": "Utakachojifunza:",
+    "duration": "Muda",
+    "certification": "Cheti",
+    "mountainSafety": {
+      "title": "Mafunzo ya Usalama wa Mlima",
+      "desc": "Mafunzo kamili kuhusu kuzuia ugonjwa wa urefu, majibu ya dharura, na mbinu za uokoaji wa mlima.",
+      "features": ["Kutambua na kuzuia ugonjwa wa urefu", "Cheti cha huduma ya kwanza ya dharura", "Tafsiri ya muundo wa hali ya hewa", "Tathmini ya usalama wa njia", "Ukaguzi na matengenezo ya vifaa"],
+      "duration": "siku 5",
+      "cert": "Cheti cha Usalama cha TAP"
+    },
+    "health": {
+      "title": "Programu ya Afya na Ustawi",
+      "desc": "Uchunguzi wa afya wa mara kwa mara, mafunzo ya usawa wa mwili, na mwongozo wa lishe ulioandaliwa kwa kazi ya urefu wa juu.",
+      "features": ["Uchunguzi wa afya wa kila mwaka", "Tathmini na mafunzo ya usawa", "Ushauri wa lishe", "Msaada wa afya ya akili", "Warsha za kuzuia majeraha"],
+      "duration": "Inaendelea",
+      "cert": "Kadi ya Kibali cha Afya"
+    },
+    "professional": {
+      "title": "Maendeleo ya Kitaaluma",
+      "desc": "Programu za kuboresha ujuzi zinazoshughulikia uongozi, huduma kwa wateja, na maendeleo ya kazi.",
+      "features": ["Uongozi na usimamizi wa timu", "Ubora wa huduma kwa wateja", "Utatuzi wa migogoro", "Elimu ya fedha", "Kupanga kazi"],
+      "duration": "siku 3",
+      "cert": "Cheti cha Mpagazi Mtaalamu"
+    },
+    "language": {
+      "title": "Ujuzi wa Lugha",
+      "desc": "Mafunzo ya lugha ya Kiingereza kuboresha mawasiliano na wapandaji na watalii wa kimataifa.",
+      "features": ["Kiingereza cha msingi hadi cha kati", "Msamiati maalum wa utalii", "Mawasiliano ya kitamaduni", "Mazoezi ya mazungumzo", "Misingi ya mawasiliano ya maandishi"],
+      "duration": "wiki 8",
+      "cert": "Cheti cha Ustadi wa Lugha"
+    },
+    "guide": {
+      "title": "Programu ya Mafunzo ya Kiongozi",
+      "desc": "Mafunzo ya juu kwa wapagazi wanaotaka kuwa viongozi wa mlima walioidhinishwa.",
+      "features": ["Ujuzi wa juu wa urambazaji", "Mbinu za uongozi wa kikundi", "Historia ya asili na ikolojia", "Tafsiri ya kitamaduni", "Misingi ya biashara na masoko"],
+      "duration": "wiki 4",
+      "cert": "Leseni ya Kiongozi wa TAP"
+    },
+    "certificationProgram": {
+      "title": "Programu ya Vyeti",
+      "desc": "Vyeti rasmi vya TAP vinavyothibitisha mafunzo ya mpagazi, uzoefu, na hali ya kitaaluma.",
+      "features": ["Uthibitishaji wa ujuzi", "Nyaraka za uzoefu", "Ukaguzi wa historia", "Uthibitishaji wa marejeo", "Ufuatiliaji wa kufuata unaoendelea"],
+      "duration": "Inategemea",
+      "cert": "Kitambulisho cha Mpagazi Mtaalamu wa TAP"
+    },
+    "ctaTitle": "Uko Tayari Kuendeleza Kazi Yako?",
+    "ctaDesc": "Jiunge na maelfu ya wapagazi ambao wameboresha ujuzi wao na kuendeleza kazi zao kupitia programu za TAP. Kuwa mwanachama aliyesajiliwa kupata fursa zetu zote za mafunzo.",
+    "registerAsPorter": "Jisajili kama Mpagazi",
+    "contactForDetails": "Wasiliana Nasi kwa Maelezo",
+    "upcomingSessions": "Vipindi vya Mafunzo Vijavyo",
+    "upcomingDesc": "Tazama ratiba yetu ya mafunzo ijayo na ujiandikishe kwa vipindi vinavyofaa upatikanaji wako.",
+    "checkBack": "Ratiba za mafunzo zinasasishwa mara kwa mara. Wasiliana nasi au rudi hivi karibuni kwa tarehe za vipindi vya hivi karibuni.",
+    "inquireTraining": "Uliza Kuhusu Mafunzo"
+  },
+  "historyPage": {
+    "title": "Historia na Urithi",
+    "subtitle": "Kutoka mwanzo wa unyenyekevu hadi kuwa sauti ya wapagazi wa Tanzania, safari yetu inaonyesha ustahimilivu na azimio la jamii tunayoihudumia.",
+    "porterLegacy": "Urithi wa Mpagazi",
+    "legacyDesc1": "Kwa zaidi ya karne moja, wapagazi wamekuwa uti wa mgongo wa safari za mlima Tanzania. Kabla ya utalii wa kisasa, jamii za mitaa ziliwaongoza wachunguzi na kubeba vifaa kwenye miteremko ya Kilimanjaro, Meru, na vilele vingine.",
+    "legacyDesc2": "Wanaume na wanawake hawa walijenga ujuzi wa karibu wa milima, wakipitisha ujuzi na mila kwa vizazi. Utaalamu wao katika urambazaji, mifumo ya hali ya hewa, na mbinu za kuishi ulikuwa wa thamani kwa wapandaji kutoka kote ulimwenguni.",
+    "legacyDesc3": "Leo, tunaheshimu urithi huu kwa kuhakikisha kuwa wapagazi wanapata utambuzi, mafunzo, na msaada wanaostahili. Roho ya huduma na ustahimilivu iliyowafafanua wapagazi wa kwanza inaendelea kuhamasisha kazi yetu katika TAP.",
+    "ourJourney": "Safari Yetu",
+    "timeline": {
+      "2008": { "title": "Msingi", "desc": "TAP ilianzishwa na kikundi cha wapagazi wastaafu na watetezi wa utalii waliokubali hitaji la sauti moja kwa wapagazi wa milima." },
+      "2010": { "title": "Programu ya Kwanza ya Mafunzo", "desc": "Tulianzisha programu yetu ya kwanza kamili ya usalama na ujuzi, tukiwaidhinisha wapagazi zaidi ya 200 mwaka wa kwanza." },
+      "2012": { "title": "Utambuzi wa Serikali", "desc": "TAP ilitambuliwa rasmi na serikali ya Tanzania kama chombo kinachowakilisha wapagazi wa milima." },
+      "2014": { "title": "Mpango wa Afya", "desc": "Tulianzisha Programu ya Afya ya Mpagazi, ikitoa uchunguzi wa afya bila malipo na msaada wa matibabu kwa wanachama." },
+      "2016": { "title": "Ushirikiano wa Kimataifa", "desc": "Tulianzisha ushirikiano na mashirika ya kimataifa ya kiserikali na utalii kukuza mazoea ya kupanda milima kwa maadili." },
+      "2018": { "title": "Usajili wa Kidijitali", "desc": "Tulianzisha mfumo wetu wa uanachama wa kidijitali, kuifanya iwe rahisi kwa wapagazi kusajili na kupata faida." },
+      "2020": { "title": "Majibu ya COVID-19", "desc": "Tulitoa msaada wa dharura kwa wapagazi zaidi ya 3,000 walioathiriwa na kusimamishwa kwa tasnia ya utalii." },
+      "2022": { "title": "Upanuzi", "desc": "Tulipanua programu zetu kushughulikia wapagazi katika milima yote mikubwa ya Tanzania na njia za kupanda." },
+      "2024": { "title": "Makao Makuu Mapya", "desc": "Tulifungua makao makuu yetu mapya Moshi, yenye kituo cha mafunzo na kituo cha huduma za wanachama." }
+    },
+    "culturalSignificance": "Umuhimu wa Kitamaduni",
+    "culturalDesc": "Wapagazi si wafanyakazi tu; wao ni mabalozi wa kitamaduni wanaoshiriki urithi tajiri wa Tanzania na wageni kutoka kote ulimwenguni.",
+    "traditionalKnowledge": "Maarifa ya Jadi",
+    "traditionalDesc": "Wapagazi wanabeba vizazi vya hekima kuhusu milima, ikiwa ni pamoja na dawa za jadi na mbinu za urambazaji.",
+    "communityBonds": "Vifungo vya Jamii",
+    "communityDesc": "Jamii ya wapagazi imeunganishwa kwa nguvu, na mila imara ya msaada wa pamoja na uwajibikaji wa pamoja.",
+    "songsStories": "Nyimbo na Hadithi",
+    "songsDesc": "Wapagazi wanaendeleza mila tajiri ya masimulizi ya nyimbo na hadithi zinazosherehekea milima na kazi yao."
+  },
+  "partnersPage": {
+    "title": "Washirika na Wabia",
+    "subtitle": "Tunafanya kazi na waendeshaji wa utalii, mashirika yasiyo ya kiserikali, vyombo vya serikali, na mashirika ya kimataifa kukuza utalii wa kimaadili na ustawi wa wapagazi.",
+    "ourPartners": "Washirika Wetu",
+    "ourPartnersDesc": "Mashirika haya yanashiriki kujitolea kwetu kuboresha maisha ya wapagazi wa milima.",
+    "visitWebsite": "Tembelea Tovuti",
+    "whyPartner": "Kwa Nini Kushirikiana Nasi?",
+    "whyPartnerDesc": "Kushirikiana na TAP kunatoa faida nyingi huku ukifanya tofauti ya kweli.",
+    "accessPorters": "Upatikanaji wa Wapagazi Walioidhinishwa",
+    "accessPortersDesc": "Unganana na mtandao wetu wa wapagazi wa kitaaluma waliofunzwa na kuidhinishwa.",
+    "brandVisibility": "Uonekano wa Nembo",
+    "brandVisibilityDesc": "Onyesha kujitolea kwako kwa utalii wa kimaadili kwenye majukwaa yetu.",
+    "industryNetworking": "Mtandao wa Tasnia",
+    "industryNetworkingDesc": "Jiunge na jamii ya mashirika yanayofanana yanayofanya kazi kwa utalii endelevu.",
+    "collaborativePrograms": "Programu za Ushirikiano",
+    "collaborativeProgramsDesc": "Shirikiana katika mipango ya mafunzo, utafiti, na maendeleo ya jamii.",
+    "becomePartner": "Kuwa Mshirika",
+    "becomePartnerDesc": "Jiunge na mtandao wetu wa washirika wanaojitolea kwa utalii wa kimaadili na ustawi wa wapagazi. Iwe wewe ni opereta wa utalii, shirika lisilo la kiserikali, au mdhamini wa shirika, kuna njia yako ya kuchangia.",
+    "corporateMembership": "Uanachama wa Shirika"
+  },
+  "storiesPage": {
+    "title": "Sauti za Wapagazi",
+    "subtitle": "Hadithi za kweli kutoka kwa wanaume na wanawake wanaobeba ndoto hadi kileleni. Uzoefu wao, changamoto, na ushindi unatuhamasisha sote.",
+    "shareYourStory": "Shiriki Hadithi Yako",
+    "shareYourStoryDesc": "Je, wewe ni mpagazi mwenye hadithi ya kusema? Tunataka kusikia kutoka kwako. Uzoefu wako unaweza kuhamasisha wengine na kusaidia kutetea hali bora kwa wapagazi wote.",
+    "submitYourStory": "Wasilisha Hadithi Yako"
+  },
+  "galleryPage": {
+    "title": "Picha",
+    "subtitle": "Sherehe ya picha ya jamii ya wapagazi, kazi yao, na milima mikuu wanayoiita mahali pao pa kazi.",
+    "all": "Zote"
   }
 }

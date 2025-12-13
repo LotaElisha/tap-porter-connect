@@ -4,10 +4,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import SEOHead from "@/components/SEOHead";
 
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-
 const About = lazy(() => import("./pages/About"));
 const History = lazy(() => import("./pages/History"));
 const Programs = lazy(() => import("./pages/Programs"));
@@ -42,6 +42,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <SEOHead />
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Index />} />

@@ -1,4 +1,50 @@
 {
+  "seo": {
+    "default": {
+      "title": "Tanzania Association of Porters | TAP",
+      "description": "Empowering Tanzania's Mountain Porters through welfare, training, and advocacy for the heroes of Kilimanjaro and beyond."
+    },
+    "home": {
+      "title": "Tanzania Association of Porters | TAP - Empowering Mountain Porters",
+      "description": "TAP is dedicated to the welfare, training, and advocacy for Tanzania's mountain porters. Join our community and support the unsung heroes of Kilimanjaro."
+    },
+    "about": {
+      "title": "About TAP | Tanzania Association of Porters",
+      "description": "Learn about our mission, vision, and the dedicated team working to elevate the lives of Tanzanian porters to the highest professional standards."
+    },
+    "contact": {
+      "title": "Contact Us | Tanzania Association of Porters",
+      "description": "Get in touch with TAP for membership inquiries, partnerships, or to learn more about supporting Tanzania's mountain porters."
+    },
+    "membership": {
+      "title": "Membership | Tanzania Association of Porters",
+      "description": "Join TAP as a porter, corporate partner, or honorary member. Access training, certification, and a supportive community."
+    },
+    "programs": {
+      "title": "Programs | Tanzania Association of Porters",
+      "description": "Explore TAP's comprehensive training programs including mountain safety, health & wellness, and professional development for porters."
+    },
+    "history": {
+      "title": "History & Legacy | Tanzania Association of Porters",
+      "description": "Discover the rich heritage and journey of Tanzania's mountain porters and how TAP continues to honor their legacy."
+    },
+    "partners": {
+      "title": "Partners & Collaborators | Tanzania Association of Porters",
+      "description": "Meet the organizations working with TAP to promote ethical tourism and improve porter welfare across Tanzania."
+    },
+    "stories": {
+      "title": "Porter Voices | Tanzania Association of Porters",
+      "description": "Read inspiring stories from the men and women who carry dreams to the summit of Kilimanjaro and beyond."
+    },
+    "gallery": {
+      "title": "Gallery | Tanzania Association of Porters",
+      "description": "A visual celebration of the porter community, their work, and the majestic mountains of Tanzania."
+    },
+    "porterDirectory": {
+      "title": "Porter Directory | Tanzania Association of Porters",
+      "description": "Find and connect with certified professional porters for your mountain expedition in Tanzania."
+    }
+  },
   "nav": {
     "home": "Home",
     "about": "About",

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -11,44 +12,47 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import tapLogo from "@/assets/tap-logo.jpeg";
-
-const navItems = [
-  { label: "Home", href: "/" },
-  {
-    label: "About",
-    children: [
-      { label: "About TAP", href: "/about" },
-      { label: "History & Legacy", href: "/history" },
-    ],
-  },
-  { label: "Programs", href: "/programs" },
-  {
-    label: "Membership",
-    children: [
-      { label: "Membership Benefits", href: "/membership" },
-      { label: "Porter Registration", href: "/membership/porter" },
-      { label: "Corporate Registration", href: "/membership/corporate" },
-      { label: "Honorary Registration", href: "/membership/honorary" },
-    ],
-  },
-  { label: "Partners", href: "/partners" },
-  {
-    label: "Stories & Media",
-    children: [
-      { label: "News & Updates", href: "/news" },
-      { label: "Porter Voices", href: "/stories" },
-      { label: "Gallery", href: "/gallery" },
-      { label: "Porters Podcast", href: "/podcast" },
-      { label: "Porter Chat", href: "/porter-chat" },
-    ],
-  },
-  { label: "Contact", href: "/contact" },
-];
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
+
+  const navItems = [
+    { label: t("nav.home"), href: "/" },
+    {
+      label: t("nav.about"),
+      children: [
+        { label: t("nav.aboutTap"), href: "/about" },
+        { label: t("nav.history"), href: "/history" },
+      ],
+    },
+    { label: t("nav.programs"), href: "/programs" },
+    {
+      label: t("nav.membership"),
+      children: [
+        { label: t("nav.membershipBenefits"), href: "/membership" },
+        { label: t("nav.porterRegistration"), href: "/membership/porter" },
+        { label: t("nav.corporateRegistration"), href: "/membership/corporate" },
+        { label: t("nav.honoraryRegistration"), href: "/membership/honorary" },
+      ],
+    },
+    { label: t("nav.partners"), href: "/partners" },
+    {
+      label: t("nav.storiesMedia"),
+      children: [
+        { label: t("nav.news"), href: "/news" },
+        { label: t("nav.porterVoices"), href: "/stories" },
+        { label: t("nav.gallery"), href: "/gallery" },
+        { label: t("nav.podcast"), href: "/podcast" },
+        { label: t("nav.porterChat"), href: "/porter-chat" },
+      ],
+    },
+    { label: t("nav.findPorter"), href: "/porters" },
+    { label: t("nav.contact"), href: "/contact" },
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -103,11 +107,15 @@ export function Header() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <div className="flex items-center gap-4">
-          <Link to="/admin" className="hidden lg:block">
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+          <Link to="/member-auth" className="hidden lg:block">
             <Button variant="outline" size="sm">
-              Admin
+              {t("nav.signIn")}
             </Button>
+          </Link>
+          <Link to="/membership/porter" className="hidden lg:block">
+            <Button size="sm">{t("nav.joinTap")}</Button>
           </Link>
 
           {/* Mobile Menu */}
@@ -147,11 +155,14 @@ export function Header() {
                     </Link>
                   )
                 )}
-                <Link to="/admin" onClick={() => setMobileOpen(false)}>
-                  <Button variant="outline" className="w-full mt-4">
-                    Admin Dashboard
-                  </Button>
-                </Link>
+                <div className="flex flex-col gap-2 mt-4">
+                  <Link to="/member-auth" onClick={() => setMobileOpen(false)}>
+                    <Button variant="outline" className="w-full">{t("nav.signIn")}</Button>
+                  </Link>
+                  <Link to="/membership/porter" onClick={() => setMobileOpen(false)}>
+                    <Button className="w-full">{t("nav.joinTap")}</Button>
+                  </Link>
+                </div>
               </nav>
             </SheetContent>
           </Sheet>

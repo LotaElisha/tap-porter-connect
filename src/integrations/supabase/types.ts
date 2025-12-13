@@ -118,6 +118,7 @@ export type Database = {
           services_offered: string[] | null
           status: Database["public"]["Enums"]["membership_status"] | null
           updated_at: string
+          user_id: string | null
           website: string | null
         }
         Insert: {
@@ -136,6 +137,7 @@ export type Database = {
           services_offered?: string[] | null
           status?: Database["public"]["Enums"]["membership_status"] | null
           updated_at?: string
+          user_id?: string | null
           website?: string | null
         }
         Update: {
@@ -154,6 +156,7 @@ export type Database = {
           services_offered?: string[] | null
           status?: Database["public"]["Enums"]["membership_status"] | null
           updated_at?: string
+          user_id?: string | null
           website?: string | null
         }
         Relationships: []
@@ -174,6 +177,7 @@ export type Database = {
           status: Database["public"]["Enums"]["membership_status"] | null
           title: string | null
           updated_at: string
+          user_id: string | null
         }
         Insert: {
           affiliation?: string | null
@@ -190,6 +194,7 @@ export type Database = {
           status?: Database["public"]["Enums"]["membership_status"] | null
           title?: string | null
           updated_at?: string
+          user_id?: string | null
         }
         Update: {
           affiliation?: string | null
@@ -206,11 +211,13 @@ export type Database = {
           status?: Database["public"]["Enums"]["membership_status"] | null
           title?: string | null
           updated_at?: string
+          user_id?: string | null
         }
         Relationships: []
       }
       members_porters: {
         Row: {
+          average_rating: number | null
           certifications: string[] | null
           created_at: string
           date_of_birth: string | null
@@ -227,10 +234,13 @@ export type Database = {
           profile_photo_url: string | null
           region: string | null
           status: Database["public"]["Enums"]["membership_status"] | null
+          total_ratings: number | null
           updated_at: string
+          user_id: string | null
           years_experience: number | null
         }
         Insert: {
+          average_rating?: number | null
           certifications?: string[] | null
           created_at?: string
           date_of_birth?: string | null
@@ -247,10 +257,13 @@ export type Database = {
           profile_photo_url?: string | null
           region?: string | null
           status?: Database["public"]["Enums"]["membership_status"] | null
+          total_ratings?: number | null
           updated_at?: string
+          user_id?: string | null
           years_experience?: number | null
         }
         Update: {
+          average_rating?: number | null
           certifications?: string[] | null
           created_at?: string
           date_of_birth?: string | null
@@ -267,7 +280,9 @@ export type Database = {
           profile_photo_url?: string | null
           region?: string | null
           status?: Database["public"]["Enums"]["membership_status"] | null
+          total_ratings?: number | null
           updated_at?: string
+          user_id?: string | null
           years_experience?: number | null
         }
         Relationships: []
@@ -395,6 +410,59 @@ export type Database = {
         }
         Relationships: []
       }
+      porter_ratings: {
+        Row: {
+          created_at: string | null
+          expedition_date: string | null
+          id: string
+          is_published: boolean | null
+          is_verified: boolean | null
+          mountain: string | null
+          porter_id: string
+          rater_email: string | null
+          rater_name: string
+          rating: number
+          review: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          expedition_date?: string | null
+          id?: string
+          is_published?: boolean | null
+          is_verified?: boolean | null
+          mountain?: string | null
+          porter_id: string
+          rater_email?: string | null
+          rater_name: string
+          rating: number
+          review?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          expedition_date?: string | null
+          id?: string
+          is_published?: boolean | null
+          is_verified?: boolean | null
+          mountain?: string | null
+          porter_id?: string
+          rater_email?: string | null
+          rater_name?: string
+          rating?: number
+          review?: string | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "porter_ratings_porter_id_fkey"
+            columns: ["porter_id"]
+            isOneToOne: false
+            referencedRelation: "members_porters"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       porter_stories: {
         Row: {
           created_at: string
@@ -502,7 +570,7 @@ export type Database = {
       }
     }
     Enums: {
-      app_role: "admin" | "moderator" | "user"
+      app_role: "admin" | "moderator" | "user" | "member"
       membership_status: "pending" | "active" | "expired" | "suspended"
     }
     CompositeTypes: {
@@ -631,7 +699,7 @@ export type CompositeTypes<
 export const Constants = {
   public: {
     Enums: {
-      app_role: ["admin", "moderator", "user"],
+      app_role: ["admin", "moderator", "user", "member"],
       membership_status: ["pending", "active", "expired", "suspended"],
     },
   },

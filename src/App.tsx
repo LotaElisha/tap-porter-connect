@@ -5,11 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
-// Eager load critical pages
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
-// Lazy load other pages for better performance
 const About = lazy(() => import("./pages/About"));
 const History = lazy(() => import("./pages/History"));
 const Programs = lazy(() => import("./pages/Programs"));
@@ -25,11 +23,13 @@ const Podcast = lazy(() => import("./pages/Podcast"));
 const PorterChat = lazy(() => import("./pages/PorterChat"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Auth = lazy(() => import("./pages/Auth"));
+const MemberAuth = lazy(() => import("./pages/MemberAuth"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
+const PorterDirectory = lazy(() => import("./pages/PorterDirectory"));
+const PorterProfile = lazy(() => import("./pages/PorterProfile"));
 
 const queryClient = new QueryClient();
 
-// Loading fallback component
 const PageLoader = () => (
   <div className="flex min-h-screen items-center justify-center">
     <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
@@ -60,7 +60,10 @@ const App = () => (
             <Route path="/porter-chat" element={<PorterChat />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/auth" element={<Auth />} />
+            <Route path="/member-auth" element={<MemberAuth />} />
             <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/porters" element={<PorterDirectory />} />
+            <Route path="/porters/:id" element={<PorterProfile />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

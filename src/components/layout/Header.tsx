@@ -57,12 +57,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={tapLogo} alt="TAP Logo" className="h-12 w-auto" />
-          <div className="hidden sm:block">
-            <p className="text-sm font-semibold text-secondary">Tanzania Association</p>
-            <p className="text-xs text-muted-foreground">of Porters</p>
-          </div>
+        <Link to="/" className="flex items-center">
+          <img src={tapLogo} alt="Tanzania Association of Porters - TAP Logo" className="h-12 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}

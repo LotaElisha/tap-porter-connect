@@ -159,7 +159,8 @@ export default function Index() {
               <div className="relative">
                 <img
                   src="https://images.unsplash.com/photo-1621414050946-1b936a78491d?q=80&w=2070"
-                  alt="Porters on Mount Kilimanjaro"
+                  alt="Porters carrying supplies on Mount Kilimanjaro trek - Tanzania Association of Porters"
+                  loading="lazy"
                   className="rounded-2xl shadow-2xl w-full"
                 />
                 <div className="absolute -bottom-8 -left-8 bg-primary text-primary-foreground p-6 rounded-2xl shadow-xl">
@@ -243,7 +244,8 @@ export default function Index() {
                   <div className="flex items-center gap-4">
                     <img
                       src={testimonial.image}
-                      alt={testimonial.name}
+                      alt={`${testimonial.name} - ${testimonial.role} | TAP Porter Testimonial`}
+                      loading="lazy"
                       className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
                     />
                     <div>

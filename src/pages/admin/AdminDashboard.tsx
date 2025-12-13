@@ -15,7 +15,8 @@ import {
   Mail, 
   LogOut, 
   Home,
-  BookOpen
+  BookOpen,
+  MessageCircle
 } from "lucide-react";
 import tapLogo from "@/assets/tap-logo.jpeg";
 import { AdminMembers } from "@/components/admin/AdminMembers";
@@ -24,6 +25,7 @@ import { AdminStories } from "@/components/admin/AdminStories";
 import { AdminGallery } from "@/components/admin/AdminGallery";
 import { AdminContacts } from "@/components/admin/AdminContacts";
 import { AdminSubscribers } from "@/components/admin/AdminSubscribers";
+import { AdminPorterChat } from "@/components/admin/AdminPorterChat";
 
 export default function AdminDashboard() {
   const [user, setUser] = useState<User | null>(null);
@@ -120,6 +122,10 @@ export default function AdminDashboard() {
               <MessageSquare className="h-4 w-4" />
               Contacts
             </TabsTrigger>
+            <TabsTrigger value="porter-chat" className="gap-2">
+              <MessageCircle className="h-4 w-4" />
+              Porter Chat
+            </TabsTrigger>
             <TabsTrigger value="subscribers" className="gap-2">
               <Mail className="h-4 w-4" />
               Subscribers
@@ -144,6 +150,10 @@ export default function AdminDashboard() {
 
           <TabsContent value="contacts">
             <AdminContacts />
+          </TabsContent>
+
+          <TabsContent value="porter-chat">
+            <AdminPorterChat />
           </TabsContent>
 
           <TabsContent value="subscribers">

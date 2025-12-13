@@ -21,6 +21,8 @@ const Partners = lazy(() => import("./pages/Partners"));
 const News = lazy(() => import("./pages/News"));
 const Stories = lazy(() => import("./pages/Stories"));
 const Gallery = lazy(() => import("./pages/Gallery"));
+const Podcast = lazy(() => import("./pages/Podcast"));
+const PorterChat = lazy(() => import("./pages/PorterChat"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Auth = lazy(() => import("./pages/Auth"));
 const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
@@ -54,6 +56,8 @@ const App = () => (
             <Route path="/news" element={<News />} />
             <Route path="/stories" element={<Stories />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/podcast" element={<Podcast />} />
+            <Route path="/porter-chat" element={<PorterChat />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/admin" element={<AdminDashboard />} />

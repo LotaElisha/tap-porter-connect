@@ -39,6 +39,8 @@ const navItems = [
       { label: "News & Updates", href: "/news" },
       { label: "Porter Voices", href: "/stories" },
       { label: "Gallery", href: "/gallery" },
+      { label: "Porters Podcast", href: "/podcast" },
+      { label: "Porter Chat", href: "/porter-chat" },
     ],
   },
   { label: "Contact", href: "/contact" },

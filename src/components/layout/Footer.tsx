@@ -86,6 +86,8 @@ export function Footer() {
               <li><Link to="/membership" className="hover:text-primary transition-colors">Become a Member</Link></li>
               <li><Link to="/partners" className="hover:text-primary transition-colors">Partners</Link></li>
               <li><Link to="/news" className="hover:text-primary transition-colors">News & Updates</Link></li>
+              <li><Link to="/podcast" className="hover:text-primary transition-colors">Porters Podcast</Link></li>
+              <li><Link to="/porter-chat" className="hover:text-primary transition-colors">Porter Chat</Link></li>
               <li><Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
             </ul>
           </div>

@@ -202,7 +202,8 @@ export default function About() {
                 {leader.image ? (
                   <img
                     src={leader.image}
-                    alt={leader.name}
+                    alt={`${leader.name} - ${leader.role} | TAP Leadership Team`}
+                    loading="lazy"
                     className="w-full h-64 object-cover"
                   />
                 ) : (

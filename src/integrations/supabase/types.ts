@@ -353,6 +353,48 @@ export type Database = {
         }
         Relationships: []
       }
+      porter_messages: {
+        Row: {
+          admin_response: string | null
+          approved_at: string | null
+          approved_by: string | null
+          author_email: string | null
+          author_name: string
+          author_phone: string | null
+          created_at: string | null
+          id: string
+          is_approved: boolean | null
+          is_featured: boolean | null
+          message: string
+        }
+        Insert: {
+          admin_response?: string | null
+          approved_at?: string | null
+          approved_by?: string | null
+          author_email?: string | null
+          author_name: string
+          author_phone?: string | null
+          created_at?: string | null
+          id?: string
+          is_approved?: boolean | null
+          is_featured?: boolean | null
+          message: string
+        }
+        Update: {
+          admin_response?: string | null
+          approved_at?: string | null
+          approved_by?: string | null
+          author_email?: string | null
+          author_name?: string
+          author_phone?: string | null
+          created_at?: string | null
+          id?: string
+          is_approved?: boolean | null
+          is_featured?: boolean | null
+          message?: string
+        }
+        Relationships: []
+      }
       porter_stories: {
         Row: {
           created_at: string

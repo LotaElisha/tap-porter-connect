@@ -7,7 +7,10 @@ Allow: /
 Disallow: /admin
 Disallow: /auth
 
-# Sitemap location
+# Dynamic sitemap with auto-updated lastmod dates
+Sitemap: https://atiwdehernqijbwyzfom.supabase.co/functions/v1/sitemap
+
+# Static sitemap fallback
 Sitemap: https://tap.or.tz/sitemap.xml
 
 # Google Bot

@@ -68,26 +68,28 @@ const values = [
   },
 ];
 
+import loishiyePhoto from "@/assets/loishiye-lenoy-mollel.png";
+
 const leadership = [
   {
-    name: "Mwenyekiti",
-    role: "Chairman",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+    name: "Mohamed Ally Mkoma",
+    role: "Mwenyekiti (Chairman)",
+    image: null,
   },
   {
-    name: "Makamu Mwenyekiti",
-    role: "Vice Chairman",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400",
+    name: "Loishiye Lenoy Mollel",
+    role: "Makamu Mwenyekiti (Vice Chairman)",
+    image: loishiyePhoto,
   },
   {
     name: "Katibu Mkuu",
     role: "General Secretary",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400",
+    image: null,
   },
   {
     name: "Mtunza Hazina",
     role: "Treasurer",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400",
+    image: null,
   },
 ];
 
@@ -197,11 +199,17 @@ export default function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {leadership.map((leader) => (
               <Card key={leader.name} className="overflow-hidden">
-                <img
-                  src={leader.image}
-                  alt={leader.name}
-                  className="w-full h-64 object-cover"
-                />
+                {leader.image ? (
+                  <img
+                    src={leader.image}
+                    alt={leader.name}
+                    className="w-full h-64 object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-64 bg-muted flex items-center justify-center">
+                    <Users className="h-20 w-20 text-muted-foreground/40" />
+                  </div>
+                )}
                 <CardContent className="p-4 text-center">
                   <h3 className="font-display text-lg font-semibold text-secondary">{leader.name}</h3>
                   <p className="text-sm text-muted-foreground">{leader.role}</p>

@@ -1,14 +1,41 @@
+# Tanzania Association of Porters (TAP) Website
+# https://tap.or.tz
+
+# Default rules for all crawlers
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /auth
+
+# Sitemap location
+Sitemap: https://tap.or.tz/sitemap.xml
+
+# Google Bot
 User-agent: Googlebot
 Allow: /
 
+# Bing Bot
 User-agent: Bingbot
 Allow: /
 
+# Social Media Crawlers
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: LinkedInBot
 Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Image crawlers
+User-agent: Googlebot-Image
+Allow: /gallery
+Allow: /assets
+
+# Video crawlers
+User-agent: Googlebot-Video
+Allow: /gallery

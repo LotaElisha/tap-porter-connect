@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Facebook, Instagram, Youtube, Music2, Mail, Phone, MapPin } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import tapLogo from "@/assets/tap-logo.jpeg";
 
 export function Footer() {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
@@ -79,16 +81,17 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-display text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="font-display text-lg font-semibold mb-4">{t("footer.quickLinks")}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/about" className="hover:text-primary transition-colors">About TAP</Link></li>
-              <li><Link to="/programs" className="hover:text-primary transition-colors">Our Programs</Link></li>
-              <li><Link to="/membership" className="hover:text-primary transition-colors">Become a Member</Link></li>
-              <li><Link to="/partners" className="hover:text-primary transition-colors">Partners</Link></li>
-              <li><Link to="/news" className="hover:text-primary transition-colors">News & Updates</Link></li>
-              <li><Link to="/podcast" className="hover:text-primary transition-colors">Porters Podcast</Link></li>
-              <li><Link to="/porter-chat" className="hover:text-primary transition-colors">Porter Chat</Link></li>
-              <li><Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
+              <li><Link to="/about" className="hover:text-primary transition-colors">{t("nav.aboutTap")}</Link></li>
+              <li><Link to="/programs" className="hover:text-primary transition-colors">{t("nav.programs")}</Link></li>
+              <li><Link to="/membership" className="hover:text-primary transition-colors">{t("nav.membership")}</Link></li>
+              <li><Link to="/partners" className="hover:text-primary transition-colors">{t("nav.partners")}</Link></li>
+              <li><Link to="/porters" className="hover:text-primary transition-colors">{t("nav.findPorter")}</Link></li>
+              <li><Link to="/news" className="hover:text-primary transition-colors">{t("nav.news")}</Link></li>
+              <li><Link to="/podcast" className="hover:text-primary transition-colors">{t("nav.podcast")}</Link></li>
+              <li><Link to="/porter-chat" className="hover:text-primary transition-colors">{t("nav.porterChat")}</Link></li>
+              <li><Link to="/contact" className="hover:text-primary transition-colors">{t("nav.contact")}</Link></li>
             </ul>
           </div>
 

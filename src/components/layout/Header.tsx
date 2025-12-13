@@ -50,7 +50,6 @@ export function Header() {
         { label: t("nav.porterChat"), href: "/porter-chat" },
       ],
     },
-    { label: t("nav.findPorter"), href: "/porters" },
     { label: t("nav.contact"), href: "/contact" },
   ];
 

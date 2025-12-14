@@ -65,7 +65,7 @@ export default function PorterProfile() {
     <Layout>
       <div className="container py-8">
         <Link to="/porters" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6">
-          <ArrowLeft className="h-4 w-4" /> {t("common.backToHome")}
+          <ArrowLeft className="h-4 w-4" /> {t("porter.backToDirectory")}
         </Link>
 
         <div className="grid lg:grid-cols-3 gap-8">

@@ -40,6 +40,7 @@ export function Header() {
       ],
     },
     { label: t("nav.partners"), href: "/partners" },
+    { label: t("nav.findPorter"), href: "/porters" },
     {
       label: t("nav.storiesMedia"),
       children: [

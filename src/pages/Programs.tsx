@@ -13,41 +13,23 @@ export default function Programs() {
       icon: Shield,
       title: t("programsPage.mountainSafety.title"),
       description: t("programsPage.mountainSafety.desc"),
-      features: [
-        t("programsPage.mountainSafety.feature1"),
-        t("programsPage.mountainSafety.feature2"),
-        t("programsPage.mountainSafety.feature3"),
-        t("programsPage.mountainSafety.feature4"),
-        t("programsPage.mountainSafety.feature5"),
-      ],
+      features: t("programsPage.mountainSafety.features", { returnObjects: true }) as string[],
       duration: t("programsPage.mountainSafety.duration"),
       certification: t("programsPage.mountainSafety.cert"),
     },
     {
       icon: Heart,
-      title: t("programsPage.healthWellness.title"),
-      description: t("programsPage.healthWellness.desc"),
-      features: [
-        t("programsPage.healthWellness.feature1"),
-        t("programsPage.healthWellness.feature2"),
-        t("programsPage.healthWellness.feature3"),
-        t("programsPage.healthWellness.feature4"),
-        t("programsPage.healthWellness.feature5"),
-      ],
-      duration: t("programsPage.healthWellness.duration"),
-      certification: t("programsPage.healthWellness.cert"),
+      title: t("programsPage.health.title"),
+      description: t("programsPage.health.desc"),
+      features: t("programsPage.health.features", { returnObjects: true }) as string[],
+      duration: t("programsPage.health.duration"),
+      certification: t("programsPage.health.cert"),
     },
     {
       icon: GraduationCap,
       title: t("programsPage.professional.title"),
       description: t("programsPage.professional.desc"),
-      features: [
-        t("programsPage.professional.feature1"),
-        t("programsPage.professional.feature2"),
-        t("programsPage.professional.feature3"),
-        t("programsPage.professional.feature4"),
-        t("programsPage.professional.feature5"),
-      ],
+      features: t("programsPage.professional.features", { returnObjects: true }) as string[],
       duration: t("programsPage.professional.duration"),
       certification: t("programsPage.professional.cert"),
     },
@@ -55,13 +37,7 @@ export default function Programs() {
       icon: Languages,
       title: t("programsPage.language.title"),
       description: t("programsPage.language.desc"),
-      features: [
-        t("programsPage.language.feature1"),
-        t("programsPage.language.feature2"),
-        t("programsPage.language.feature3"),
-        t("programsPage.language.feature4"),
-        t("programsPage.language.feature5"),
-      ],
+      features: t("programsPage.language.features", { returnObjects: true }) as string[],
       duration: t("programsPage.language.duration"),
       certification: t("programsPage.language.cert"),
     },
@@ -69,29 +45,17 @@ export default function Programs() {
       icon: Users,
       title: t("programsPage.guide.title"),
       description: t("programsPage.guide.desc"),
-      features: [
-        t("programsPage.guide.feature1"),
-        t("programsPage.guide.feature2"),
-        t("programsPage.guide.feature3"),
-        t("programsPage.guide.feature4"),
-        t("programsPage.guide.feature5"),
-      ],
+      features: t("programsPage.guide.features", { returnObjects: true }) as string[],
       duration: t("programsPage.guide.duration"),
       certification: t("programsPage.guide.cert"),
     },
     {
       icon: Award,
-      title: t("programsPage.certification.title"),
-      description: t("programsPage.certification.desc"),
-      features: [
-        t("programsPage.certification.feature1"),
-        t("programsPage.certification.feature2"),
-        t("programsPage.certification.feature3"),
-        t("programsPage.certification.feature4"),
-        t("programsPage.certification.feature5"),
-      ],
-      duration: t("programsPage.certification.duration"),
-      certification: t("programsPage.certification.cert"),
+      title: t("programsPage.certificationProgram.title"),
+      description: t("programsPage.certificationProgram.desc"),
+      features: t("programsPage.certificationProgram.features", { returnObjects: true }) as string[],
+      duration: t("programsPage.certificationProgram.duration"),
+      certification: t("programsPage.certificationProgram.cert"),
     },
   ];
 
@@ -157,10 +121,10 @@ export default function Programs() {
       <section className="py-20 bg-gradient-warm">
         <div className="container text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-6">
-            {t("programsPage.readyToAdvance")}
+            {t("programsPage.ctaTitle")}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            {t("programsPage.readyToAdvanceDesc")}
+            {t("programsPage.ctaDesc")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/membership/porter">
@@ -183,18 +147,18 @@ export default function Programs() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">
-              {t("programsPage.upcomingTraining")}
+              {t("programsPage.upcomingSessions")}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              {t("programsPage.upcomingTrainingDesc")}
+              {t("programsPage.upcomingDesc")}
             </p>
           </div>
           <div className="bg-muted rounded-lg p-8 text-center">
             <p className="text-muted-foreground mb-4">
-              {t("programsPage.trainingScheduleInfo")}
+              {t("programsPage.checkBack")}
             </p>
             <Link to="/contact">
-              <Button>{t("programsPage.inquireAboutTraining")}</Button>
+              <Button>{t("programsPage.inquireTraining")}</Button>
             </Link>
           </div>
         </div>

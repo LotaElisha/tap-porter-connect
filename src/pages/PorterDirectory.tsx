@@ -16,11 +16,8 @@ export default function PorterDirectory() {
 
   useEffect(() => {
     const fetchPorters = async () => {
-      const { data } = await supabase
-        .from("members_porters")
-        .select("*")
-        .eq("status", "active")
-        .order("average_rating", { ascending: false });
+      // Use secure RPC function that only returns non-sensitive fields
+      const { data } = await supabase.rpc("get_public_porter_profiles");
       setPorters(data || []);
       setLoading(false);
     };

@@ -26,11 +26,13 @@ export default function PorterProfile() {
 
   useEffect(() => {
     const fetchData = async () => {
+      // Use secure RPC function that only returns non-sensitive fields
       const [porterRes, ratingsRes] = await Promise.all([
-        supabase.from("members_porters").select("*").eq("id", id).maybeSingle(),
-        supabase.from("porter_ratings").select("*").eq("porter_id", id).eq("is_published", true).order("created_at", { ascending: false }),
+        supabase.rpc("get_public_porter_profile", { porter_id: id }),
+        supabase.from("porter_ratings").select("rater_name, rating, review, created_at, mountain, expedition_date").eq("porter_id", id).eq("is_published", true).order("created_at", { ascending: false }),
       ]);
-      setPorter(porterRes.data);
+      // RPC returns array, get first result
+      setPorter(porterRes.data?.[0] || null);
       setRatings(ratingsRes.data || []);
       setLoading(false);
     };

@@ -162,5 +162,33 @@
     "installInstructions": "Installieren Sie unsere App für schnellen Zugriff",
     "iosInstructions": "Tippen Sie auf Teilen, dann 'Zum Home-Bildschirm'",
     "androidInstructions": "Tippen Sie auf Menü, dann 'App installieren'"
+  },
+  "partnersPage": {
+    "title": "Partner & Mitarbeiter",
+    "subtitle": "Wir arbeiten mit Reiseveranstaltern, NGOs, Regierungsbehörden und internationalen Organisationen zusammen, um ethischen Tourismus und Trägerwohl zu fördern.",
+    "ourPartners": "Unsere Partner",
+    "ourPartnersDesc": "Diese Organisationen teilen unser Engagement für die Verbesserung des Lebens der Bergträger.",
+    "visitWebsite": "Website besuchen",
+    "whyPartner": "Warum mit uns zusammenarbeiten?",
+    "whyPartnerDesc": "Eine Partnerschaft mit TAP bietet zahlreiche Vorteile und macht einen echten Unterschied.",
+    "accessPorters": "Zugang zu zertifizierten Trägern",
+    "accessPortersDesc": "Verbinden Sie sich mit unserem Netzwerk ausgebildeter und zertifizierter professioneller Träger.",
+    "brandVisibility": "Markensichtbarkeit",
+    "brandVisibilityDesc": "Zeigen Sie Ihr Engagement für ethischen Tourismus auf unseren Plattformen.",
+    "industryNetworking": "Branchen-Networking",
+    "industryNetworkingDesc": "Treten Sie einer Gemeinschaft gleichgesinnter Organisationen bei, die für nachhaltigen Tourismus arbeiten.",
+    "collaborativePrograms": "Kooperationsprogramme",
+    "collaborativeProgramsDesc": "Partnerschaften bei Schulungs-, Forschungs- und Gemeindeentwicklungsinitiativen.",
+    "becomePartner": "Partner werden",
+    "becomePartnerDesc": "Treten Sie unserem Netzwerk von Partnern bei, die sich für ethischen Tourismus und Trägerwohl einsetzen.",
+    "corporateMembership": "Unternehmensmitgliedschaft",
+    "typeTourOperator": "Reiseveranstalter",
+    "typeGovernment": "Regierungsbehörde",
+    "typeNgo": "NGO / Gemeinnützig",
+    "typeCorporate": "Unternehmenssponsor",
+    "placeholderTourOperatorDesc": "Zertifizierter ethischer Reiseveranstalter-Partner",
+    "placeholderGovernmentDesc": "Offizieller Regierungs-Tourismuspartner",
+    "placeholderNgoDesc": "Gemeinnütziger Gesundheitsinitiative-Partner",
+    "placeholderCorporateDesc": "Unternehmens-Nachhaltigkeitspartner"
   }
 }

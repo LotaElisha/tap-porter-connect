@@ -527,7 +527,15 @@
     "collaborativeProgramsDesc": "Shirikiana katika mipango ya mafunzo, utafiti, na maendeleo ya jamii.",
     "becomePartner": "Kuwa Mshirika",
     "becomePartnerDesc": "Jiunge na mtandao wetu wa washirika wanaojitolea kwa utalii wa kimaadili na ustawi wa wapagazi. Iwe wewe ni opereta wa utalii, shirika lisilo la kiserikali, au mdhamini wa shirika, kuna njia yako ya kuchangia.",
-    "corporateMembership": "Uanachama wa Shirika"
+    "corporateMembership": "Uanachama wa Shirika",
+    "typeTourOperator": "Opereta wa Utalii",
+    "typeGovernment": "Taasisi ya Serikali",
+    "typeNgo": "Shirika Lisilo la Kiserikali",
+    "typeCorporate": "Mdhamini wa Shirika",
+    "placeholderTourOperatorDesc": "Mshirika wa opereta wa utalii wa kimaadili aliyeidhinishwa",
+    "placeholderGovernmentDesc": "Mshirika rasmi wa utalii wa serikali",
+    "placeholderNgoDesc": "Mshirika wa mpango wa afya usio wa faida",
+    "placeholderCorporateDesc": "Mshirika wa uendelevu wa shirika"
   },
   "storiesPage": {
     "title": "Sauti za Wapagazi",

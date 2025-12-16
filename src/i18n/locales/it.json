@@ -162,5 +162,33 @@
     "installInstructions": "Installa la nostra app per un accesso rapido",
     "iosInstructions": "Tocca Condividi poi 'Aggiungi a schermata Home'",
     "androidInstructions": "Tocca menu poi 'Installa App'"
+  },
+  "partnersPage": {
+    "title": "Partner e Collaboratori",
+    "subtitle": "Lavoriamo con tour operator, ONG, enti governativi e organizzazioni internazionali per promuovere il turismo etico e il benessere dei portatori.",
+    "ourPartners": "I Nostri Partner",
+    "ourPartnersDesc": "Queste organizzazioni condividono il nostro impegno per migliorare la vita dei portatori di montagna.",
+    "visitWebsite": "Visita Sito Web",
+    "whyPartner": "Perché collaborare con noi?",
+    "whyPartnerDesc": "Una partnership con TAP offre numerosi vantaggi facendo una vera differenza.",
+    "accessPorters": "Accesso a Portatori Certificati",
+    "accessPortersDesc": "Connettiti con la nostra rete di portatori professionali formati e certificati.",
+    "brandVisibility": "Visibilità del Marchio",
+    "brandVisibilityDesc": "Mostra il tuo impegno per il turismo etico sulle nostre piattaforme.",
+    "industryNetworking": "Networking di Settore",
+    "industryNetworkingDesc": "Unisciti a una comunità di organizzazioni che lavorano per un turismo sostenibile.",
+    "collaborativePrograms": "Programmi Collaborativi",
+    "collaborativeProgramsDesc": "Partnership su iniziative di formazione, ricerca e sviluppo comunitario.",
+    "becomePartner": "Diventa Partner",
+    "becomePartnerDesc": "Unisciti alla nostra rete di partner impegnati per il turismo etico e il benessere dei portatori.",
+    "corporateMembership": "Adesione Aziendale",
+    "typeTourOperator": "Tour Operator",
+    "typeGovernment": "Agenzia Governativa",
+    "typeNgo": "ONG / Non Profit",
+    "typeCorporate": "Sponsor Aziendale",
+    "placeholderTourOperatorDesc": "Partner tour operator etico certificato",
+    "placeholderGovernmentDesc": "Partner ufficiale del turismo governativo",
+    "placeholderNgoDesc": "Partner di iniziativa sanitaria non profit",
+    "placeholderCorporateDesc": "Partner di sostenibilità aziendale"
   }
 }

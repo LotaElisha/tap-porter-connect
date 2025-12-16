@@ -22,17 +22,17 @@ export default function Partners() {
   const [loading, setLoading] = useState(true);
 
   const partnershipBenefits = [
-    { icon: Users, title: t("partnersPage.benefits.access"), description: t("partnersPage.benefits.accessDesc") },
-    { icon: Building2, title: t("partnersPage.benefits.visibility"), description: t("partnersPage.benefits.visibilityDesc") },
-    { icon: Globe, title: t("partnersPage.benefits.networking"), description: t("partnersPage.benefits.networkingDesc") },
-    { icon: Handshake, title: t("partnersPage.benefits.collaborative"), description: t("partnersPage.benefits.collaborativeDesc") },
+    { icon: Users, title: t("partnersPage.accessPorters"), description: t("partnersPage.accessPortersDesc") },
+    { icon: Building2, title: t("partnersPage.brandVisibility"), description: t("partnersPage.brandVisibilityDesc") },
+    { icon: Globe, title: t("partnersPage.industryNetworking"), description: t("partnersPage.industryNetworkingDesc") },
+    { icon: Handshake, title: t("partnersPage.collaborativePrograms"), description: t("partnersPage.collaborativeProgramsDesc") },
   ];
 
   const placeholderPartners: Partner[] = [
-    { id: "1", name: "Kilimanjaro Expeditions", description: t("partnersPage.placeholders.tourOperator"), logo_url: null, website: "https://example.com", partner_type: t("partnersPage.types.tourOperator") },
-    { id: "2", name: "Tanzania Tourism Board", description: t("partnersPage.placeholders.government"), logo_url: null, website: "https://example.com", partner_type: t("partnersPage.types.government") },
-    { id: "3", name: "Mountain Health Initiative", description: t("partnersPage.placeholders.ngo"), logo_url: null, website: "https://example.com", partner_type: t("partnersPage.types.ngo") },
-    { id: "4", name: "Adventure Gear Co.", description: t("partnersPage.placeholders.corporate"), logo_url: null, website: "https://example.com", partner_type: t("partnersPage.types.corporate") },
+    { id: "1", name: "Kilimanjaro Expeditions", description: t("partnersPage.placeholderTourOperatorDesc"), logo_url: null, website: "https://example.com", partner_type: t("partnersPage.typeTourOperator") },
+    { id: "2", name: "Tanzania Tourism Board", description: t("partnersPage.placeholderGovernmentDesc"), logo_url: null, website: "https://example.com", partner_type: t("partnersPage.typeGovernment") },
+    { id: "3", name: "Mountain Health Initiative", description: t("partnersPage.placeholderNgoDesc"), logo_url: null, website: "https://example.com", partner_type: t("partnersPage.typeNgo") },
+    { id: "4", name: "Adventure Gear Co.", description: t("partnersPage.placeholderCorporateDesc"), logo_url: null, website: "https://example.com", partner_type: t("partnersPage.typeCorporate") },
   ];
 
   useEffect(() => {

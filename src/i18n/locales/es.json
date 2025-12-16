@@ -162,5 +162,33 @@
     "installInstructions": "Instala nuestra app para acceso rápido",
     "iosInstructions": "Toca Compartir y luego 'Añadir a Pantalla de Inicio'",
     "androidInstructions": "Toca menú y luego 'Instalar App'"
+  },
+  "partnersPage": {
+    "title": "Socios y Colaboradores",
+    "subtitle": "Trabajamos con operadores turísticos, ONGs, organismos gubernamentales y organizaciones internacionales para promover el turismo ético y el bienestar de los porteadores.",
+    "ourPartners": "Nuestros Socios",
+    "ourPartnersDesc": "Estas organizaciones comparten nuestro compromiso de mejorar la vida de los porteadores de montaña.",
+    "visitWebsite": "Visitar Sitio Web",
+    "whyPartner": "¿Por qué asociarse con nosotros?",
+    "whyPartnerDesc": "Asociarse con TAP ofrece numerosos beneficios mientras se hace una diferencia real.",
+    "accessPorters": "Acceso a Porteadores Certificados",
+    "accessPortersDesc": "Conéctese con nuestra red de porteadores profesionales capacitados y certificados.",
+    "brandVisibility": "Visibilidad de Marca",
+    "brandVisibilityDesc": "Muestre su compromiso con el turismo ético en nuestras plataformas.",
+    "industryNetworking": "Redes del Sector",
+    "industryNetworkingDesc": "Únase a una comunidad de organizaciones afines que trabajan por el turismo sostenible.",
+    "collaborativePrograms": "Programas Colaborativos",
+    "collaborativeProgramsDesc": "Asociarse en iniciativas de capacitación, investigación y desarrollo comunitario.",
+    "becomePartner": "Convertirse en Socio",
+    "becomePartnerDesc": "Únase a nuestra red de socios comprometidos con el turismo ético y el bienestar de los porteadores.",
+    "corporateMembership": "Membresía Corporativa",
+    "typeTourOperator": "Operador Turístico",
+    "typeGovernment": "Agencia Gubernamental",
+    "typeNgo": "ONG / Sin Fines de Lucro",
+    "typeCorporate": "Patrocinador Corporativo",
+    "placeholderTourOperatorDesc": "Socio operador turístico ético certificado",
+    "placeholderGovernmentDesc": "Socio oficial de turismo gubernamental",
+    "placeholderNgoDesc": "Socio de iniciativa de salud sin fines de lucro",
+    "placeholderCorporateDesc": "Socio de sostenibilidad corporativa"
   }
 }

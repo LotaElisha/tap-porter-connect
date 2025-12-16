@@ -481,7 +481,15 @@
     "collaborativeProgramsDesc": "在培训、研究和社区发展倡议方面进行合作。",
     "becomePartner": "成为合作伙伴",
     "becomePartnerDesc": "加入我们致力于道德旅游和挑夫福利的合作伙伴网络。无论您是旅游运营商、非政府组织还是企业赞助商，都有您贡献的方式。",
-    "corporateMembership": "企业会员"
+    "corporateMembership": "企业会员",
+    "typeTourOperator": "旅游运营商",
+    "typeGovernment": "政府机构",
+    "typeNgo": "非政府组织/非营利",
+    "typeCorporate": "企业赞助商",
+    "placeholderTourOperatorDesc": "认证道德旅游运营商合作伙伴",
+    "placeholderGovernmentDesc": "官方政府旅游合作伙伴",
+    "placeholderNgoDesc": "非营利健康倡议合作伙伴",
+    "placeholderCorporateDesc": "企业可持续发展合作伙伴"
   },
   "storiesPage": {
     "title": "挑夫心声",

@@ -162,5 +162,33 @@
     "installInstructions": "빠른 접근을 위해 앱을 설치하세요",
     "iosInstructions": "공유를 탭한 후 '홈 화면에 추가'",
     "androidInstructions": "메뉴를 탭한 후 '앱 설치'"
+  },
+  "partnersPage": {
+    "title": "파트너 및 협력자",
+    "subtitle": "우리는 여행사, NGO, 정부 기관 및 국제 기구와 협력하여 윤리적 관광과 포터 복지를 촉진합니다.",
+    "ourPartners": "우리의 파트너",
+    "ourPartnersDesc": "이 기관들은 산악 포터의 삶을 개선하려는 우리의 약속을 공유합니다.",
+    "visitWebsite": "웹사이트 방문",
+    "whyPartner": "왜 우리와 파트너가 되어야 할까요?",
+    "whyPartnerDesc": "TAP과의 파트너십은 실질적인 변화를 만들면서 수많은 혜택을 제공합니다.",
+    "accessPorters": "인증된 포터 접근",
+    "accessPortersDesc": "훈련되고 인증된 전문 포터 네트워크와 연결하세요.",
+    "brandVisibility": "브랜드 가시성",
+    "brandVisibilityDesc": "우리 플랫폼에서 윤리적 관광에 대한 귀하의 약속을 보여주세요.",
+    "industryNetworking": "업계 네트워킹",
+    "industryNetworkingDesc": "지속 가능한 관광을 위해 일하는 뜻이 맞는 조직 커뮤니티에 참여하세요.",
+    "collaborativePrograms": "협력 프로그램",
+    "collaborativeProgramsDesc": "훈련, 연구 및 커뮤니티 개발 이니셔티브에서 파트너십을 맺으세요.",
+    "becomePartner": "파트너 되기",
+    "becomePartnerDesc": "윤리적 관광과 포터 복지에 전념하는 파트너 네트워크에 참여하세요.",
+    "corporateMembership": "기업 회원",
+    "typeTourOperator": "여행사",
+    "typeGovernment": "정부 기관",
+    "typeNgo": "NGO / 비영리",
+    "typeCorporate": "기업 후원사",
+    "placeholderTourOperatorDesc": "인증된 윤리적 여행사 파트너",
+    "placeholderGovernmentDesc": "공식 정부 관광 파트너",
+    "placeholderNgoDesc": "비영리 건강 이니셔티브 파트너",
+    "placeholderCorporateDesc": "기업 지속가능성 파트너"
   }
 }

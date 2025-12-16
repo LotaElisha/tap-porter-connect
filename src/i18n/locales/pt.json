@@ -162,5 +162,33 @@
     "installInstructions": "Instale nosso app para acesso rápido",
     "iosInstructions": "Toque em Compartilhar e depois 'Adicionar à Tela Inicial'",
     "androidInstructions": "Toque no menu e depois 'Instalar App'"
+  },
+  "partnersPage": {
+    "title": "Parceiros e Colaboradores",
+    "subtitle": "Trabalhamos com operadores turísticos, ONGs, órgãos governamentais e organizações internacionais para promover o turismo ético e o bem-estar dos carregadores.",
+    "ourPartners": "Nossos Parceiros",
+    "ourPartnersDesc": "Essas organizações compartilham nosso compromisso em melhorar a vida dos carregadores de montanha.",
+    "visitWebsite": "Visitar Site",
+    "whyPartner": "Por que se associar conosco?",
+    "whyPartnerDesc": "Uma parceria com a TAP oferece inúmeros benefícios enquanto faz uma diferença real.",
+    "accessPorters": "Acesso a Carregadores Certificados",
+    "accessPortersDesc": "Conecte-se à nossa rede de carregadores profissionais treinados e certificados.",
+    "brandVisibility": "Visibilidade da Marca",
+    "brandVisibilityDesc": "Mostre seu compromisso com o turismo ético em nossas plataformas.",
+    "industryNetworking": "Networking do Setor",
+    "industryNetworkingDesc": "Junte-se a uma comunidade de organizações que trabalham pelo turismo sustentável.",
+    "collaborativePrograms": "Programas Colaborativos",
+    "collaborativeProgramsDesc": "Parceria em iniciativas de treinamento, pesquisa e desenvolvimento comunitário.",
+    "becomePartner": "Torne-se Parceiro",
+    "becomePartnerDesc": "Junte-se à nossa rede de parceiros comprometidos com o turismo ético e o bem-estar dos carregadores.",
+    "corporateMembership": "Associação Corporativa",
+    "typeTourOperator": "Operador Turístico",
+    "typeGovernment": "Agência Governamental",
+    "typeNgo": "ONG / Sem Fins Lucrativos",
+    "typeCorporate": "Patrocinador Corporativo",
+    "placeholderTourOperatorDesc": "Parceiro operador turístico ético certificado",
+    "placeholderGovernmentDesc": "Parceiro oficial de turismo governamental",
+    "placeholderNgoDesc": "Parceiro de iniciativa de saúde sem fins lucrativos",
+    "placeholderCorporateDesc": "Parceiro de sustentabilidade corporativa"
   }
 }

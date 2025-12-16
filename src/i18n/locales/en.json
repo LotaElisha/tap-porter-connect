@@ -527,7 +527,15 @@
     "collaborativeProgramsDesc": "Partner on training, research, and community development initiatives.",
     "becomePartner": "Become a Partner",
     "becomePartnerDesc": "Join our network of partners committed to ethical tourism and porter welfare. Whether you're a tour operator, NGO, or corporate sponsor, there's a way for you to contribute.",
-    "corporateMembership": "Corporate Membership"
+    "corporateMembership": "Corporate Membership",
+    "typeTourOperator": "Tour Operator",
+    "typeGovernment": "Government Agency",
+    "typeNgo": "NGO / Non-Profit",
+    "typeCorporate": "Corporate Sponsor",
+    "placeholderTourOperatorDesc": "Certified ethical tour operator partner",
+    "placeholderGovernmentDesc": "Official government tourism partner",
+    "placeholderNgoDesc": "Non-profit health initiative partner",
+    "placeholderCorporateDesc": "Corporate sustainability partner"
   },
   "storiesPage": {
     "title": "Porter Voices",

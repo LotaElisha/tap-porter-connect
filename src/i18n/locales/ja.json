@@ -162,5 +162,33 @@
     "installInstructions": "クイックアクセスのためにアプリをインストール",
     "iosInstructions": "共有をタップして「ホーム画面に追加」",
     "androidInstructions": "メニューをタップして「アプリをインストール」"
+  },
+  "partnersPage": {
+    "title": "パートナーと協力者",
+    "subtitle": "私たちはツアーオペレーター、NGO、政府機関、国際組織と協力して、倫理的な観光とポーターの福祉を推進しています。",
+    "ourPartners": "私たちのパートナー",
+    "ourPartnersDesc": "これらの組織は、山岳ポーターの生活改善への私たちの取り組みを共有しています。",
+    "visitWebsite": "ウェブサイトを訪問",
+    "whyPartner": "なぜ私たちと提携するのか？",
+    "whyPartnerDesc": "TAPとの提携は、実際の変化を生み出しながら多くの利点を提供します。",
+    "accessPorters": "認定ポーターへのアクセス",
+    "accessPortersDesc": "訓練され認定されたプロのポーターネットワークと接続してください。",
+    "brandVisibility": "ブランドの可視性",
+    "brandVisibilityDesc": "私たちのプラットフォームで倫理的な観光への取り組みを示してください。",
+    "industryNetworking": "業界ネットワーキング",
+    "industryNetworkingDesc": "持続可能な観光のために活動する同志の組織コミュニティに参加してください。",
+    "collaborativePrograms": "協力プログラム",
+    "collaborativeProgramsDesc": "トレーニング、研究、コミュニティ開発イニシアチブでパートナーシップを結んでください。",
+    "becomePartner": "パートナーになる",
+    "becomePartnerDesc": "倫理的な観光とポーターの福祉に取り組むパートナーネットワークに参加してください。",
+    "corporateMembership": "法人会員",
+    "typeTourOperator": "ツアーオペレーター",
+    "typeGovernment": "政府機関",
+    "typeNgo": "NGO / 非営利",
+    "typeCorporate": "企業スポンサー",
+    "placeholderTourOperatorDesc": "認定倫理ツアーオペレーターパートナー",
+    "placeholderGovernmentDesc": "公式政府観光パートナー",
+    "placeholderNgoDesc": "非営利健康イニシアチブパートナー",
+    "placeholderCorporateDesc": "企業サステナビリティパートナー"
   }
 }

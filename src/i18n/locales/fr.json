@@ -162,5 +162,33 @@
     "installInstructions": "Installez notre app pour un accès rapide",
     "iosInstructions": "Appuyez sur Partager puis 'Ajouter à l'écran d'accueil'",
     "androidInstructions": "Appuyez sur menu puis 'Installer l'app'"
+  },
+  "partnersPage": {
+    "title": "Partenaires et Collaborateurs",
+    "subtitle": "Nous travaillons avec des voyagistes, des ONG, des organismes gouvernementaux et des organisations internationales pour promouvoir le tourisme éthique et le bien-être des porteurs.",
+    "ourPartners": "Nos Partenaires",
+    "ourPartnersDesc": "Ces organisations partagent notre engagement à améliorer la vie des porteurs de montagne.",
+    "visitWebsite": "Visiter le Site Web",
+    "whyPartner": "Pourquoi s'associer avec nous?",
+    "whyPartnerDesc": "Un partenariat avec TAP offre de nombreux avantages tout en faisant une vraie différence.",
+    "accessPorters": "Accès aux Porteurs Certifiés",
+    "accessPortersDesc": "Connectez-vous à notre réseau de porteurs professionnels formés et certifiés.",
+    "brandVisibility": "Visibilité de Marque",
+    "brandVisibilityDesc": "Montrez votre engagement envers le tourisme éthique sur nos plateformes.",
+    "industryNetworking": "Réseautage Industriel",
+    "industryNetworkingDesc": "Rejoignez une communauté d'organisations partageant les mêmes idées pour un tourisme durable.",
+    "collaborativePrograms": "Programmes Collaboratifs",
+    "collaborativeProgramsDesc": "Partenariat sur des initiatives de formation, recherche et développement communautaire.",
+    "becomePartner": "Devenir Partenaire",
+    "becomePartnerDesc": "Rejoignez notre réseau de partenaires engagés pour le tourisme éthique et le bien-être des porteurs.",
+    "corporateMembership": "Adhésion Entreprise",
+    "typeTourOperator": "Voyagiste",
+    "typeGovernment": "Agence Gouvernementale",
+    "typeNgo": "ONG / Non Lucratif",
+    "typeCorporate": "Sponsor Entreprise",
+    "placeholderTourOperatorDesc": "Partenaire voyagiste éthique certifié",
+    "placeholderGovernmentDesc": "Partenaire officiel du tourisme gouvernemental",
+    "placeholderNgoDesc": "Partenaire d'initiative de santé à but non lucratif",
+    "placeholderCorporateDesc": "Partenaire de durabilité d'entreprise"
   }
 }

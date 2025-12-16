@@ -162,5 +162,33 @@
     "installInstructions": "ثبت تطبيقنا للوصول السريع",
     "iosInstructions": "اضغط مشاركة ثم 'إضافة إلى الشاشة الرئيسية'",
     "androidInstructions": "اضغط القائمة ثم 'تثبيت التطبيق'"
+  },
+  "partnersPage": {
+    "title": "الشركاء والمتعاونون",
+    "subtitle": "نعمل مع منظمي الرحلات والمنظمات غير الحكومية والهيئات الحكومية والمنظمات الدولية لتعزيز السياحة الأخلاقية ورفاهية الحمالين.",
+    "ourPartners": "شركاؤنا",
+    "ourPartnersDesc": "تشاركنا هذه المنظمات التزامنا بتحسين حياة حمالي الجبال.",
+    "visitWebsite": "زيارة الموقع",
+    "whyPartner": "لماذا الشراكة معنا؟",
+    "whyPartnerDesc": "الشراكة مع TAP تقدم فوائد عديدة مع إحداث فرق حقيقي.",
+    "accessPorters": "الوصول إلى الحمالين المعتمدين",
+    "accessPortersDesc": "تواصل مع شبكتنا من الحمالين المحترفين المدربين والمعتمدين.",
+    "brandVisibility": "ظهور العلامة التجارية",
+    "brandVisibilityDesc": "أظهر التزامك بالسياحة الأخلاقية على منصاتنا.",
+    "industryNetworking": "شبكات الصناعة",
+    "industryNetworkingDesc": "انضم إلى مجتمع من المنظمات المتشابهة التفكير التي تعمل من أجل السياحة المستدامة.",
+    "collaborativePrograms": "البرامج التعاونية",
+    "collaborativeProgramsDesc": "الشراكة في مبادرات التدريب والبحث وتنمية المجتمع.",
+    "becomePartner": "كن شريكاً",
+    "becomePartnerDesc": "انضم إلى شبكة شركائنا الملتزمين بالسياحة الأخلاقية ورفاهية الحمالين.",
+    "corporateMembership": "العضوية المؤسسية",
+    "typeTourOperator": "منظم رحلات",
+    "typeGovernment": "جهة حكومية",
+    "typeNgo": "منظمة غير حكومية / غير ربحية",
+    "typeCorporate": "راعي مؤسسي",
+    "placeholderTourOperatorDesc": "شريك منظم رحلات أخلاقي معتمد",
+    "placeholderGovernmentDesc": "شريك السياحة الحكومي الرسمي",
+    "placeholderNgoDesc": "شريك مبادرة صحية غير ربحية",
+    "placeholderCorporateDesc": "شريك الاستدامة المؤسسية"
   }
 }

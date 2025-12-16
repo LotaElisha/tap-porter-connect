@@ -561,6 +561,34 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      get_public_porter_profile: {
+        Args: { porter_id: string }
+        Returns: {
+          average_rating: number
+          certifications: string[]
+          full_name: string
+          id: string
+          membership_number: string
+          profile_photo_url: string
+          region: string
+          total_ratings: number
+          years_experience: number
+        }[]
+      }
+      get_public_porter_profiles: {
+        Args: never
+        Returns: {
+          average_rating: number
+          certifications: string[]
+          full_name: string
+          id: string
+          membership_number: string
+          profile_photo_url: string
+          region: string
+          total_ratings: number
+          years_experience: number
+        }[]
+      }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]

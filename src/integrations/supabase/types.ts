@@ -561,6 +561,17 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      get_public_porter_messages: {
+        Args: never
+        Returns: {
+          admin_response: string
+          author_name: string
+          created_at: string
+          id: string
+          is_featured: boolean
+          message: string
+        }[]
+      }
       get_public_porter_profile: {
         Args: { porter_id: string }
         Returns: {
@@ -587,6 +598,18 @@ export type Database = {
           region: string
           total_ratings: number
           years_experience: number
+        }[]
+      }
+      get_public_porter_ratings: {
+        Args: { porter_id: string }
+        Returns: {
+          created_at: string
+          expedition_date: string
+          id: string
+          mountain: string
+          rater_name: string
+          rating: number
+          review: string
         }[]
       }
       has_role: {

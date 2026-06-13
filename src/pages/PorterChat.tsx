@@ -45,12 +45,7 @@ export default function PorterChat() {
 
   const fetchApprovedMessages = async () => {
     try {
-      const { data, error } = await supabase
-        .from("porter_messages")
-        .select("id, author_name, message, admin_response, is_featured, created_at")
-        .eq("is_approved", true)
-        .order("is_featured", { ascending: false })
-        .order("created_at", { ascending: false });
+      const { data, error } = await supabase.rpc("get_public_porter_messages");
 
       if (error) throw error;
       setMessages(data || []);

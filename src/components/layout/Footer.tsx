@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
-import tapLogo from "@/assets/tap-logo.jpeg";
+import tapLogo from "@/assets/tap-logo.png";
 
 export function Footer() {
   const { t } = useTranslation();

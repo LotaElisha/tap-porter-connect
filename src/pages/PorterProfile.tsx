@@ -29,7 +29,7 @@ export default function PorterProfile() {
       // Use secure RPC function that only returns non-sensitive fields
       const [porterRes, ratingsRes] = await Promise.all([
         supabase.rpc("get_public_porter_profile", { porter_id: id }),
-        supabase.from("porter_ratings").select("rater_name, rating, review, created_at, mountain, expedition_date").eq("porter_id", id).eq("is_published", true).order("created_at", { ascending: false }),
+        supabase.rpc("get_public_porter_ratings", { porter_id: id }),
       ]);
       // RPC returns array, get first result
       setPorter(porterRes.data?.[0] || null);

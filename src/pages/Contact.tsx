@@ -37,10 +37,11 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.name || !formData.email || !formData.message) {
+    const parsed = contactSchema.safeParse(formData);
+    if (!parsed.success) {
       toast({
         title: t("contactPage.requiredFields"),
-        description: t("contactPage.requiredFieldsDesc"),
+        description: parsed.error.errors[0]?.message || t("contactPage.requiredFieldsDesc"),
         variant: "destructive",
       });
       return;
@@ -49,10 +50,10 @@ export default function Contact() {
     setLoading(true);
     try {
       const { error } = await supabase.from("contact_submissions").insert({
-        name: formData.name.trim(),
-        email: formData.email.trim(),
-        subject: formData.subject.trim() || null,
-        message: formData.message.trim(),
+        name: parsed.data.name,
+        email: parsed.data.email,
+        subject: parsed.data.subject || null,
+        message: parsed.data.message,
       });
 
       if (error) throw error;

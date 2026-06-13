@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-import tapLogo from "@/assets/tap-logo.jpeg";
+import tapLogo from "@/assets/tap-logo.png";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);

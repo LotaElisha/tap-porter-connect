@@ -9,6 +9,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Loader2, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  subject: z.string().trim().max(200, "Subject must be less than 200 characters").optional(),
+  message: z.string().trim().min(10, "Message must be at least 10 characters").max(2000, "Message must be less than 2000 characters"),
+});
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -29,10 +37,11 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.name || !formData.email || !formData.message) {
+    const parsed = contactSchema.safeParse(formData);
+    if (!parsed.success) {
       toast({
         title: t("contactPage.requiredFields"),
-        description: t("contactPage.requiredFieldsDesc"),
+        description: parsed.error.errors[0]?.message || t("contactPage.requiredFieldsDesc"),
         variant: "destructive",
       });
       return;
@@ -41,10 +50,10 @@ export default function Contact() {
     setLoading(true);
     try {
       const { error } = await supabase.from("contact_submissions").insert({
-        name: formData.name.trim(),
-        email: formData.email.trim(),
-        subject: formData.subject.trim() || null,
-        message: formData.message.trim(),
+        name: parsed.data.name,
+        email: parsed.data.email,
+        subject: parsed.data.subject || null,
+        message: parsed.data.message,
       });
 
       if (error) throw error;

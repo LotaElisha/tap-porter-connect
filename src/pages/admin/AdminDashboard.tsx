@@ -31,6 +31,8 @@ export default function AdminDashboard() {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
   const [loading, setLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [checkingRole, setCheckingRole] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -51,12 +53,31 @@ export default function AdminDashboard() {
     return () => subscription.unsubscribe();
   }, []);
 
+  useEffect(() => {
+    if (loading) return;
+    if (!user) {
+      setCheckingRole(false);
+      return;
+    }
+    let active = true;
+    supabase
+      .rpc("has_role", { _user_id: user.id, _role: "admin" })
+      .then(({ data }) => {
+        if (!active) return;
+        setIsAdmin(Boolean(data));
+        setCheckingRole(false);
+      });
+    return () => {
+      active = false;
+    };
+  }, [user, loading]);
+
   const handleSignOut = async () => {
     await supabase.auth.signOut();
     navigate("/auth");
   };
 
-  if (loading) {
+  if (loading || (user && checkingRole)) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
@@ -66,6 +87,11 @@ export default function AdminDashboard() {
 
   if (!user) {
     navigate("/auth");
+    return null;
+  }
+
+  if (!isAdmin) {
+    navigate("/");
     return null;
   }
 

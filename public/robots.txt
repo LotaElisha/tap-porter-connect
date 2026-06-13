@@ -7,8 +7,7 @@ Allow: /
 Disallow: /admin
 Disallow: /auth
 
-# Dynamic sitemap with auto-updated lastmod dates
-Sitemap: https://atiwdehernqijbwyzfom.supabase.co/functions/v1/sitemap
+# Dynamic sitemap
 
 # Static sitemap fallback
 Sitemap: https://tap.or.tz/sitemap.xml

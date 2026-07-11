@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Eye, Lightbulb, Heart, Users, Award, Globe, GraduationCap, Handshake, Shield, Banknote } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Target, Eye, Lightbulb, Heart, Users, Award, Globe, GraduationCap, Handshake, Shield, Banknote, ArrowRight } from "lucide-react";
 
 import loishiyePhoto from "@/assets/loishiye-lenoy-mollel.png";
 import chairmanPhoto from "@/assets/mohamed-ally-mkoma.png";
@@ -145,6 +147,36 @@ export default function About() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* History */}
+      <section className="py-20">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-primary font-medium text-sm tracking-wider uppercase">
+                {t("about.historyLabel")}
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mt-3 mb-6">
+                {t("about.historyTitle")}
+              </h2>
+              <p className="text-muted-foreground mb-4 leading-relaxed">{t("about.historyDesc1")}</p>
+              <p className="text-muted-foreground mb-8 leading-relaxed">{t("about.historyDesc2")}</p>
+              <Link to="/history">
+                <Button variant="outline" size="lg">
+                  {t("about.readFullHistory")}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1650668302197-7f556c34cb91?q=80&w=2070"
+              alt="Historic mountain porter expedition in Tanzania - TAP history"
+              loading="lazy"
+              className="rounded-2xl shadow-xl w-full"
+            />
           </div>
         </div>
       </section>

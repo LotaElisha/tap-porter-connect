@@ -67,7 +67,7 @@ export function Footer() {
               <a href="https://www.facebook.com/tanzaniaporters" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://www.instagram.com/tanzaniaporters" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/tanzania_asociation_of_porters" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
               <a href="https://www.youtube.com/@tanzaniaporters" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="YouTube">
@@ -85,6 +85,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link to="/about" className="hover:text-primary transition-colors">{t("nav.aboutTap")}</Link></li>
               <li><Link to="/programs" className="hover:text-primary transition-colors">{t("nav.programs")}</Link></li>
+              <li><Link to="/donate" className="hover:text-primary transition-colors">{t("nav.donate")}</Link></li>
               <li><Link to="/membership" className="hover:text-primary transition-colors">{t("nav.membership")}</Link></li>
               <li><Link to="/partners" className="hover:text-primary transition-colors">{t("nav.partners")}</Link></li>
               <li><Link to="/porters" className="hover:text-primary transition-colors">{t("nav.findPorter")}</Link></li>

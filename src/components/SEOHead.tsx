@@ -78,6 +78,11 @@ const SEOHead = () => {
             title: t('seo.news.title'),
             description: t('seo.news.description')
           };
+        case '/donate':
+          return {
+            title: t('seo.donate.title'),
+            description: t('seo.donate.description')
+          };
         case '/podcast':
           return {
             title: t('seo.podcast.title'),
@@ -175,7 +180,7 @@ const SEOHead = () => {
     
     const jsonLd = {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "NGO",
       "name": "Tanzania Association of Porters",
       "alternateName": "TAP",
       "url": SITE_URL,
@@ -197,7 +202,7 @@ const SEOHead = () => {
       },
       "sameAs": [
         "https://www.facebook.com/tanzaniaporters",
-        "https://www.instagram.com/tanzaniaporters",
+        "https://www.instagram.com/tanzania_asociation_of_porters",
         "https://www.youtube.com/@tanzaniaporters"
       ],
       "areaServed": {

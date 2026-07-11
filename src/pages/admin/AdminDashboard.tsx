@@ -18,7 +18,7 @@ import {
   BookOpen,
   MessageCircle
 } from "lucide-react";
-import tapLogo from "@/assets/tap-logo.jpeg";
+import tapLogo from "@/assets/tap-logo.png";
 import { AdminMembers } from "@/components/admin/AdminMembers";
 import { AdminNews } from "@/components/admin/AdminNews";
 import { AdminStories } from "@/components/admin/AdminStories";

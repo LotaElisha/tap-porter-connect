@@ -21,6 +21,7 @@ const STATIC_PAGES: PageConfig[] = [
   { path: '/about', priority: '0.9', changefreq: 'monthly', includeHreflang: true },
   { path: '/membership', priority: '0.9', changefreq: 'monthly', includeHreflang: true },
   { path: '/programs', priority: '0.8', changefreq: 'monthly', includeHreflang: true },
+  { path: '/donate', priority: '0.9', changefreq: 'monthly', includeHreflang: true },
   { path: '/contact', priority: '0.8', changefreq: 'monthly', includeHreflang: true },
   { path: '/porters', priority: '0.8', changefreq: 'weekly', includeHreflang: true },
   { path: '/partners', priority: '0.7', changefreq: 'monthly', includeHreflang: true },

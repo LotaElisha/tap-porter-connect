@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { Layout } from "@/components/layout/Layout";
 import { supabase } from "@/integrations/supabase/client";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -14,23 +13,21 @@ interface GalleryItem {
   category: string | null;
 }
 
+const placeholderGallery: GalleryItem[] = [
+  { id: "1", title: "Summit Day on Kilimanjaro", description: "Porters reaching Uhuru Peak with expedition gear.", media_url: "https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=800", media_type: "image", category: "Mountain Routes" },
+  { id: "2", title: "First Aid Training Session", description: "Certified instructors leading a TAP safety cohort.", media_url: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800", media_type: "image", category: "Training" },
+  { id: "3", title: "Base Camp Life", description: "Porters preparing gear before the morning ascent.", media_url: "https://images.unsplash.com/photo-1621414050946-1b936a78491d?w=800", media_type: "image", category: "Porters" },
+  { id: "4", title: "Community Gathering", description: "Members meeting at TAP's Arusha office.", media_url: "https://images.unsplash.com/photo-1650668302197-7f556c34cb91?w=800", media_type: "image", category: "Porters" },
+  { id: "5", title: "Sunrise Over Kibo", description: "The Machame route at dawn.", media_url: "https://images.unsplash.com/photo-1580834341580-8c17a3a0135b?w=800", media_type: "image", category: "Mountain Routes" },
+  { id: "6", title: "Porter Pride", description: "A certified TAP porter on the Marangu route.", media_url: "https://images.unsplash.com/photo-1551524164-687a55dd1126?w=800", media_type: "image", category: "Porters" },
+  { id: "7", title: "Loading Expedition Gear", description: "Weigh-in station enforcing the 20kg load limit.", media_url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800", media_type: "image", category: "Mountain Routes" },
+  { id: "8", title: "Health Screening Day", description: "Annual welfare health checks for registered porters.", media_url: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800", media_type: "image", category: "Training" },
+];
+
 export default function Gallery() {
-  const { t } = useTranslation();
-  const [gallery, setGallery] = useState<GalleryItem[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [gallery, setGallery] = useState<GalleryItem[]>(placeholderGallery);
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
   const [filter, setFilter] = useState<string>("all");
-
-  const placeholderGallery: GalleryItem[] = [
-    { id: "1", title: t("galleryPage.items.summitDay"), description: t("galleryPage.items.summitDayDesc"), media_url: "https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=800", media_type: "image", category: t("galleryPage.categories.onTheMountain") },
-    { id: "2", title: t("galleryPage.items.trainingSession"), description: t("galleryPage.items.trainingSessionDesc"), media_url: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800", media_type: "image", category: t("galleryPage.categories.training") },
-    { id: "3", title: t("galleryPage.items.baseCampLife"), description: t("galleryPage.items.baseCampLifeDesc"), media_url: "https://images.unsplash.com/photo-1621414050946-1b936a78491d?w=800", media_type: "image", category: t("galleryPage.categories.onTheMountain") },
-    { id: "4", title: t("galleryPage.items.communityGathering"), description: t("galleryPage.items.communityGatheringDesc"), media_url: "https://images.unsplash.com/photo-1650668302197-7f556c34cb91?w=800", media_type: "image", category: t("galleryPage.categories.community") },
-    { id: "5", title: t("galleryPage.items.sunriseKibo"), description: t("galleryPage.items.sunriseKiboDesc"), media_url: "https://images.unsplash.com/photo-1580834341580-8c17a3a0135b?w=800", media_type: "image", category: t("galleryPage.categories.onTheMountain") },
-    { id: "6", title: t("galleryPage.items.porterPride"), description: t("galleryPage.items.porterPrideDesc"), media_url: "https://images.unsplash.com/photo-1551524164-687a55dd1126?w=800", media_type: "image", category: t("galleryPage.categories.community") },
-    { id: "7", title: t("galleryPage.items.loadingEquipment"), description: t("galleryPage.items.loadingEquipmentDesc"), media_url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800", media_type: "image", category: t("galleryPage.categories.onTheMountain") },
-    { id: "8", title: t("galleryPage.items.healthScreening"), description: t("galleryPage.items.healthScreeningDesc"), media_url: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800", media_type: "image", category: t("galleryPage.categories.health") },
-  ];
 
   useEffect(() => {
     async function fetchGallery() {
@@ -42,10 +39,7 @@ export default function Gallery() {
 
       if (data && data.length > 0) {
         setGallery(data);
-      } else {
-        setGallery(placeholderGallery);
       }
-      setLoading(false);
     }
 
     fetchGallery();
@@ -59,9 +53,9 @@ export default function Gallery() {
       {/* Hero */}
       <section className="relative py-20 bg-secondary text-secondary-foreground">
         <div className="container">
-          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">{t("galleryPage.title")}</h1>
+          <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">Gallery</h1>
           <p className="text-xl text-secondary-foreground/80 max-w-3xl">
-            {t("galleryPage.subtitle")}
+            Porters at work, training sessions in progress, and the Kilimanjaro and Mount Meru routes they know best.
           </p>
         </div>
       </section>
@@ -80,7 +74,7 @@ export default function Gallery() {
                     : "bg-muted text-muted-foreground hover:bg-muted/80"
                 }`}
               >
-                {category === "all" ? t("galleryPage.allCategories") : category}
+                {category === "all" ? "All" : category}
               </button>
             ))}
           </div>
@@ -101,7 +95,8 @@ export default function Gallery() {
               >
                 <img
                   src={item.media_url}
-                  alt={item.title}
+                  alt={`${item.title}${item.category ? ` - ${item.category}` : ""} | TAP Gallery`}
+                  loading="lazy"
                   className={`w-full object-cover transition-transform duration-300 group-hover:scale-105 ${
                     index % 5 === 0 ? "h-80 md:h-[400px]" : "h-48 md:h-56"
                   }`}
@@ -126,16 +121,17 @@ export default function Gallery() {
               <button
                 onClick={() => setSelectedItem(null)}
                 className="absolute top-4 right-4 z-10 p-2 bg-secondary/80 rounded-full text-white hover:bg-secondary transition-colors"
+                aria-label="Close"
               >
                 <X className="h-5 w-5" />
               </button>
               <img
                 src={selectedItem.media_url}
-                alt={selectedItem.title}
+                alt={`${selectedItem.title}${selectedItem.category ? ` - ${selectedItem.category}` : ""} | TAP Gallery`}
                 className="w-full max-h-[80vh] object-contain rounded-lg"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-secondary/90 to-transparent p-6 rounded-b-lg">
-                <h3 className="font-display text-xl font-bold text-white">{selectedItem.title}</h3>
+                <h2 className="font-display text-xl font-bold text-white">{selectedItem.title}</h2>
                 {selectedItem.description && <p className="text-white/80 mt-1">{selectedItem.description}</p>}
               </div>
             </div>

@@ -43,6 +43,14 @@
     "porterDirectory": {
       "title": "Porter Directory | Tanzania Association of Porters",
       "description": "Find and connect with certified professional porters for your mountain expedition in Tanzania."
+    },
+    "donate": {
+      "title": "Donate | Support Tanzania's Mountain Porters | TAP",
+      "description": "Support Kilimanjaro and Mount Meru porters through one-time or monthly giving, gear donations, and corporate partnership. Your gift funds welfare, training, and advocacy."
+    },
+    "news": {
+      "title": "News & Updates | Tanzania Association of Porters",
+      "description": "Latest news on TAP training cohorts, welfare distributions, and partnerships supporting Kilimanjaro and Tanzania mountain porters."
     }
   },
   "nav": {
@@ -64,6 +72,7 @@
     "podcast": "Porters Podcast",
     "porterChat": "Porter Chat",
     "contact": "Contact",
+    "donate": "Donate",
     "signIn": "Sign In",
     "joinTap": "Join TAP",
     "findPorter": "Find a Porter",
@@ -213,11 +222,11 @@
     "androidInstructions": "Tap menu then 'Install App'"
   },
   "index": {
-    "tagline": "Tanzania Association of Porters",
-    "heroTitle1": "Honoring the",
-    "heroTitle2": "Unsung Heroes",
-    "heroTitle3": "of Kilimanjaro",
-    "heroSubtitle": "Dedicated to the welfare, professional development, and recognition of the brave men and women who carry dreams to the Roof of Africa.",
+    "tagline": "Tanzania Association of Porters · Arusha, Tanzania",
+    "heroTitle": "The Professional Voice of Tanzania's Mountain Porters",
+    "heroSubtitle": "TAP advances the welfare, training, and rights of the porters who carry Kilimanjaro and Mount Meru expeditions — building a trekking industry that works fairly for the people who power it.",
+    "donateNow": "Donate",
+    "seeOurPrograms": "See Our Programs",
     "joinAsPorter": "Join as a Porter",
     "learnAboutTap": "Learn About TAP",
     "stats": {
@@ -225,6 +234,19 @@
       "trainingPrograms": "Training Programs",
       "partnerOrganizations": "Partner Organizations",
       "yearsOfService": "Years of Service"
+    },
+    "pillars": {
+      "sectionLabel": "Our Approach",
+      "sectionTitle": "Four Pillars of Our Work",
+      "sectionDesc": "Every program TAP runs falls under one of four commitments to Tanzania's mountain porters.",
+      "welfare": "Welfare",
+      "welfareDesc": "Gear support, medical care, and emergency rescue assistance for porters and their families.",
+      "training": "Training",
+      "trainingDesc": "Safety, first aid, and guiding-skills certification that raises the professional standard on every route.",
+      "advocacy": "Advocacy",
+      "advocacyDesc": "Fair wage standards and load-limit enforcement, backed by dialogue with operators and government.",
+      "partnership": "Partnership",
+      "partnershipDesc": "Working with tour operators, lodges, and NGOs who commit to ethical, porter-first practices."
     },
     "about": {
       "whoWeAre": "Who We Are",
@@ -240,18 +262,31 @@
       "ourPrograms": "Our Programs",
       "programsDescription": "Comprehensive programs designed to support, train, and empower porters at every stage of their careers.",
       "exploreAllPrograms": "Explore All Programs",
-      "safetyHealth": "Safety & Health Training",
-      "safetyHealthDesc": "Comprehensive training on altitude sickness prevention, first aid, and mountain safety protocols.",
-      "skillsDevelopment": "Skills Development",
-      "skillsDesc": "Professional development programs including language skills, customer service, and leadership.",
-      "welfarePrograms": "Welfare Programs",
-      "welfareDesc": "Healthcare support, insurance schemes, and emergency assistance for porters and their families."
+      "safetyHealth": "Welfare Program",
+      "safetyHealthDesc": "Gear provision, medical screening, and an emergency rescue fund for porters on the mountain.",
+      "skillsDevelopment": "Training Program",
+      "skillsDesc": "Certified courses in mountain safety, first aid, and professional guiding skills.",
+      "welfarePrograms": "Advocacy Program",
+      "welfareDesc": "Fair wage standards and load limits, negotiated directly with tour operators and regulators."
     },
     "testimonials": {
       "porterVoices": "Porter Voices",
       "storiesFromSummit": "Stories from the Summit",
-      "testimonialsDesc": "Hear from the porters whose lives have been transformed through TAP.",
+      "testimonialsDesc": "Hear directly from the porters whose careers and safety have been shaped by TAP's programs.",
       "readMoreStories": "Read More Stories"
+    },
+    "newsPreview": {
+      "sectionLabel": "Latest Updates",
+      "sectionTitle": "News from TAP",
+      "sectionDesc": "Training cohorts, partnerships, and welfare distributions from across our program.",
+      "readMore": "Read More",
+      "viewAllNews": "View All News"
+    },
+    "donateCta": {
+      "title": "Your Support Funds the Mountain",
+      "description": "Every gift to TAP goes directly to porter welfare, safety training, and advocacy work. Give once, give monthly, or partner with us as an organization.",
+      "donateNow": "Donate Now",
+      "waysToGive": "See Ways to Give"
     },
     "cta": {
       "joinCommunity": "Join the TAP Community",
@@ -324,7 +359,12 @@
     "chairman": "Mwenyekiti (Chairman)",
     "viceChairman": "Makamu Mwenyekiti (Vice Chairman)",
     "generalSecretary": "General Secretary",
-    "treasurer": "Treasurer"
+    "treasurer": "Treasurer",
+    "historyLabel": "Since 2008",
+    "historyTitle": "Our History",
+    "historyDesc1": "TAP was founded by veteran porters and tourism advocates who saw the need for a unified, professional voice for Tanzania's mountain porters.",
+    "historyDesc2": "Since then, we've secured government recognition, launched health and safety training programs, and built partnerships with tour operators and NGOs committed to ethical trekking.",
+    "readFullHistory": "Read Our Full History"
   },
   "contactPage": {
     "title": "Contact Us",
@@ -426,10 +466,86 @@
   },
   "programsPage": {
     "title": "Our Programs",
-    "subtitle": "Comprehensive training and development programs designed to empower porters with the skills, knowledge, and certifications they need to excel in their profession.",
+    "subtitle": "TAP's work is organized into three areas: welfare, training, and advocacy — each designed to raise the standard of living and working conditions for Tanzania's mountain porters.",
     "whatYouLearn": "What You'll Learn:",
     "duration": "Duration",
     "certification": "Certification",
+    "sections": {
+      "welfare": {
+        "label": "Welfare",
+        "title": "Gear, Medical Care & Rescue",
+        "desc": "Direct support that keeps porters safe and equipped on the mountain."
+      },
+      "training": {
+        "label": "Training",
+        "title": "Safety, First Aid & Guiding Skills",
+        "desc": "Certified courses that raise professional standards across every route."
+      },
+      "advocacy": {
+        "label": "Advocacy",
+        "title": "Fair Wage Standards & Load Limits",
+        "desc": "Policy work that holds the industry accountable to porters."
+      }
+    },
+    "welfareItems": {
+      "gear": {
+        "title": "Gear Provision",
+        "desc": "Waterproof jackets, boots, sleeping bags, and cold-weather gear issued to registered porters who lack adequate equipment.",
+        "features": ["Cold-weather clothing distribution", "Footwear and gaiters", "Sleeping bag loan program", "Equipment inspection before summit pushes"]
+      },
+      "medical": {
+        "title": "Medical Support",
+        "desc": "Health screening, altitude-illness monitoring, and access to treatment for porters and their families.",
+        "features": ["Annual health screenings", "Altitude sickness monitoring on route", "Clinic referrals and treatment support", "Family health education"]
+      },
+      "rescue": {
+        "title": "Emergency Rescue Fund",
+        "desc": "Rapid-response evacuation and emergency medical costs for porters injured or endangered on the mountain.",
+        "features": ["24-hour emergency response coordination", "Evacuation cost coverage", "Emergency medical treatment fund", "Family notification and support"]
+      }
+    },
+    "advocacyItems": {
+      "wages": {
+        "title": "Fair Wage Standards",
+        "desc": "TAP negotiates and monitors minimum daily wage standards with tour operators to ensure porters are paid fairly and on time.",
+        "features": ["Published minimum daily wage benchmarks", "Direct bank payment verification", "Operator compliance monitoring", "Wage dispute mediation"]
+      },
+      "loadLimits": {
+        "title": "Load Limit Enforcement",
+        "desc": "We advocate for and monitor compliance with the 20kg maximum load limit set by Kilimanjaro National Park authorities.",
+        "features": ["Load weigh-in stations at gates", "Operator compliance reporting", "Porter rights education", "Reporting channel for violations"]
+      },
+      "policy": {
+        "title": "Policy & Legal Advocacy",
+        "desc": "Representing porters in dialogue with government, park authorities, and the tourism industry on working conditions.",
+        "features": ["Government liaison on porter policy", "Industry standards working groups", "Legal support referrals", "Annual state-of-porters reporting"]
+      }
+    },
+    "pledge": {
+      "label": "For Tour Operators",
+      "title": "The Fair Porter Pledge",
+      "desc": "A public commitment for tour operators and outfitters to uphold fair wage, load-limit, and welfare standards for the porters on their trips.",
+      "commitmentsTitle": "By signing, your company commits to:",
+      "commitments": [
+        "Pay all porters at or above TAP's published minimum daily wage, in full and on time",
+        "Enforce the 20kg maximum load limit per porter on every trip",
+        "Provide or reimburse adequate cold-weather gear for every porter",
+        "Ensure access to emergency medical care and evacuation on all treks",
+        "Allow TAP to verify compliance through porter interviews and route checks"
+      ],
+      "formTitle": "Sign the Pledge",
+      "formDesc": "Submit your company's commitment and we'll add you to TAP's list of Fair Porter Pledge partners.",
+      "companyName": "Company / Operator Name",
+      "contactName": "Contact Person",
+      "contactEmail": "Email Address",
+      "website": "Company Website",
+      "submit": "Submit Our Pledge",
+      "submitting": "Submitting...",
+      "successTitle": "Pledge Received",
+      "successDesc": "Thank you for committing to fair porter standards. Our team will follow up to confirm your listing.",
+      "errorTitle": "Submission Failed",
+      "errorDesc": "Please try again or email info@tap.or.tz directly."
+    },
     "mountainSafety": {
       "title": "Mountain Safety Training",
       "desc": "Comprehensive training on altitude sickness prevention, emergency response, and mountain rescue techniques.",
@@ -548,5 +664,47 @@
     "title": "Gallery",
     "subtitle": "A visual celebration of the porter community, their work, and the majestic mountains they call their workplace.",
     "all": "All"
+  },
+  "donatePage": {
+    "title": "Donate",
+    "subtitle": "Your gift funds gear, medical care, safety training, and fair-wage advocacy for the porters who carry Kilimanjaro and Mount Meru.",
+    "sectionLabel": "Ways to Give",
+    "sectionTitle": "Choose How You Support Porters",
+    "sectionDesc": "Every option below funds TAP's welfare, training, and advocacy programs directly.",
+    "oneTime": {
+      "title": "One-Time Gift",
+      "desc": "A single donation directed to our most urgent welfare and rescue needs.",
+      "cta": "Give Once"
+    },
+    "monthly": {
+      "title": "Monthly Giving",
+      "desc": "Sustained monthly support that lets us plan training cohorts and welfare distributions year-round.",
+      "cta": "Give Monthly"
+    },
+    "gear": {
+      "title": "Gear Donation",
+      "desc": "Donate waterproof jackets, sleeping bags, boots, headlamps, and gloves. We accept drop-offs at our Arusha office and can arrange collection for larger contributions.",
+      "cta": "Arrange a Gear Donation"
+    },
+    "corporate": {
+      "title": "Corporate Partnership",
+      "desc": "Tour operators, lodges, and businesses can fund programs directly and sign the Fair Porter Pledge to publicly commit to ethical standards.",
+      "cta": "Discuss a Partnership"
+    },
+    "contactPrompt": "Get Donation Details",
+    "howFundsAreUsed": "How Your Gift Is Used",
+    "howFundsAreUsedDesc": "TAP directs donations to three areas of impact.",
+    "impact": {
+      "welfare": "Welfare",
+      "welfareDesc": "Gear, medical screening, and emergency rescue support.",
+      "training": "Training",
+      "trainingDesc": "Safety, first aid, and guiding-skills certification.",
+      "advocacy": "Advocacy",
+      "advocacyDesc": "Fair wage and load-limit standards enforcement."
+    },
+    "otherWaysTitle": "Other Ways to Support TAP",
+    "otherWaysDesc": "Not ready to give financially? You can also become a porter member, register as an honorary supporter, or partner with us as an organization.",
+    "bankTransfer": "For bank transfer or mobile money details, contact our office and we'll send secure instructions directly.",
+    "taxNote": "TAP is a registered non-profit in Tanzania. Contact us for receipts and documentation for your records."
   }
 }

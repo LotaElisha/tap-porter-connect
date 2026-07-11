@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { Loader2, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Loader2, MapPin, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -156,6 +156,30 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
+
+              <div>
+                <h3 className="font-semibold text-secondary mb-3">Follow TAP</h3>
+                <div className="flex gap-3">
+                  <a
+                    href="https://www.instagram.com/tanzania_asociation_of_porters"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <Instagram className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/tanzaniaporters"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Contact Form */}
@@ -229,10 +253,16 @@ export default function Contact() {
       {/* Map Section */}
       <section className="py-12 bg-muted">
         <div className="container">
-          <div className="bg-secondary/10 rounded-lg h-80 flex items-center justify-center">
-            <p className="text-muted-foreground">
-              {t("common.interactiveMapComingSoon")}
-            </p>
+          <div className="rounded-lg overflow-hidden h-80 shadow-md">
+            <iframe
+              title="TAP office location in Arusha, Tanzania"
+              src="https://www.google.com/maps?q=-3.3869,36.6830&z=13&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>

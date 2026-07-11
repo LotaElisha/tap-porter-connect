@@ -17,6 +17,7 @@ const CorporateRegistration = lazy(() => import("./pages/membership/CorporateReg
 const HonoraryRegistration = lazy(() => import("./pages/membership/HonoraryRegistration"));
 const Partners = lazy(() => import("./pages/Partners"));
 const News = lazy(() => import("./pages/News"));
+const Donate = lazy(() => import("./pages/Donate"));
 const Stories = lazy(() => import("./pages/Stories"));
 const Gallery = lazy(() => import("./pages/Gallery"));
 const Podcast = lazy(() => import("./pages/Podcast"));
@@ -55,6 +56,7 @@ const App = () => (
             <Route path="/membership/honorary" element={<HonoraryRegistration />} />
             <Route path="/partners" element={<Partners />} />
             <Route path="/news" element={<News />} />
+            <Route path="/donate" element={<Donate />} />
             <Route path="/stories" element={<Stories />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/podcast" element={<Podcast />} />

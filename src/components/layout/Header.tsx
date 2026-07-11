@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Menu } from "lucide-react";
+import { Menu, Facebook, Instagram, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -54,6 +54,11 @@ export function Header() {
     { label: t("nav.contact"), href: "/contact" },
   ];
 
+  const socialLinks = [
+    { label: "Instagram", href: "https://www.instagram.com/tanzania_asociation_of_porters", icon: Instagram },
+    { label: "Facebook", href: "https://www.facebook.com/tanzaniaporters", icon: Facebook },
+  ];
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-20 items-center justify-between">
@@ -104,14 +109,34 @@ export function Header() {
         </NavigationMenu>
 
         <div className="flex items-center gap-2">
+          <div className="hidden xl:flex items-center gap-1 mr-1">
+            {socialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.label}
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground hover:bg-muted hover:text-primary transition-colors"
+              >
+                <social.icon className="h-4 w-4" />
+              </a>
+            ))}
+          </div>
           <LanguageSwitcher />
           <Link to="/member-auth" className="hidden lg:block">
             <Button variant="outline" size="sm">
               {t("nav.signIn")}
             </Button>
           </Link>
+          <Link to="/donate" className="hidden lg:block">
+            <Button size="sm" className="gap-1.5">
+              <Heart className="h-3.5 w-3.5" />
+              {t("nav.donate")}
+            </Button>
+          </Link>
           <Link to="/membership/porter" className="hidden lg:block">
-            <Button size="sm">{t("nav.joinTap")}</Button>
+            <Button size="sm" variant="outline">{t("nav.joinTap")}</Button>
           </Link>
 
           {/* Mobile Menu */}
@@ -152,12 +177,32 @@ export function Header() {
                   )
                 )}
                 <div className="flex flex-col gap-2 mt-4">
+                  <Link to="/donate" onClick={() => setMobileOpen(false)}>
+                    <Button className="w-full gap-1.5">
+                      <Heart className="h-3.5 w-3.5" />
+                      {t("nav.donate")}
+                    </Button>
+                  </Link>
                   <Link to="/member-auth" onClick={() => setMobileOpen(false)}>
                     <Button variant="outline" className="w-full">{t("nav.signIn")}</Button>
                   </Link>
                   <Link to="/membership/porter" onClick={() => setMobileOpen(false)}>
-                    <Button className="w-full">{t("nav.joinTap")}</Button>
+                    <Button variant="outline" className="w-full">{t("nav.joinTap")}</Button>
                   </Link>
+                </div>
+                <div className="flex gap-4 mt-6 pt-6 border-t">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.label}
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <social.icon className="h-4 w-4" />
+                    </a>
+                  ))}
                 </div>
               </nav>
             </SheetContent>

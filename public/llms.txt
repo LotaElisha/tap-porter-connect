@@ -1,0 +1,25 @@
+# Tanzania Association of Porters (TAP)
+
+> TAP is a Tanzanian non-profit dedicated to the welfare, training, and advocacy of mountain porters on Kilimanjaro, Meru, and beyond.
+
+TAP supports porters through professional training, fair-wage advocacy, welfare programs, and a public directory that connects climbers and operators with certified porters. The site also hosts news, porter stories, a gallery, a podcast, and membership registration for porters, corporate partners, and honorary members.
+
+## Pages
+
+- [Home](/): Overview of TAP's mission and programs.
+- [About TAP](/about): Mission, vision, and leadership.
+- [History & Legacy](/history): The story of Tanzania's porters and TAP's founding.
+- [Programs](/programs): Training, safety, health, and welfare programs for porters.
+- [Membership](/membership): How porters, companies, and supporters join TAP.
+- [Partners](/partners): Organizations working with TAP on ethical tourism.
+- [Find a Porter](/porters): Public directory of certified TAP porters.
+- [News](/news): Announcements and updates from TAP.
+- [Porter Voices](/stories): First-hand stories from Tanzanian porters.
+- [Gallery](/gallery): Photos from trainings, expeditions, and events.
+- [Podcast](/podcast): The Porters Podcast — conversations from the mountain.
+- [Contact](/contact): Reach TAP for partnerships, media, or membership questions.
+- [Donate](/donate): Support porter welfare and training programs.
+
+## Optional
+
+- [Porter Chat](/porter-chat): Moderated community board for TAP porters.

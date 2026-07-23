@@ -132,8 +132,9 @@ export default function News() {
                   <Link
                     to={`/news/${featuredNews.slug}`}
                     className="inline-flex items-center text-primary hover:underline font-medium"
+                    aria-label={`Read full article: ${featuredNews.title}`}
                   >
-                    Read More
+                    Read full article
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </CardContent>
@@ -181,8 +182,9 @@ export default function News() {
                   <Link
                     to={`/news/${article.slug}`}
                     className="inline-flex items-center text-sm text-primary hover:underline"
+                    aria-label={`Read full article: ${article.title}`}
                   >
-                    Read More
+                    Read full article
                     <ArrowRight className="ml-1 h-3 w-3" />
                   </Link>
                 </CardContent>

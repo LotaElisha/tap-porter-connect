@@ -69,7 +69,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-3">
-              <img src={tapLogo} alt="TAP Logo" className="h-16 w-auto bg-white rounded-lg p-1" />
+              <img src={tapLogo} alt="Tanzania Association of Porters (TAP) official logo" className="h-16 w-auto bg-white rounded-lg p-1" />
             </Link>
             <p className="text-sm text-secondary-foreground/80">
               Empowering porters, preserving culture, and building a sustainable future for Tanzania's mountain communities.

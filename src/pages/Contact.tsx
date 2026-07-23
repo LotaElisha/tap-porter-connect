@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -8,8 +9,26 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { Loader2, MapPin, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
+import { Loader2, MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube, Music2, Users, Heart, Twitter, Linkedin, MessageSquare } from "lucide-react";
 import { z } from "zod";
+import {
+  address,
+  phoneNumbers,
+  officialEmail,
+  socialLinks,
+  moshiOfficeRepresentatives,
+  organizationStaff,
+} from "@/config/organization";
+
+const socialIcons = [
+  { key: "facebook" as const, label: "Facebook", Icon: Facebook },
+  { key: "instagram" as const, label: "Instagram", Icon: Instagram },
+  { key: "youtube" as const, label: "YouTube", Icon: Youtube },
+  { key: "tiktok" as const, label: "TikTok", Icon: Music2 },
+  { key: "twitter" as const, label: "X / Twitter", Icon: Twitter },
+  { key: "linkedin" as const, label: "LinkedIn", Icon: Linkedin },
+  { key: "whatsapp" as const, label: "WhatsApp", Icon: MessageSquare },
+];
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
@@ -108,8 +127,8 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-secondary">{t("contactPage.address")}</h3>
                     <p className="text-muted-foreground text-sm">
-                      P.O. Box 4087<br />
-                      Arusha, Tanzania
+                      {address.poBox}<br />
+                      {address.city}, {address.country}
                     </p>
                   </div>
                 </div>
@@ -120,27 +139,35 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-secondary">{t("contactPage.phone")}</h3>
-                    <p className="text-muted-foreground text-sm">
-                      <a href="tel:+255763488857" className="hover:text-primary transition-colors">
-                        +255 763 488 857
-                      </a>
+                    <p className="text-muted-foreground text-sm space-y-1">
+                      {phoneNumbers.map((phone) => (
+                        <a
+                          key={phone.href}
+                          href={phone.href}
+                          className="block hover:text-primary transition-colors"
+                        >
+                          {phone.display}
+                        </a>
+                      ))}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg h-fit">
-                    <Mail className="h-5 w-5 text-primary" />
+                {officialEmail && (
+                  <div className="flex gap-4">
+                    <div className="p-3 bg-primary/10 rounded-lg h-fit">
+                      <Mail className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-secondary">{t("contactPage.email")}</h3>
+                      <p className="text-muted-foreground text-sm">
+                        <a href={`mailto:${officialEmail}`} className="hover:text-primary transition-colors">
+                          {officialEmail}
+                        </a>
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-secondary">{t("contactPage.email")}</h3>
-                    <p className="text-muted-foreground text-sm">
-                      <a href="mailto:info@tap.or.tz" className="hover:text-primary transition-colors">
-                        info@tap.or.tz
-                      </a>
-                    </p>
-                  </div>
-                </div>
+                )}
 
                 <div className="flex gap-4">
                   <div className="p-3 bg-primary/10 rounded-lg h-fit">
@@ -157,27 +184,63 @@ export default function Contact() {
                 </div>
               </div>
 
+              {socialIcons.some(({ key }) => Boolean(socialLinks[key])) && (
+                <div>
+                  <h3 className="font-semibold text-secondary mb-3">Follow TAP</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {socialIcons
+                      .filter(({ key }) => Boolean(socialLinks[key]))
+                      .map(({ key, label, Icon }) => (
+                        <a
+                          key={key}
+                          href={socialLinks[key]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={label}
+                          className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                        >
+                          <Icon className="h-5 w-5" />
+                        </a>
+                      ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Moshi Secretary Office Representatives */}
               <div>
-                <h3 className="font-semibold text-secondary mb-3">Follow TAP</h3>
-                <div className="flex gap-3">
-                  <a
-                    href="https://www.instagram.com/tanzania_asociation_of_porters"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                  >
-                    <Instagram className="h-5 w-5" />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/tanzaniaporters"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                  >
-                    <Facebook className="h-5 w-5" />
-                  </a>
+                <h3 className="font-semibold text-secondary mb-3">Moshi Secretary Office</h3>
+                <div className="space-y-3">
+                  {moshiOfficeRepresentatives.map((rep) => (
+                    <div key={rep.name} className="flex items-center gap-3 p-3 rounded-lg bg-muted/60 hover:bg-muted transition-colors">
+                      <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary font-bold text-xs">
+                        {rep.image ? (
+                          <img src={rep.image} alt={rep.name} className="h-10 w-10 rounded-full object-cover" />
+                        ) : (
+                          rep.name.split(" ").map((n) => n[0]).join("").slice(0, 2)
+                        )}
+                      </div>
+                      <div>
+                        <p className="font-medium text-secondary text-sm">{rep.name}</p>
+                        <p className="text-xs text-muted-foreground">{rep.office} &middot; {rep.location}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Donation Support CTA */}
+              <div className="p-5 rounded-lg bg-primary/5 border border-primary/10">
+                <div className="flex items-start gap-3">
+                  <Heart className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-secondary mb-1">{t("nav.donate")}</h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      For official donation and bank details, please contact the organisation using the phone numbers or email above.
+                    </p>
+                    <Link to="/donate" className="text-sm font-medium text-primary hover:underline">
+                      {t("donatePage.title")} &rarr;
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

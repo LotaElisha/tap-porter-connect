@@ -1,12 +1,23 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Facebook, Instagram, Youtube, Music2, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Youtube, Music2, Mail, Phone, MapPin, Twitter, Linkedin, MessageSquare } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import tapLogo from "@/assets/tap-logo.png";
+import { address, phoneNumbers, officialEmail, socialLinks } from "@/config/organization";
+
+const socialIcons = [
+  { key: "facebook" as const, label: "Facebook", Icon: Facebook },
+  { key: "instagram" as const, label: "Instagram", Icon: Instagram },
+  { key: "youtube" as const, label: "YouTube", Icon: Youtube },
+  { key: "tiktok" as const, label: "TikTok", Icon: Music2 },
+  { key: "twitter" as const, label: "X / Twitter", Icon: Twitter },
+  { key: "linkedin" as const, label: "LinkedIn", Icon: Linkedin },
+  { key: "whatsapp" as const, label: "WhatsApp", Icon: MessageSquare },
+];
 
 export function Footer() {
   const { t } = useTranslation();
@@ -64,18 +75,20 @@ export function Footer() {
               Empowering porters, preserving culture, and building a sustainable future for Tanzania's mountain communities.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.facebook.com/tanzaniaporters" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Facebook">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="https://www.instagram.com/tanzania_asociation_of_porters" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Instagram">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="https://www.youtube.com/@tanzaniaporters" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="YouTube">
-                <Youtube className="h-5 w-5" />
-              </a>
-              <a href="https://www.tiktok.com/@tanzaniaporters" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="TikTok">
-                <Music2 className="h-5 w-5" />
-              </a>
+              {socialIcons
+                .filter(({ key }) => socialLinks[key])
+                .map(({ key, label, Icon }) => (
+                  <a
+                    key={key}
+                    href={socialLinks[key]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                    aria-label={label}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                ))}
             </div>
           </div>
 
@@ -102,16 +115,20 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-1 shrink-0" />
-                <span>P.O. Box 4087, Arusha, Tanzania</span>
+                <span>{address.full}</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 shrink-0" />
-                <a href="tel:+255763488857" className="hover:text-primary transition-colors">+255 763 488 857</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 shrink-0" />
-                <a href="mailto:info@tap.or.tz" className="hover:text-primary transition-colors">info@tap.or.tz</a>
-              </li>
+              {phoneNumbers.map((phone) => (
+                <li key={phone.href} className="flex items-center gap-2">
+                  <Phone className="h-4 w-4 shrink-0" />
+                  <a href={phone.href} className="hover:text-primary transition-colors">{phone.display}</a>
+                </li>
+              ))}
+              {officialEmail && (
+                <li className="flex items-center gap-2">
+                  <Mail className="h-4 w-4 shrink-0" />
+                  <a href={`mailto:${officialEmail}`} className="hover:text-primary transition-colors">{officialEmail}</a>
+                </li>
+              )}
             </ul>
           </div>
 

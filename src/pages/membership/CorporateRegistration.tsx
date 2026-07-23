@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Loader2, CheckCircle } from "lucide-react";
+import { officialEmail } from "@/config/organization";
 
 const companyTypes = [
   "Tour Operator",
@@ -99,7 +100,7 @@ export default function CorporateRegistration() {
                   Thank you for applying for corporate membership with TAP. Our team will review your application and contact you within 5-7 business days.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  For any questions, contact us at info@tapo.or.tz
+                  For any questions, contact us at {officialEmail}
                 </p>
               </CardContent>
             </Card>

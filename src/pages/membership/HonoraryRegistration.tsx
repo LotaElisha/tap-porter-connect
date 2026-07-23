@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Loader2, CheckCircle } from "lucide-react";
+import { officialEmail } from "@/config/organization";
 
 const memberTypes = [
   "NGO Representative",
@@ -100,7 +101,7 @@ export default function HonoraryRegistration() {
                   We appreciate your interest in supporting the Tanzania Association of Porters. Our team will review your application and reach out to discuss how we can work together.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  For any questions, contact us at info@tapo.or.tz
+                  For any questions, contact us at {officialEmail}
                 </p>
               </CardContent>
             </Card>

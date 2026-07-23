@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Menu, Facebook, Instagram, Heart } from "lucide-react";
+import { Menu, Facebook, Instagram, Youtube, Music2, Twitter, Linkedin, MessageSquare, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -14,6 +14,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import tapLogo from "@/assets/tap-logo.png";
+import { socialLinks } from "@/config/organization";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -54,10 +55,15 @@ export function Header() {
     { label: t("nav.contact"), href: "/contact" },
   ];
 
-  const socialLinks = [
-    { label: "Instagram", href: "https://www.instagram.com/tanzania_asociation_of_porters", icon: Instagram },
-    { label: "Facebook", href: "https://www.facebook.com/tanzaniaporters", icon: Facebook },
-  ];
+  const headerSocialLinks = [
+    { label: "Facebook", href: socialLinks.facebook, icon: Facebook },
+    { label: "Instagram", href: socialLinks.instagram, icon: Instagram },
+    { label: "YouTube", href: socialLinks.youtube, icon: Youtube },
+    { label: "TikTok", href: socialLinks.tiktok, icon: Music2 },
+    { label: "X / Twitter", href: socialLinks.twitter, icon: Twitter },
+    { label: "LinkedIn", href: socialLinks.linkedin, icon: Linkedin },
+    { label: "WhatsApp", href: socialLinks.whatsapp, icon: MessageSquare },
+  ].filter((social) => Boolean(social.href));
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -110,7 +116,7 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <div className="hidden xl:flex items-center gap-1 mr-1">
-            {socialLinks.map((social) => (
+            {headerSocialLinks.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
@@ -191,7 +197,7 @@ export function Header() {
                   </Link>
                 </div>
                 <div className="flex gap-4 mt-6 pt-6 border-t">
-                  {socialLinks.map((social) => (
+                  {headerSocialLinks.map((social) => (
                     <a
                       key={social.label}
                       href={social.href}

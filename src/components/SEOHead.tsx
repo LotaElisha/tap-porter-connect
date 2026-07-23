@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import { address, phoneNumbers, officialEmail, socialLinks } from '@/config/organization';
 
 const SITE_URL = 'https://tap.or.tz';
 const SUPPORTED_LANGUAGES = ['en', 'sw', 'de', 'es', 'fr', 'it', 'pt', 'ja', 'ko', 'ru', 'ar', 'zh'];
@@ -189,22 +190,18 @@ const SEOHead = () => {
       "foundingDate": "2018",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "P.O. Box 4087",
-        "addressLocality": "Arusha",
-        "addressCountry": "TZ"
+        "streetAddress": address.poBox,
+        "addressLocality": address.city,
+        "addressCountry": address.countryCode
       },
-      "contactPoint": {
+      "contactPoint": phoneNumbers.map((phone) => ({
         "@type": "ContactPoint",
-        "telephone": "+255-763-488-857",
-        "email": "info@tap.or.tz",
+        "telephone": phone.href.replace("tel:", ""),
+        "email": officialEmail || undefined,
         "contactType": "customer service",
         "availableLanguage": ["English", "Swahili"]
-      },
-      "sameAs": [
-        "https://www.facebook.com/tanzaniaporters",
-        "https://www.instagram.com/tanzania_asociation_of_porters",
-        "https://www.youtube.com/@tanzaniaporters"
-      ],
+      })),
+      "sameAs": Object.values(socialLinks).filter(Boolean),
       "areaServed": {
         "@type": "Country",
         "name": "Tanzania"

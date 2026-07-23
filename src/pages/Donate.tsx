@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart, Repeat, Package, Handshake, Shield, GraduationCap, Scale, Mail } from "lucide-react";
+import { Heart, Repeat, Package, Handshake, Shield, GraduationCap, Scale, Mail, Phone } from "lucide-react";
+import { BankDetailsCard } from "@/components/donate/BankDetailsCard";
+import { officialEmail, phoneNumbers } from "@/config/organization";
 
 export default function Donate() {
   const { t } = useTranslation();
@@ -74,7 +76,7 @@ export default function Donate() {
                   <h3 className="font-display text-lg font-semibold text-secondary mb-2">{way.title}</h3>
                   <p className="text-sm text-muted-foreground mb-6 leading-relaxed">{way.desc}</p>
                   <a
-                    href={`mailto:info@tap.or.tz?subject=${encodeURIComponent(`Donation Inquiry: ${way.title}`)}`}
+                    href={`mailto:${officialEmail}?subject=${encodeURIComponent(`Donation Inquiry: ${way.title}`)}`}
                     className="mt-auto w-full"
                   >
                     <Button variant="outline" className="w-full">
@@ -86,9 +88,18 @@ export default function Donate() {
             ))}
           </div>
 
-          <p className="text-center text-sm text-muted-foreground max-w-xl mx-auto mt-10">
-            {t("donatePage.bankTransfer")}
-          </p>
+          <div className="mt-16">
+            <div className="text-center max-w-2xl mx-auto mb-8">
+              <span className="text-primary font-medium text-sm tracking-wider uppercase">
+                Support Our Work
+              </span>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-secondary mt-3 mb-2">
+                Bank Transfer
+              </h2>
+              <p className="text-muted-foreground">{t("donatePage.bankTransfer")}</p>
+            </div>
+            <BankDetailsCard />
+          </div>
         </div>
       </section>
 
@@ -130,7 +141,7 @@ export default function Donate() {
             {t("donatePage.taxNote")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:info@tap.or.tz?subject=Donation%20Inquiry">
+            <a href={`mailto:${officialEmail}?subject=Donation%20Inquiry`}>
               <Button size="lg" className="text-lg h-14 px-8">
                 {t("donatePage.contactPrompt")}
               </Button>
@@ -144,6 +155,18 @@ export default function Donate() {
                 {t("index.seeOurPrograms")}
               </Button>
             </Link>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8">
+            {phoneNumbers.map((phone) => (
+              <a
+                key={phone.href}
+                href={phone.href}
+                className="inline-flex items-center gap-2 text-sm text-secondary-foreground/80 hover:text-primary transition-colors"
+              >
+                <Phone className="h-4 w-4" />
+                {phone.display}
+              </a>
+            ))}
           </div>
         </div>
       </section>

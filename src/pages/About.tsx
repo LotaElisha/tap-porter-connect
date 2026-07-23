@@ -5,8 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Target, Eye, Lightbulb, Heart, Users, Award, Globe, GraduationCap, Handshake, Shield, Banknote, ArrowRight } from "lucide-react";
 
-import loishiyePhoto from "@/assets/loishiye-lenoy-mollel.png";
-import chairmanPhoto from "@/assets/mohamed-ally-mkoma.png";
+import { moshiOfficeRepresentatives, organizationStaff } from "@/config/organization";
 
 export default function About() {
   const { t } = useTranslation();
@@ -29,12 +28,7 @@ export default function About() {
     { icon: Globe, title: t("about.sustainability"), description: t("about.sustainabilityDesc") },
   ];
 
-  const leadership = [
-    { name: "Mohamed Ally Mkoma", role: t("about.chairman"), image: chairmanPhoto },
-    { name: "Loishiye Lenoy Mollel", role: t("about.viceChairman"), image: loishiyePhoto },
-    { name: "Katibu Mkuu", role: t("about.generalSecretary"), image: null },
-    { name: "Mtunza Hazina", role: t("about.treasurer"), image: null },
-  ];
+  const staff = organizationStaff;
 
   return (
     <Layout>
@@ -126,24 +120,64 @@ export default function About() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">{t("about.leadership")}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">{t("about.leadershipDesc")}</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {leadership.map((leader) => (
-              <Card key={leader.name} className="overflow-hidden">
-                {leader.image ? (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {staff.map((member) => (
+              <Card key={member.name} className="overflow-hidden bg-card hover:shadow-md transition-shadow">
+                {member.image ? (
                   <img
-                    src={leader.image}
-                    alt={`${leader.name} - ${leader.role} | TAP Leadership Team`}
+                    src={member.image}
+                    alt={`${member.name} - ${member.roleTitle || member.office} | TAP Office Team`}
                     loading="lazy"
                     className="w-full h-64 object-cover"
                   />
                 ) : (
-                  <div className="w-full h-64 bg-muted flex items-center justify-center">
-                    <Users className="h-20 w-20 text-muted-foreground/40" />
+                  <div className="w-full h-64 bg-muted/80 flex flex-col items-center justify-center p-6 text-center">
+                    <div className="h-20 w-20 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl mb-2">
+                      {member.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+                    </div>
                   </div>
                 )}
-                <CardContent className="p-4 text-center">
-                  <h3 className="font-display text-lg font-semibold text-secondary">{leader.name}</h3>
-                  <p className="text-sm text-muted-foreground">{leader.role}</p>
+                <CardContent className="p-5 text-center">
+                  <h3 className="font-display text-lg font-semibold text-secondary">{member.name}</h3>
+                  <p className="text-sm text-muted-foreground font-medium">{member.roleTitle || member.office}</p>
+                  <p className="text-xs text-muted-foreground/80 mt-1">{member.location}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Moshi Secretary Office */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary mb-4">Moshi Secretary Office</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Official representatives serving TAP members from our Moshi Secretary Office.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            {moshiOfficeRepresentatives.map((rep) => (
+              <Card key={rep.name} className="overflow-hidden bg-card hover:shadow-md transition-shadow">
+                {rep.image ? (
+                  <img
+                    src={rep.image}
+                    alt={`${rep.name} - ${rep.office} | TAP Moshi Secretary Office`}
+                    loading="lazy"
+                    className="w-full h-64 object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-56 bg-muted/80 flex flex-col items-center justify-center p-6 text-center">
+                    <div className="h-20 w-20 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl mb-2">
+                      {rep.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+                    </div>
+                  </div>
+                )}
+                <CardContent className="p-5 text-center">
+                  <h3 className="font-display text-lg font-semibold text-secondary">{rep.name}</h3>
+                  <p className="text-sm text-muted-foreground font-medium">{rep.office}</p>
+                  <p className="text-xs text-muted-foreground/80 mt-1">Location: {rep.location}</p>
                 </CardContent>
               </Card>
             ))}

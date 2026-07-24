@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { Loader2, MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube, Music2, Users, Heart, Twitter, Linkedin, MessageSquare } from "lucide-react";
+import { Loader2, MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube, Music2, Users, Heart, Twitter, Linkedin, MessageSquare, Star, Share2 } from "lucide-react";
 import { z } from "zod";
 import {
   address,
@@ -25,6 +25,8 @@ const socialIcons = [
   { key: "instagram" as const, label: "Instagram", Icon: Instagram },
   { key: "youtube" as const, label: "YouTube", Icon: Youtube },
   { key: "tiktok" as const, label: "TikTok", Icon: Music2 },
+  { key: "googleReviews" as const, label: "Google Reviews", Icon: Star },
+  { key: "googleShare" as const, label: "Google Business", Icon: Share2 },
   { key: "twitter" as const, label: "X / Twitter", Icon: Twitter },
   { key: "linkedin" as const, label: "LinkedIn", Icon: Linkedin },
   { key: "whatsapp" as const, label: "WhatsApp", Icon: MessageSquare },

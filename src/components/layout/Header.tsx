@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Menu, Facebook, Instagram, Youtube, Music2, Twitter, Linkedin, MessageSquare, Heart } from "lucide-react";
+import { Menu, Facebook, Instagram, Youtube, Music2, Twitter, Linkedin, MessageSquare, Heart, Star, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -60,6 +60,8 @@ export function Header() {
     { label: "Instagram", href: socialLinks.instagram, icon: Instagram },
     { label: "YouTube", href: socialLinks.youtube, icon: Youtube },
     { label: "TikTok", href: socialLinks.tiktok, icon: Music2 },
+    { label: "Google Reviews", href: socialLinks.googleReviews, icon: Star },
+    { label: "Google Business", href: socialLinks.googleShare, icon: Share2 },
     { label: "X / Twitter", href: socialLinks.twitter, icon: Twitter },
     { label: "LinkedIn", href: socialLinks.linkedin, icon: Linkedin },
     { label: "WhatsApp", href: socialLinks.whatsapp, icon: MessageSquare },

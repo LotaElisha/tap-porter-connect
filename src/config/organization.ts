@@ -72,6 +72,58 @@ export const socialLinks: Record<string, string> = {
 };
 
 // ---------------------------------------------------------------------------
+// 4b. Google Business Live Posts
+// ---------------------------------------------------------------------------
+export interface GoogleBusinessPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  publishedDate: string;
+  url: string;
+  imageUrl?: string;
+}
+
+export const googleBusinessPosts: GoogleBusinessPost[] = [
+  {
+    id: "gpost-1",
+    title: "Mountain Porter Welfare & Safety Milestone — TAP Official Update",
+    excerpt: "Official updates on porter welfare standards, load limits, and first-aid safety certifications on Mount Kilimanjaro and Meru routes.",
+    category: "Google Business Post",
+    publishedDate: "2026-07-20",
+    url: "https://share.google/GiyoA7AUPx440Euzh",
+    imageUrl: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800",
+  },
+  {
+    id: "gpost-2",
+    title: "Equipment Distribution & Mountain Gear Welfare Campaign",
+    excerpt: "TAP welfare committee distributing essential cold-weather mountain gear and protective boots to registered mountain porters.",
+    category: "Google Business Post",
+    publishedDate: "2026-07-15",
+    url: "https://share.google/kmnesjSUpVi242dFz",
+    imageUrl: "https://images.unsplash.com/photo-1621414050946-1b936a78491d?w=800",
+  },
+  {
+    id: "gpost-3",
+    title: "Tour Operator Collaboration & Fair Wages Agreement",
+    excerpt: "Expanding tour operator partnerships under the TAP Fair Porter Pledge to enforce ethical wage guidelines and medical insurance.",
+    category: "Google Business Post",
+    publishedDate: "2026-07-10",
+    url: "https://share.google/n4TPMyB62typdN48X",
+    imageUrl: "https://images.unsplash.com/photo-1609198092458-38a293c7ac4b?w=800",
+  },
+  {
+    id: "gpost-4",
+    title: "Health Screening & Medical Outreach Campaign for TAP Members",
+    excerpt: "Free health screenings, physical wellness evaluations, and altitude health education delivered to mountain porters across Tanzania.",
+    category: "Google Business Post",
+    publishedDate: "2026-07-05",
+    url: "https://share.google/y7sD6uoZvO47c49ht",
+    imageUrl: "https://images.unsplash.com/photo-1650668302197-7f556c34cb91?w=800",
+  },
+];
+
+// ---------------------------------------------------------------------------
 // 5. Moshi Secretary Office Representatives
 // ---------------------------------------------------------------------------
 // Explicitly confirmed representatives for the Moshi Secretary Office.

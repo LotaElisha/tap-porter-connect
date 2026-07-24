@@ -3,9 +3,10 @@ import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { supabase } from "@/integrations/supabase/client";
-import { Calendar, ArrowRight } from "lucide-react";
+import { Calendar, ArrowRight, ExternalLink, Globe } from "lucide-react";
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
+import { googleBusinessPosts } from "@/config/organization";
 
 interface NewsArticle {
   id: string;
@@ -95,7 +96,7 @@ export default function News() {
         <div className="container">
           <h1 className="font-display text-4xl md:text-5xl font-bold mb-6">News & Updates</h1>
           <p className="text-xl text-secondary-foreground/80 max-w-3xl">
-            Stay informed about TAP's latest programs, partnerships, and initiatives supporting porter welfare.
+            Stay informed about TAP's latest programs, partnerships, official Google Business updates, and welfare initiatives.
           </p>
         </div>
       </section>
@@ -144,10 +145,76 @@ export default function News() {
         </section>
       )}
 
+      {/* Official Google Business Posts Section */}
+      <section className="py-12 bg-secondary/5 border-y">
+        <div className="container">
+          <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <Globe className="h-5 w-5 text-primary" />
+                <Badge variant="outline" className="text-xs uppercase tracking-wider font-semibold border-primary/40 text-primary">
+                  Official Live Stream
+                </Badge>
+              </div>
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-secondary">
+                Google Business Updates
+              </h2>
+              <p className="text-sm text-muted-foreground mt-1">
+                Direct updates and announcements published from TAP's official Google Business Profile.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {googleBusinessPosts.map((post) => (
+              <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-all border border-border/80 flex flex-col justify-between">
+                <div>
+                  {post.imageUrl && (
+                    <div className="w-full h-44 bg-muted overflow-hidden">
+                      <img
+                        src={post.imageUrl}
+                        alt={post.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
+                  <CardHeader className="p-5 pb-2">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Badge className="bg-primary/10 text-primary hover:bg-primary/20 text-xs border-none font-medium">
+                        {post.category}
+                      </Badge>
+                    </div>
+                    <CardTitle className="font-display text-base line-clamp-2 leading-snug">
+                      {post.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-5 pt-0">
+                    <CardDescription className="line-clamp-3 text-xs text-muted-foreground leading-relaxed">
+                      {post.excerpt}
+                    </CardDescription>
+                  </CardContent>
+                </div>
+                <div className="p-5 pt-0 mt-auto">
+                  <a
+                    href={post.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-between w-full text-xs font-semibold text-primary hover:text-primary/80 pt-3 border-t transition-colors"
+                  >
+                    <span>View Google Post</span>
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* News Grid */}
       <section className="py-12 bg-muted">
         <div className="container">
-          <h2 className="font-display text-2xl font-bold text-secondary mb-8">Latest News</h2>
+          <h2 className="font-display text-2xl font-bold text-secondary mb-8">Latest Articles & Reports</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {otherNews.map((article) => (
               <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-shadow">

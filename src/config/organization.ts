@@ -63,7 +63,7 @@ export const socialLinks: Record<string, string> = {
   instagram: "https://www.instagram.com/tanzania_asociation_of_porters",
   youtube: "https://www.youtube.com/@tanzaniaporters",
   tiktok: "https://www.tiktok.com/@tanzaniaporters",
-  googleReviews: "https://g.page/r/CT_PQ8cTMeCDEAE/review",
+  googleReviews: "https://g.page/r/CT_PQ8cTMeCDEBM/review",
   googleShare: "https://share.google/gx0gJ8XAMkvbmvQR6",
   twitter: "", // DEVELOPER NOTE: Enter verified X/Twitter URL here when available
   linkedin: "", // DEVELOPER NOTE: Enter verified LinkedIn URL here when available

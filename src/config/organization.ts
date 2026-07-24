@@ -11,16 +11,16 @@
  * About page, Donate page, SEOHead structured data) reads from this file.
  */
 
-import chairmanPhoto from "@/assets/MOHAMMED ALLY MKOMA.jpg";
-import viceChairmanPhoto from "@/assets/LOISHIYE LONEY MOLLEL .PNG";
-import edsonPhoto from "@/assets/EDSON SELEMANI MATAUNA .PNG";
-import ramadhaniPhoto from "@/assets/RAMADHANI LILA MATALI.jpg";
-import samsonPhoto from "@/assets/SAMSON GABUCHO MACHABA.jpg";
-import winniePhoto from "@/assets/WINNIE  MICHAEL MPONDE.jpg";
-import marryPhoto from "@/assets/MARRY ROBERT LYIMO.jpg";
-import gloryPhoto from "@/assets/GLORY GODLOVE NDOSI.jpg";
-import mwanaidiPhoto from "@/assets/MWANAIDI HABIBU MKUMBO.jpg";
-import mwallyPhoto from "@/assets/MWALLY DUNIA ADONIS.jpg";
+import chairmanPhoto from "@/assets/mohamed-ally-mkoma.jpg";
+import viceChairmanPhoto from "@/assets/loishiye-lenoy-mollel.png";
+import edsonPhoto from "@/assets/edson-selemani-matauna.png";
+import ramadhaniPhoto from "@/assets/ramadhani-lila-matali.jpg";
+import samsonPhoto from "@/assets/samson-gabucho-machaba.jpg";
+import winniePhoto from "@/assets/winnie-michael-mponde.jpg";
+import marryPhoto from "@/assets/marry-robert-lyimo.jpg";
+import gloryPhoto from "@/assets/glory-godlove-ndosi.jpg";
+import mwanaidiPhoto from "@/assets/mwanaidi-habibu-mkumbo.jpg";
+import mwallyPhoto from "@/assets/mwally-dunia-adonis.jpg";
 
 // ---------------------------------------------------------------------------
 // 1. Postal Address

@@ -132,6 +132,16 @@ export default function Contact() {
                       {address.poBox}<br />
                       {address.city}, {address.country}
                     </p>
+                    {socialLinks.googleMaps && (
+                      <a
+                        href={socialLinks.googleMaps}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-xs text-primary hover:underline font-medium mt-1"
+                      >
+                        <MapPin className="h-3 w-3" /> View on Google Maps &rarr;
+                      </a>
+                    )}
                   </div>
                 </div>
 

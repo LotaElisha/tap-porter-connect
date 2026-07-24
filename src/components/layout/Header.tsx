@@ -1,7 +1,23 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Menu, Facebook, Instagram, Youtube, Music2, Twitter, Linkedin, MessageSquare, Heart, Star, Share2 } from "lucide-react";
+import {
+  Menu,
+  Facebook,
+  Instagram,
+  Youtube,
+  Music2,
+  Twitter,
+  Linkedin,
+  MessageSquare,
+  Heart,
+  Star,
+  Share2,
+  Phone,
+  Mail,
+  UserPlus,
+  LogIn,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -11,10 +27,10 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import tapLogo from "@/assets/tap-logo.png";
-import { socialLinks } from "@/config/organization";
+import { socialLinks, phoneNumbers, officialEmail } from "@/config/organization";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -22,37 +38,37 @@ export function Header() {
   const { t } = useTranslation();
 
   const navItems = [
-    { label: t("nav.home"), href: "/" },
+    { label: t("nav.home", "Home"), href: "/" },
     {
-      label: t("nav.about"),
+      label: t("nav.about", "About TAP"),
       children: [
-        { label: t("nav.aboutTap"), href: "/about" },
-        { label: t("nav.history"), href: "/history" },
+        { label: t("nav.aboutTap", "Overview"), href: "/about" },
+        { label: t("nav.history", "Our History"), href: "/history" },
       ],
     },
-    { label: t("nav.programs"), href: "/programs" },
+    { label: t("nav.programs", "Programs"), href: "/programs" },
     {
-      label: t("nav.membership"),
+      label: t("nav.membership", "Membership"),
       children: [
-        { label: t("nav.membershipBenefits"), href: "/membership" },
-        { label: t("nav.porterRegistration"), href: "/membership/porter" },
-        { label: t("nav.corporateRegistration"), href: "/membership/corporate" },
-        { label: t("nav.honoraryRegistration"), href: "/membership/honorary" },
+        { label: t("nav.membershipBenefits", "Member Benefits"), href: "/membership" },
+        { label: t("nav.porterRegistration", "Porter Registration"), href: "/membership/porter" },
+        { label: t("nav.corporateRegistration", "Corporate Registration"), href: "/membership/corporate" },
+        { label: t("nav.honoraryRegistration", "Honorary Registration"), href: "/membership/honorary" },
       ],
     },
-    { label: t("nav.partners"), href: "/partners" },
-    { label: t("nav.findPorter"), href: "/porters" },
+    { label: t("nav.partners", "Partners"), href: "/partners" },
+    { label: t("nav.findPorter", "Find a Porter"), href: "/porters" },
     {
-      label: t("nav.storiesMedia"),
+      label: t("nav.storiesMedia", "News & Media"),
       children: [
-        { label: t("nav.news"), href: "/news" },
-        { label: t("nav.porterVoices"), href: "/stories" },
-        { label: t("nav.gallery"), href: "/gallery" },
-        { label: t("nav.podcast"), href: "/podcast" },
-        { label: t("nav.porterChat"), href: "/porter-chat" },
+        { label: t("nav.news", "News & Updates"), href: "/news" },
+        { label: t("nav.porterVoices", "Porter Voices"), href: "/stories" },
+        { label: t("nav.gallery", "Media Gallery"), href: "/gallery" },
+        { label: t("nav.podcast", "TAP Podcast"), href: "/podcast" },
+        { label: t("nav.porterChat", "Porter Community Chat"), href: "/porter-chat" },
       ],
     },
-    { label: t("nav.contact"), href: "/contact" },
+    { label: t("nav.contact", "Contact"), href: "/contact" },
   ];
 
   const headerSocialLinks = [
@@ -67,30 +83,43 @@ export function Header() {
     { label: "WhatsApp", href: socialLinks.whatsapp, icon: MessageSquare },
   ].filter((social) => Boolean(social.href));
 
+  const isPathActive = (href?: string, children?: { href: string }[]) => {
+    if (href && location.pathname === href) return true;
+    if (children && children.some((child) => location.pathname === child.href)) return true;
+    return false;
+  };
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center">
-          <img src={tapLogo} alt="Tanzania Association of Porters - TAP Logo" className="h-14 w-auto" />
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-sm transition-all">
+      <div className="container flex h-20 items-center justify-between gap-4">
+        {/* Brand Logo */}
+        <Link to="/" className="flex items-center shrink-0 hover:opacity-90 transition-opacity">
+          <img src={tapLogo} alt="Tanzania Association of Porters - TAP Logo" className="h-14 w-auto object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
         <NavigationMenu className="hidden lg:flex">
-          <NavigationMenuList>
+          <NavigationMenuList className="gap-1">
             {navItems.map((item) =>
               item.children ? (
                 <NavigationMenuItem key={item.label}>
-                  <NavigationMenuTrigger className="bg-transparent">
+                  <NavigationMenuTrigger
+                    className={`bg-transparent text-sm font-medium transition-colors hover:text-primary focus:text-primary ${
+                      isPathActive(undefined, item.children) ? "text-primary font-semibold" : "text-foreground/80"
+                    }`}
+                  >
                     {item.label}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-48 gap-1 p-2">
+                    <ul className="grid w-52 gap-1 p-2 bg-popover rounded-md shadow-lg border">
                       {item.children.map((child) => (
                         <li key={child.href}>
                           <NavigationMenuLink asChild>
                             <Link
                               to={child.href}
-                              className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              className={`block select-none rounded-md px-3 py-2 text-sm font-medium leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-primary focus:bg-accent focus:text-primary ${
+                                location.pathname === child.href ? "bg-accent/60 text-primary font-semibold" : "text-popover-foreground/90"
+                              }`}
                             >
                               {child.label}
                             </Link>
@@ -103,9 +132,9 @@ export function Header() {
               ) : (
                 <NavigationMenuItem key={item.label}>
                   <Link
-                    to={item.href}
-                    className={`group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none ${
-                      location.pathname === item.href ? "text-primary" : ""
+                    to={item.href!}
+                    className={`group inline-flex h-10 w-max items-center justify-center rounded-md px-3.5 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-primary focus:bg-accent focus:text-primary focus:outline-none ${
+                      location.pathname === item.href ? "text-primary font-semibold bg-accent/40" : "text-foreground/80"
                     }`}
                   >
                     {item.label}
@@ -116,7 +145,9 @@ export function Header() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <div className="flex items-center gap-2">
+        {/* Header Right Actions */}
+        <div className="flex items-center gap-2 shrink-0">
+          {/* Social Quick Links (XL screens) */}
           <div className="hidden xl:flex items-center gap-1 mr-1">
             {headerSocialLinks.map((social) => (
               <a
@@ -125,80 +156,128 @@ export function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground hover:bg-muted hover:text-primary transition-colors"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full text-muted-foreground hover:bg-accent hover:text-primary transition-colors"
               >
                 <social.icon className="h-4 w-4" />
               </a>
             ))}
           </div>
+
           <LanguageSwitcher />
-          <Link to="/member-auth" className="hidden lg:block">
-            <Button variant="outline" size="sm">
-              {t("nav.signIn")}
-            </Button>
-          </Link>
+
+          {/* Action Buttons */}
           <Link to="/donate" className="hidden lg:block">
-            <Button size="sm" className="gap-1.5">
-              <Heart className="h-3.5 w-3.5" />
-              {t("nav.donate")}
+            <Button size="sm" className="gap-1.5 font-medium shadow-sm">
+              <Heart className="h-3.5 w-3.5 fill-current" />
+              {t("nav.donate", "Donate")}
             </Button>
-          </Link>
-          <Link to="/membership/porter" className="hidden lg:block">
-            <Button size="sm" variant="outline">{t("nav.joinTap")}</Button>
           </Link>
 
-          {/* Mobile Menu */}
+          <Link to="/member-auth" className="hidden xl:block">
+            <Button variant="outline" size="sm" className="gap-1 font-medium">
+              <LogIn className="h-3.5 w-3.5" />
+              {t("nav.signIn", "Sign In")}
+            </Button>
+          </Link>
+
+          <Link to="/membership/porter" className="hidden lg:block">
+            <Button size="sm" variant="outline" className="gap-1 font-medium border-primary/40 hover:border-primary text-primary">
+              <UserPlus className="h-3.5 w-3.5" />
+              {t("nav.joinTap", "Join TAP")}
+            </Button>
+          </Link>
+
+          {/* Mobile Navigation Drawer */}
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild className="lg:hidden">
               <Button variant="ghost" size="icon" aria-label="Open menu">
-                <Menu className="h-5 w-5" />
+                <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-80">
-              <nav className="flex flex-col gap-4 mt-8">
-                {navItems.map((item) =>
-                  item.children ? (
-                    <div key={item.label} className="space-y-2">
-                      <p className="font-medium text-sm text-muted-foreground">
+            <SheetContent side="right" className="w-80 flex flex-col justify-between overflow-y-auto">
+              <div>
+                <SheetHeader className="text-left pb-4 border-b">
+                  <SheetTitle className="flex items-center gap-2">
+                    <img src={tapLogo} alt="TAP Logo" className="h-10 w-auto" />
+                  </SheetTitle>
+                </SheetHeader>
+
+                <nav className="flex flex-col gap-3 mt-6">
+                  {navItems.map((item) =>
+                    item.children ? (
+                      <div key={item.label} className="space-y-1">
+                        <p className="font-semibold text-xs uppercase tracking-wider text-muted-foreground px-2 pt-2">
+                          {item.label}
+                        </p>
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            to={child.href}
+                            onClick={() => setMobileOpen(false)}
+                            className={`block pl-4 pr-3 py-2 text-sm rounded-md transition-colors ${
+                              location.pathname === child.href
+                                ? "bg-primary/10 text-primary font-semibold"
+                                : "text-foreground/80 hover:bg-accent hover:text-primary"
+                            }`}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    ) : (
+                      <Link
+                        key={item.href}
+                        to={item.href!}
+                        onClick={() => setMobileOpen(false)}
+                        className={`block px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${
+                          location.pathname === item.href
+                            ? "bg-primary/10 text-primary font-semibold"
+                            : "text-foreground/80 hover:bg-accent hover:text-primary"
+                        }`}
+                      >
                         {item.label}
-                      </p>
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          to={child.href}
-                          onClick={() => setMobileOpen(false)}
-                          className="block pl-4 py-2 text-sm hover:text-primary transition-colors"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  ) : (
-                    <Link
-                      key={item.href}
-                      to={item.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="py-2 font-medium hover:text-primary transition-colors"
-                    >
-                      {item.label}
-                    </Link>
-                  )
-                )}
-                <div className="flex flex-col gap-2 mt-4">
+                      </Link>
+                    )
+                  )}
+                </nav>
+
+                {/* Mobile CTAs */}
+                <div className="flex flex-col gap-2.5 mt-6 pt-6 border-t">
                   <Link to="/donate" onClick={() => setMobileOpen(false)}>
-                    <Button className="w-full gap-1.5">
-                      <Heart className="h-3.5 w-3.5" />
-                      {t("nav.donate")}
+                    <Button className="w-full gap-1.5 font-medium">
+                      <Heart className="h-4 w-4 fill-current" />
+                      {t("nav.donate", "Donate to TAP")}
+                    </Button>
+                  </Link>
+                  <Link to="/membership/porter" onClick={() => setMobileOpen(false)}>
+                    <Button variant="outline" className="w-full gap-1.5 font-medium border-primary/40 text-primary">
+                      <UserPlus className="h-4 w-4" />
+                      {t("nav.joinTap", "Join TAP")}
                     </Button>
                   </Link>
                   <Link to="/member-auth" onClick={() => setMobileOpen(false)}>
-                    <Button variant="outline" className="w-full">{t("nav.signIn")}</Button>
-                  </Link>
-                  <Link to="/membership/porter" onClick={() => setMobileOpen(false)}>
-                    <Button variant="outline" className="w-full">{t("nav.joinTap")}</Button>
+                    <Button variant="ghost" className="w-full gap-1.5 font-medium">
+                      <LogIn className="h-4 w-4" />
+                      {t("nav.signIn", "Sign In")}
+                    </Button>
                   </Link>
                 </div>
-                <div className="flex gap-4 mt-6 pt-6 border-t">
+              </div>
+
+              {/* Mobile Drawer Footer with Contact & Social Icons */}
+              <div className="pt-6 mt-6 border-t space-y-4">
+                <div className="space-y-2 text-xs text-muted-foreground">
+                  <a href={phoneNumbers[0].href} className="flex items-center gap-2 hover:text-primary transition-colors">
+                    <Phone className="h-3.5 w-3.5 text-primary" />
+                    <span>{phoneNumbers[0].display}</span>
+                  </a>
+                  <a href={`mailto:${officialEmail}`} className="flex items-center gap-2 hover:text-primary transition-colors">
+                    <Mail className="h-3.5 w-3.5 text-primary" />
+                    <span>{officialEmail}</span>
+                  </a>
+                </div>
+
+                <div className="flex flex-wrap gap-2 pt-2">
                   {headerSocialLinks.map((social) => (
                     <a
                       key={social.label}
@@ -206,13 +285,13 @@ export function Header() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.label}
-                      className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-muted text-muted-foreground hover:text-primary transition-colors"
+                      className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
                     >
-                      <social.icon className="h-4 w-4" />
+                      <social.icon className="h-3.5 w-3.5" />
                     </a>
                   ))}
                 </div>
-              </nav>
+              </div>
             </SheetContent>
           </Sheet>
         </div>

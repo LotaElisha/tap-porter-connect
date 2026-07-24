@@ -164,7 +164,7 @@ export const organizationStaff: Representative[] = [
   {
     name: "Loishiye Lenoy Mollel",
     office: "Leadership",
-    roleTitle: "Makamu Mwenyekiti (Vice Chairman)",
+    roleTitle: "General Secretary",
     location: "Arusha Main Office",
     image: viceChairmanPhoto,
   },

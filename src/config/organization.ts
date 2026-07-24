@@ -13,6 +13,9 @@
 
 import chairmanPhoto from "@/assets/MOHAMMED ALLY MKOMA.jpg";
 import viceChairmanPhoto from "@/assets/LOISHIYE LONEY MOLLEL .PNG";
+import edsonPhoto from "@/assets/EDSON SELEMANI MATAUNA .PNG";
+import ramadhaniPhoto from "@/assets/RAMADHANI LILA MATALI.jpg";
+import samsonPhoto from "@/assets/SAMSON GABUCHO MACHABA.jpg";
 import winniePhoto from "@/assets/WINNIE  MICHAEL MPONDE.jpg";
 import marryPhoto from "@/assets/MARRY ROBERT LYIMO.jpg";
 import gloryPhoto from "@/assets/GLORY GODLOVE NDOSI.jpg";
@@ -109,6 +112,27 @@ export const organizationStaff: Representative[] = [
     roleTitle: "Makamu Mwenyekiti (Vice Chairman)",
     location: "Arusha Main Office",
     image: viceChairmanPhoto,
+  },
+  {
+    name: "Edson Selemani Matauna",
+    office: "Leadership",
+    roleTitle: "Vice Chairperson",
+    location: "Arusha Main Office",
+    image: edsonPhoto,
+  },
+  {
+    name: "Ramadhani Lila Matali",
+    office: "Administration",
+    roleTitle: "Deputy General Secretary",
+    location: "Arusha Main Office",
+    image: ramadhaniPhoto,
+  },
+  {
+    name: "Samson Gabucho Machaba",
+    office: "Administration",
+    roleTitle: "Administration",
+    location: "Arusha Main Office",
+    image: samsonPhoto,
   },
   {
     name: "Winnie Michael Mponde",

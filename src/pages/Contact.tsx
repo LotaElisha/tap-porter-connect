@@ -212,9 +212,9 @@ export default function Contact() {
                 <div className="space-y-3">
                   {moshiOfficeRepresentatives.map((rep) => (
                     <div key={rep.name} className="flex items-center gap-3 p-3 rounded-lg bg-muted/60 hover:bg-muted transition-colors">
-                      <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary font-bold text-xs">
+                      <div className="h-14 w-14 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0 text-primary font-bold text-xs p-0.5 border border-primary/20 overflow-hidden">
                         {rep.image ? (
-                          <img src={rep.image} alt={rep.name} className="h-10 w-10 rounded-full object-cover" />
+                          <img src={rep.image} alt={rep.name} className="h-full w-full object-contain rounded" />
                         ) : (
                           rep.name.split(" ").map((n) => n[0]).join("").slice(0, 2)
                         )}

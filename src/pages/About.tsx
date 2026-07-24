@@ -122,16 +122,18 @@ export default function About() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {staff.map((member) => (
-              <Card key={member.name} className="overflow-hidden bg-card hover:shadow-md transition-shadow">
+              <Card key={member.name} className="overflow-hidden bg-card hover:shadow-lg transition-all border-none">
                 {member.image ? (
-                  <img
-                    src={member.image}
-                    alt={`${member.name} - ${member.roleTitle || member.office} | TAP Office Team`}
-                    loading="lazy"
-                    className="w-full h-64 object-cover"
-                  />
+                  <div className="w-full h-80 bg-secondary/10 flex items-center justify-center p-2 overflow-hidden">
+                    <img
+                      src={member.image}
+                      alt={`${member.name} - ${member.roleTitle || member.office} | TAP Office Team`}
+                      loading="lazy"
+                      className="w-full h-full object-contain rounded-md"
+                    />
+                  </div>
                 ) : (
-                  <div className="w-full h-64 bg-muted/80 flex flex-col items-center justify-center p-6 text-center">
+                  <div className="w-full h-80 bg-muted/80 flex flex-col items-center justify-center p-6 text-center">
                     <div className="h-20 w-20 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl mb-2">
                       {member.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
                     </div>
@@ -159,16 +161,18 @@ export default function About() {
           </div>
           <div className="grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {moshiOfficeRepresentatives.map((rep) => (
-              <Card key={rep.name} className="overflow-hidden bg-card hover:shadow-md transition-shadow">
+              <Card key={rep.name} className="overflow-hidden bg-card hover:shadow-lg transition-all border-none">
                 {rep.image ? (
-                  <img
-                    src={rep.image}
-                    alt={`${rep.name} - ${rep.office} | TAP Moshi Secretary Office`}
-                    loading="lazy"
-                    className="w-full h-64 object-cover"
-                  />
+                  <div className="w-full h-80 bg-secondary/10 flex items-center justify-center p-2 overflow-hidden">
+                    <img
+                      src={rep.image}
+                      alt={`${rep.name} - ${rep.office} | TAP Moshi Secretary Office`}
+                      loading="lazy"
+                      className="w-full h-full object-contain rounded-md"
+                    />
+                  </div>
                 ) : (
-                  <div className="w-full h-56 bg-muted/80 flex flex-col items-center justify-center p-6 text-center">
+                  <div className="w-full h-80 bg-muted/80 flex flex-col items-center justify-center p-6 text-center">
                     <div className="h-20 w-20 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl mb-2">
                       {rep.name.split(" ").map((n) => n[0]).join("").slice(0, 2)}
                     </div>

@@ -17,16 +17,15 @@ import {
   Mail,
   UserPlus,
   LogIn,
+  ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import tapLogo from "@/assets/tap-logo.png";
@@ -42,7 +41,7 @@ export function Header() {
     {
       label: t("nav.about", "About TAP"),
       children: [
-        { label: t("nav.aboutTap", "Overview"), href: "/about" },
+        { label: t("nav.aboutTap", "Overview & Mission"), href: "/about" },
         { label: t("nav.history", "Our History"), href: "/history" },
       ],
     },
@@ -98,52 +97,51 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <NavigationMenu className="hidden lg:flex">
-          <NavigationMenuList className="gap-1">
-            {navItems.map((item) =>
-              item.children ? (
-                <NavigationMenuItem key={item.label}>
-                  <NavigationMenuTrigger
-                    className={`bg-transparent text-sm font-medium transition-colors hover:text-primary focus:text-primary ${
-                      isPathActive(undefined, item.children) ? "text-primary font-semibold" : "text-foreground/80"
+        <nav className="hidden lg:flex items-center gap-1">
+          {navItems.map((item) =>
+            item.children ? (
+              <DropdownMenu key={item.label}>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    type="button"
+                    className={`group inline-flex h-10 items-center justify-center rounded-md px-3.5 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-primary focus:bg-accent focus:text-primary outline-none ${
+                      isPathActive(undefined, item.children) ? "text-primary font-semibold bg-accent/40" : "text-foreground/80"
                     }`}
                   >
-                    {item.label}
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-52 gap-1 p-2 bg-popover rounded-md shadow-lg border">
-                      {item.children.map((child) => (
-                        <li key={child.href}>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              to={child.href}
-                              className={`block select-none rounded-md px-3 py-2 text-sm font-medium leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-primary focus:bg-accent focus:text-primary ${
-                                location.pathname === child.href ? "bg-accent/60 text-primary font-semibold" : "text-popover-foreground/90"
-                              }`}
-                            >
-                              {child.label}
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              ) : (
-                <NavigationMenuItem key={item.label}>
-                  <Link
-                    to={item.href!}
-                    className={`group inline-flex h-10 w-max items-center justify-center rounded-md px-3.5 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-primary focus:bg-accent focus:text-primary focus:outline-none ${
-                      location.pathname === item.href ? "text-primary font-semibold bg-accent/40" : "text-foreground/80"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                </NavigationMenuItem>
-              )
-            )}
-          </NavigationMenuList>
-        </NavigationMenu>
+                    <span>{item.label}</span>
+                    <ChevronDown className="ml-1.5 h-3.5 w-3.5 transition-transform duration-200 group-data-[state=open]:rotate-180 text-muted-foreground group-hover:text-primary" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-56 p-1.5 shadow-xl border border-border/80 rounded-lg bg-popover z-50">
+                  {item.children.map((child) => (
+                    <DropdownMenuItem key={child.href} asChild>
+                      <Link
+                        to={child.href}
+                        className={`flex items-center w-full px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
+                          location.pathname === child.href
+                            ? "bg-primary/10 text-primary font-semibold"
+                            : "text-popover-foreground hover:bg-accent hover:text-primary"
+                        }`}
+                      >
+                        {child.label}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link
+                key={item.label}
+                to={item.href!}
+                className={`group inline-flex h-10 items-center justify-center rounded-md px-3.5 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-primary focus:bg-accent focus:text-primary outline-none ${
+                  location.pathname === item.href ? "text-primary font-semibold bg-accent/40" : "text-foreground/80"
+                }`}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
+        </nav>
 
         {/* Header Right Actions */}
         <div className="flex items-center gap-2 shrink-0">
